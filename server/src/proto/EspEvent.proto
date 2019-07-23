@@ -1,0 +1,6 @@
+syntax = "proto2";
+package pb;
+
+message Esp8266Event {
+    required int32 stat = 1;
+}
