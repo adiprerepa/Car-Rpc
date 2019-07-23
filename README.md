@@ -19,5 +19,5 @@ This is the big mama of steps. Here, we combine step one and two by having a ser
 ### Side Note : How the IR Connection would work
 TV remotes and 
 
-#Inital 7/22/19
+# Inital 7/22/19
  - Got a go server working after the java one didnt, recieving a number from the esp on grpc.
