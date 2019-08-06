@@ -1,0 +1,32 @@
+syntax = "proto2";
+option java_package = "com.prerepa.generated";
+option java_multiple_files = true;
+option java_outer_classname = "Esp8266Proto";
+package esp8266;
+
+// For sending a command to the Esp8266, uses an enum for direction
+// That will be got from the Controller.
+message Esp8266_Command {
+    enum Esp8266_Direction {
+        MOTOR_FORWARD = 0;
+        MOTOR_BACK = 1;
+        WHEELS_LEFT = 2;
+        WHEELS_RIGHT = 3;
+        KEEP_ALIVE = 4;
+    }
+    required Esp8266_Direction direction = 1;
+}
+
+// Stuff to send back the the Esp8266, enum for status return code,
+// and more metrics.
+// todo add more metrics!
+message Esp8266_Metrics {
+    enum Esp8266_Return_Status_Codes {
+        MALFORMED_COMMAND = 0;
+        COULD_NOT_EXECUTE_UNABLE_TO_SEND_TO_CAR = 1;
+        COULD_NOT_EXECUTE_RUNTIME_ERROR = 2;
+        OPERATION_OK = 3;
+    }
+    required double hcsr04_calibrate = 1;
+    required Esp8266_Return_Status_Codes returnCode = 2;
+}

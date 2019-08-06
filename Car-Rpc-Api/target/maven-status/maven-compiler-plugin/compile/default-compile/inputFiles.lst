@@ -1,0 +1,14 @@
+/home/aditya/Car-Rpc/Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/api/controller/ControllerPlatform.java
+/home/aditya/Car-Rpc/Car-Rpc-Api/target/generated-sources/protobuf/java/com/prerepa/generated/Esp8266_MetricsOrBuilder.java
+/home/aditya/Car-Rpc/Car-Rpc-Api/target/generated-sources/protobuf/java/com/prerepa/generated/ControlResponseOrBuilder.java
+/home/aditya/Car-Rpc/Car-Rpc-Api/target/generated-sources/protobuf/java/com/prerepa/generated/Esp8266Proto.java
+/home/aditya/Car-Rpc/Car-Rpc-Api/target/generated-sources/protobuf/java/com/prerepa/generated/Esp8266_Metrics.java
+/home/aditya/Car-Rpc/Car-Rpc-Api/target/generated-sources/protobuf/java/com/prerepa/generated/Esp8266_Command.java
+/home/aditya/Car-Rpc/Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/api/esp_8266/Esp8266RawCommandTypes.java
+/home/aditya/Car-Rpc/Car-Rpc-Api/target/generated-sources/protobuf/java/com/prerepa/generated/ControlRequestOrBuilder.java
+/home/aditya/Car-Rpc/Car-Rpc-Api/target/generated-sources/protobuf/java/com/prerepa/generated/ControllerProto.java
+/home/aditya/Car-Rpc/Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.java
+/home/aditya/Car-Rpc/Car-Rpc-Api/target/generated-sources/protobuf/grpc-java/com/prerepa/generated/ControllerServiceGrpc.java
+/home/aditya/Car-Rpc/Car-Rpc-Api/target/generated-sources/protobuf/java/com/prerepa/generated/ControlRequest.java
+/home/aditya/Car-Rpc/Car-Rpc-Api/target/generated-sources/protobuf/java/com/prerepa/generated/ControlResponse.java
+/home/aditya/Car-Rpc/Car-Rpc-Api/target/generated-sources/protobuf/java/com/prerepa/generated/Esp8266_CommandOrBuilder.java

@@ -1,0 +1,40 @@
+syntax = "proto2";
+option java_package = "com.prerepa.generated";
+option java_multiple_files = true;
+option java_outer_classname = "ControllerProto";
+package controller;
+
+// Main Service
+service ControllerService {
+    rpc ControlService(ControlRequest) returns (ControlResponse){}
+}
+
+// Request from Controller Client
+// Enum for Control Requested
+// Key for authentication
+message ControlRequest {
+    enum Direction {
+        MOTOR_FORWARD = 0;
+        MOTOR_BACK = 1;
+        WHEELS_LEFT = 2;
+        WHEELS_RIGHT = 3;
+        KEEP_ALIVE = 4;
+    }
+    required int64 controller_key = 1;
+    required Direction direction = 2;
+}
+
+// Response for the Request
+// Gives optional metrics only if the Status Code is OK,
+// otherwise 0. Metrics are optional.
+message ControlResponse {
+    enum Request_Status_Code {
+        MALFORMED_COMMAND = 0;
+        UNABLE_TO_CONNECT_TO_ESP8266 = 1;
+        INTERNAL_SERVER_ERROR = 2;
+        INVALID_KEY = 3;
+        OK = 4;
+    }
+    optional int32 hcsro4_calibrate = 1 [default = 0];
+    required Request_Status_Code requestCode = 2;
+}
