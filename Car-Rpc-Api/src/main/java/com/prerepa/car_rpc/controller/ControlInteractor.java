@@ -7,13 +7,11 @@ public class ControlInteractor extends Thread implements ControllerPlatform {
 
     private Server server;
 
-
-
     @Override
     public void start() {
         int port = 20002;
         try {
-// todo finish
+
         }
     }
 

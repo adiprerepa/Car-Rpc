@@ -7,5 +7,7 @@ import java.net.Socket;
  * todo add metrics support
  */
 public interface Esp8266Platform {
-    Esp8266_Metrics recieveMetrics(Socket raw_socket, Esp8266_Command command);
+    Esp8266_Metrics recieveMetrics(Socket raw_socket);
+
+    void sendCommand(Esp8266_Command command);
 }
