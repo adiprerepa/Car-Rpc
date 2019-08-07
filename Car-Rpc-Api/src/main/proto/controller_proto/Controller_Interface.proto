@@ -7,6 +7,8 @@ package controller;
 // Main Service
 service ControllerService {
     rpc ControlService(ControlRequest) returns (ControlResponse){}
+
+    rpc ControlAcknowledge(Control_Esp8266Address) returns (Control_Esp8266Acknowledge) {}
 }
 
 // Request from Controller Client
@@ -37,4 +39,22 @@ message ControlResponse {
     }
     optional int32 hcsro4_calibrate = 1 [default = 0];
     required Request_Status_Code requestCode = 2;
+}
+
+// for acknowledging the controller wants a connection with the esp8266,
+// Input a controller key so only they can control it.
+message Control_Esp8266Address {
+    required string address = 1;
+    required int32 port = 2;
+    required int32 controller_key = 3;
+}
+
+// to send back after we did our operations
+message Control_Esp8266Acknowledge {
+    enum Request_Status {
+        INTERNAL_SERVER_ERROR = 0;
+        UNABLE_TO_CONNECT_TO_ESP8266 = 1;
+        OK = 2;
+    }
+    required Request_Status status = 1;
 }

@@ -24,6 +24,16 @@ public final class ControllerProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_controller_ControlResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_controller_Control_Esp8266Address_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_controller_Control_Esp8266Address_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_controller_Control_Esp8266Acknowledge_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_controller_Control_Esp8266Acknowledge_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -45,11 +55,20 @@ public final class ControllerProto {
       "est_Status_Code\"\202\001\n\023Request_Status_Code\022",
       "\025\n\021MALFORMED_COMMAND\020\000\022 \n\034UNABLE_TO_CONN" +
       "ECT_TO_ESP8266\020\001\022\031\n\025INTERNAL_SERVER_ERRO" +
-      "R\020\002\022\017\n\013INVALID_KEY\020\003\022\006\n\002OK\020\0042`\n\021Controll" +
-      "erService\022K\n\016ControlService\022\032.controller" +
-      ".ControlRequest\032\033.controller.ControlResp" +
-      "onse\"\000B*\n\025com.prerepa.generatedB\017Control" +
-      "lerProtoP\001"
+      "R\020\002\022\017\n\013INVALID_KEY\020\003\022\006\n\002OK\020\004\"O\n\026Control_" +
+      "Esp8266Address\022\017\n\007address\030\001 \002(\t\022\014\n\004port\030" +
+      "\002 \002(\005\022\026\n\016controller_key\030\003 \002(\005\"\272\001\n\032Contro" +
+      "l_Esp8266Acknowledge\022E\n\006status\030\001 \002(\01625.c" +
+      "ontroller.Control_Esp8266Acknowledge.Req" +
+      "uest_Status\"U\n\016Request_Status\022\031\n\025INTERNA" +
+      "L_SERVER_ERROR\020\000\022 \n\034UNABLE_TO_CONNECT_TO" +
+      "_ESP8266\020\001\022\006\n\002OK\020\0022\304\001\n\021ControllerService",
+      "\022K\n\016ControlService\022\032.controller.ControlR" +
+      "equest\032\033.controller.ControlResponse\"\000\022b\n" +
+      "\022ControlAcknowledge\022\".controller.Control" +
+      "_Esp8266Address\032&.controller.Control_Esp" +
+      "8266Acknowledge\"\000B*\n\025com.prerepa.generat" +
+      "edB\017ControllerProtoP\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -75,6 +94,18 @@ public final class ControllerProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_controller_ControlResponse_descriptor,
         new java.lang.String[] { "Hcsro4Calibrate", "RequestCode", });
+    internal_static_controller_Control_Esp8266Address_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_controller_Control_Esp8266Address_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_controller_Control_Esp8266Address_descriptor,
+        new java.lang.String[] { "Address", "Port", "ControllerKey", });
+    internal_static_controller_Control_Esp8266Acknowledge_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_controller_Control_Esp8266Acknowledge_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_controller_Control_Esp8266Acknowledge_descriptor,
+        new java.lang.String[] { "Status", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

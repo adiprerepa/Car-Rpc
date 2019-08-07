@@ -62,6 +62,38 @@ public final class ControllerServiceGrpc {
      return getControlServiceMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.prerepa.generated.Control_Esp8266Address,
+      com.prerepa.generated.Control_Esp8266Acknowledge> getControlAcknowledgeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ControlAcknowledge",
+      requestType = com.prerepa.generated.Control_Esp8266Address.class,
+      responseType = com.prerepa.generated.Control_Esp8266Acknowledge.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.prerepa.generated.Control_Esp8266Address,
+      com.prerepa.generated.Control_Esp8266Acknowledge> getControlAcknowledgeMethod() {
+    io.grpc.MethodDescriptor<com.prerepa.generated.Control_Esp8266Address, com.prerepa.generated.Control_Esp8266Acknowledge> getControlAcknowledgeMethod;
+    if ((getControlAcknowledgeMethod = ControllerServiceGrpc.getControlAcknowledgeMethod) == null) {
+      synchronized (ControllerServiceGrpc.class) {
+        if ((getControlAcknowledgeMethod = ControllerServiceGrpc.getControlAcknowledgeMethod) == null) {
+          ControllerServiceGrpc.getControlAcknowledgeMethod = getControlAcknowledgeMethod = 
+              io.grpc.MethodDescriptor.<com.prerepa.generated.Control_Esp8266Address, com.prerepa.generated.Control_Esp8266Acknowledge>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(
+                  "controller.ControllerService", "ControlAcknowledge"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.prerepa.generated.Control_Esp8266Address.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.prerepa.generated.Control_Esp8266Acknowledge.getDefaultInstance()))
+                  .setSchemaDescriptor(new ControllerServiceMethodDescriptorSupplier("ControlAcknowledge"))
+                  .build();
+          }
+        }
+     }
+     return getControlAcknowledgeMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -99,6 +131,13 @@ public final class ControllerServiceGrpc {
       asyncUnimplementedUnaryCall(getControlServiceMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void controlAcknowledge(com.prerepa.generated.Control_Esp8266Address request,
+        io.grpc.stub.StreamObserver<com.prerepa.generated.Control_Esp8266Acknowledge> responseObserver) {
+      asyncUnimplementedUnaryCall(getControlAcknowledgeMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -108,6 +147,13 @@ public final class ControllerServiceGrpc {
                 com.prerepa.generated.ControlRequest,
                 com.prerepa.generated.ControlResponse>(
                   this, METHODID_CONTROL_SERVICE)))
+          .addMethod(
+            getControlAcknowledgeMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                com.prerepa.generated.Control_Esp8266Address,
+                com.prerepa.generated.Control_Esp8266Acknowledge>(
+                  this, METHODID_CONTROL_ACKNOWLEDGE)))
           .build();
     }
   }
@@ -140,6 +186,14 @@ public final class ControllerServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getControlServiceMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void controlAcknowledge(com.prerepa.generated.Control_Esp8266Address request,
+        io.grpc.stub.StreamObserver<com.prerepa.generated.Control_Esp8266Acknowledge> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getControlAcknowledgeMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -168,6 +222,13 @@ public final class ControllerServiceGrpc {
     public com.prerepa.generated.ControlResponse controlService(com.prerepa.generated.ControlRequest request) {
       return blockingUnaryCall(
           getChannel(), getControlServiceMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.prerepa.generated.Control_Esp8266Acknowledge controlAcknowledge(com.prerepa.generated.Control_Esp8266Address request) {
+      return blockingUnaryCall(
+          getChannel(), getControlAcknowledgeMethod(), getCallOptions(), request);
     }
   }
 
@@ -199,9 +260,18 @@ public final class ControllerServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getControlServiceMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.prerepa.generated.Control_Esp8266Acknowledge> controlAcknowledge(
+        com.prerepa.generated.Control_Esp8266Address request) {
+      return futureUnaryCall(
+          getChannel().newCall(getControlAcknowledgeMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CONTROL_SERVICE = 0;
+  private static final int METHODID_CONTROL_ACKNOWLEDGE = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -223,6 +293,10 @@ public final class ControllerServiceGrpc {
         case METHODID_CONTROL_SERVICE:
           serviceImpl.controlService((com.prerepa.generated.ControlRequest) request,
               (io.grpc.stub.StreamObserver<com.prerepa.generated.ControlResponse>) responseObserver);
+          break;
+        case METHODID_CONTROL_ACKNOWLEDGE:
+          serviceImpl.controlAcknowledge((com.prerepa.generated.Control_Esp8266Address) request,
+              (io.grpc.stub.StreamObserver<com.prerepa.generated.Control_Esp8266Acknowledge>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -286,6 +360,7 @@ public final class ControllerServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ControllerServiceFileDescriptorSupplier())
               .addMethod(getControlServiceMethod())
+              .addMethod(getControlAcknowledgeMethod())
               .build();
         }
       }
