@@ -5,6 +5,10 @@ import com.prerepa.generated.ControlResponse;
 import com.prerepa.generated.Control_Esp8266Acknowledge;
 import com.prerepa.generated.Control_Esp8266Address;
 
+/**
+ * Interface the Api has to follow (Controller)
+ * @author aditya
+ */
 public interface ControllerPlatform {
     ControlResponse handleControllerRequest(ControlRequest request);
 

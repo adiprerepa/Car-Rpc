@@ -3,8 +3,16 @@ package com.prerepa.car_rpc.shared;
 import java.net.Socket;
 import java.util.Vector;
 
+/**
+ * Shared store for all constants and information
+ * about connections.
+ * @author aditya
+ */
 public class ValueStore {
     private static boolean esp_connection_success = true;
+    /**
+     * We use {@link Vector} because it is thread safe.
+     */
     private static Vector<String> esp8266Addresses = new Vector<>();
     private static Vector<Integer> esp8266Ports = new Vector<>();
     private static Vector<Integer> controllerKeys = new Vector<>();

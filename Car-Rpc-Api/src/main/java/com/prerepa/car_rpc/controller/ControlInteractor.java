@@ -10,7 +10,12 @@ import com.prerepa.generated.Control_Esp8266Address;
 
 import java.io.IOException;
 import java.net.Socket;
+import java.net.UnknownHostException;
 
+/**
+ * The Main Controller Platform that has all the logic in it.
+ * @author aditya
+ */
 public class ControlInteractor implements ControllerPlatform {
 
     @Override
@@ -30,22 +35,45 @@ public class ControlInteractor implements ControllerPlatform {
 
     @Override
     public Control_Esp8266Acknowledge handleAcknowledge(Control_Esp8266Address address) {
-        Esp8266Interactor interactor = new Esp8266Interactor();
-        try {
-            Socket reserve_socket = interactor.startConnection(address.getAddress(), address.getPort());
-            ValueStore.setSocket(reserve_socket);
-            ValueStore.setEsp_connection_success(true);
-        } catch (IOException e) {
-            ValueStore.setEsp_connection_success(false);
-            e.printStackTrace();
-        }
         Control_Esp8266Acknowledge esp8266Acknowledge;
-        if (ValueStore.getEsp_connection_success()) {
-            esp8266Acknowledge = Control_Esp8266Acknowledge.newBuilder().setStatus(Control_Esp8266Acknowledge.Request_Status.OK).build();
-        } else {
-            esp8266Acknowledge = Control_Esp8266Acknowledge.newBuilder().setStatus(Control_Esp8266Acknowledge.Request_Status.UNABLE_TO_CONNECT_TO_ESP8266).build();
+        try {
+            Socket reserve_socket = getEsp8266InteractorSocket(address.getAddress(), address.getPort());
+            ValueStore.setEsp_connection_success(true);
+            ValueStore.setSocket(reserve_socket);
+            ValueStore.setKey(address.getAddress(), address.getPort(), address.getControllerKey());
+            esp8266Acknowledge = buildAcknowledge(AcknowledgeStatus.OK);
+        } catch (IOException e) { // Means we weren't able to connect
+            ValueStore.setEsp_connection_success(false);
+            esp8266Acknowledge = buildAcknowledge(AcknowledgeStatus.CANNOT_CONNECT_TO_ESP8266);
         }
         return esp8266Acknowledge;
     }
 
+    public Socket getEsp8266InteractorSocket(String hostAddress, int port) throws IOException {
+        Esp8266Interactor interactor = new Esp8266Interactor();
+        return interactor.startConnection(hostAddress, port);
+    }
+
+    // Individual method for testablility
+    public Control_Esp8266Acknowledge buildAcknowledge(AcknowledgeStatus status) {
+        Control_Esp8266Acknowledge acknowledge;
+        switch (status) {
+            case OK:
+                acknowledge = Control_Esp8266Acknowledge.newBuilder()
+                        .setStatus(Control_Esp8266Acknowledge.Request_Status.OK)
+                        .build();
+                break;
+            case CANNOT_CONNECT_TO_ESP8266:
+                acknowledge = Control_Esp8266Acknowledge.newBuilder()
+                        .setStatus(Control_Esp8266Acknowledge.Request_Status.UNABLE_TO_CONNECT_TO_ESP8266)
+                        .build();
+                break;
+            default:
+                acknowledge = Control_Esp8266Acknowledge.newBuilder()
+                        .setStatus(Control_Esp8266Acknowledge.Request_Status.INTERNAL_SERVER_ERROR)
+                        .build();
+                break;
+        }
+        return acknowledge;
+    }
 }
