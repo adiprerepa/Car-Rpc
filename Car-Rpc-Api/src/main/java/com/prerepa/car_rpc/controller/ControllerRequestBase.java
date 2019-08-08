@@ -3,6 +3,10 @@ package com.prerepa.car_rpc.controller;
 import com.prerepa.generated.*;
 import io.grpc.stub.StreamObserver;
 
+/**
+ * The actual service rpc definition, links to
+ * {@link ControlInteractor} for the most part.
+ */
 public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServiceImplBase {
 
     private ControlInteractor controlInteractor;

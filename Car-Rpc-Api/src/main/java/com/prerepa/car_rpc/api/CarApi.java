@@ -8,6 +8,7 @@ import java.io.IOException;
 
 /**
  * gRPC service declaration
+ * @author aditya
  */
 public class CarApi {
     private Server server;
@@ -19,7 +20,7 @@ public class CarApi {
                     .addService(new ControllerRequestBase())
                     .build()
                     .start();
-            System.out.println("Server Started");
+            System.out.printf("Server Started on port %d\n", serverPort);
             Runtime.getRuntime().addShutdownHook(new Thread(() -> {
                 System.err.println("JVM Shutdown, bye!");
                 CarApi.this.stopServer();
@@ -31,7 +32,7 @@ public class CarApi {
 
     public void blockUntilShutdown() throws Throwable {
         if (server != null)
-            server.shutdown();
+            server.awaitTermination();
     }
 
     private void stopServer() {
