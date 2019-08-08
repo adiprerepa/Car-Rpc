@@ -2,43 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2b0cb0b-b8bb-41cf-a716-8df61f4f8a8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava2_rxjava_2_2_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlReturnType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/shared/ValueStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/prerepa/generated/Control_Esp8266Acknowledge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/prerepa/generated/Control_Esp8266AcknowledgeOrBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/prerepa/generated/Control_Esp8266Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/prerepa/generated/Control_Esp8266AddressOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_2_0_2_beta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/AcknowledgeStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/api/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/controller/ControllerInteractorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/shared/ValueStoreTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava2_rxjava_2_2_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Car-Rpc-Api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Car-Rpc-Api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/controller/ControllerPlatform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/controller/ControllerPlatform.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/esp_8266/Esp8266RawCommandTypes.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlReturnType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerDatabase.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/esp8266/Esp8266Interactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/esp8266/Esp8266Interactor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/shared/ValueStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/shared/ValueStore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/proto/controller_proto/Controller_Interface.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/controller_proto/Controller_Interface.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Car-Rpc-Api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Car-Rpc-Api-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/api/controller/ControllerPlatform.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/api/controller/ControllerPlatform.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/esp8266_proto/Esp8266_Interface.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/esp8266_proto/Esp8266_Interface.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerProto$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerProto$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerProto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerProto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$ControllerServiceBaseDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$ControllerServiceBaseDescriptorSupplier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$ControllerServiceBlockingStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$ControllerServiceBlockingStub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$ControllerServiceFileDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$ControllerServiceFileDescriptorSupplier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$ControllerServiceFutureStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$ControllerServiceFutureStub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$ControllerServiceImplBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$ControllerServiceImplBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$ControllerServiceMethodDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$ControllerServiceMethodDescriptorSupplier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$ControllerServiceStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$ControllerServiceStub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$MethodHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc$MethodHandlers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/generated/ControllerServiceGrpc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller_proto/Controller_Interface.proto" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller_proto/Controller_Interface.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/com/prerepa/generated/ControllerServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/com/prerepa/generated/ControllerServiceGrpc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/prerepa/generated/ControllerProto.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/prerepa/generated/ControllerProto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/api/esp_8266/Esp8266RawCommandTypes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/controller/ControlInteractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/controller/ControlInteractor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/controller/ControlReturnType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/controller/ControllerDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/controller/ControllerRequestBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/controller/ControllerRequestBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/esp8266/Esp8266Interactor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/esp8266/Esp8266Interactor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/shared/ValueStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/shared/ValueStore.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +46,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
+        <option value="package-info" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -74,10 +71,11 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -96,6 +94,94 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="JUnit.ControllerInteractorTest.buildAcknowledgeResponseTest_Cannot_Connect_To_Esp8266">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.main.Main" />
+      <module name="Car-Rpc-Api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.prerepa.car_rpc.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerInteractorTest.buildAcknowledgeResponseTest_Cannot_Connect_To_Esp8266" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Car-Rpc-Api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.prerepa.car_rpc.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.controller.ControllerInteractorTest" />
+      <option name="METHOD_NAME" value="buildAcknowledgeResponseTest_Cannot_Connect_To_Esp8266" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerInteractorTest.buildAcknowledgeResponseTest_Internal_Server_Error" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Car-Rpc-Api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.prerepa.car_rpc.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.controller.ControllerInteractorTest" />
+      <option name="METHOD_NAME" value="buildAcknowledgeResponseTest_Internal_Server_Error" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerInteractorTest.buildAcknowledgeResponseTest_OK" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Car-Rpc-Api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.prerepa.car_rpc.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.controller.ControllerInteractorTest" />
+      <option name="METHOD_NAME" value="buildAcknowledgeResponseTest_OK" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerInteractorTest.handleAcknowledgeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Car-Rpc-Api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.prerepa.car_rpc.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.controller.ControllerInteractorTest" />
+      <option name="METHOD_NAME" value="handleAcknowledgeTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ControllerInteractorTest.buildAcknowledgeResponseTest_Cannot_Connect_To_Esp8266" />
+        <item itemvalue="JUnit.ControllerInteractorTest.buildAcknowledgeResponseTest_Internal_Server_Error" />
+        <item itemvalue="JUnit.ControllerInteractorTest.buildAcknowledgeResponseTest_OK" />
+        <item itemvalue="JUnit.ControllerInteractorTest.handleAcknowledgeTest" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -116,7 +202,9 @@
       <workItem from="1565110448152" duration="1284000" />
       <workItem from="1565116669376" duration="770000" />
       <workItem from="1565117929012" duration="72000" />
-      <workItem from="1565118136350" duration="13253000" />
+      <workItem from="1565118136350" duration="17579000" />
+      <workItem from="1565235475831" duration="366000" />
+      <workItem from="1565236050991" duration="6579000" />
     </task>
     <servers />
   </component>
@@ -138,5 +226,42 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java</url>
+          <line>32</line>
+          <properties class="com.prerepa.car_rpc.api.CarApi" method="blockUntilShutdown">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java</url>
+          <line>37</line>
+          <properties class="com.prerepa.car_rpc.api.CarApi" method="stopServer">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
