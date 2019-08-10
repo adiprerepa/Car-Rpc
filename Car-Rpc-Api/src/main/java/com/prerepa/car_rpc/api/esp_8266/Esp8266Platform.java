@@ -20,5 +20,5 @@ public interface Esp8266Platform {
 
     Socket startConnection(String esp8266Endpoint, int port) throws UnknownHostException, IOException;
 
-    void setSocketConnection(Socket socket);
+    void acknowledgeConnection(String hostAddress, int port, int controllerKey);
 }
