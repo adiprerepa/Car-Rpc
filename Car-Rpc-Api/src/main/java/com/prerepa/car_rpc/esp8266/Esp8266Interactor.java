@@ -5,6 +5,7 @@ import com.prerepa.generated.Esp8266_Command;
 import com.prerepa.generated.Esp8266_Metrics;
 
 import java.io.IOException;
+import java.io.OutputStream;
 import java.net.Socket;
 
 /**
@@ -14,18 +15,26 @@ import java.net.Socket;
  */
 public class Esp8266Interactor implements Esp8266Platform {
 
+    private Socket socket;
+
     @Override
     public Esp8266_Metrics recieveMetrics(Socket socket) throws Throwable {
         return Esp8266_Metrics.parseFrom(socket.getInputStream());
     }
 
     @Override
-    public void sendCommand(Esp8266_Command command) {
-
+    public void sendCommand(Esp8266_Command command) throws IOException {
+        OutputStream protoOutputStream = socket.getOutputStream();
+        command.writeTo(protoOutputStream);
     }
 
     @Override
     public Socket startConnection(String address, int port) throws IOException {
         return new Socket(address, port);
+    }
+
+    @Override
+    public void setSocketConnection(Socket socket) {
+        this.socket = socket;
     }
 }

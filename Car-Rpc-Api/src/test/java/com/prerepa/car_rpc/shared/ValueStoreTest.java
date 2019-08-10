@@ -18,6 +18,5 @@ public class ValueStoreTest {
         int port = 23;
         int key = 1626;
         ValueStore.setKey(espAddress, port, key);
-
     }
 }

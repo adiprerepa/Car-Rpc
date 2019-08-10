@@ -16,7 +16,9 @@ import java.net.UnknownHostException;
 public interface Esp8266Platform {
     Esp8266_Metrics recieveMetrics(Socket raw_socket) throws Throwable;
 
-    void sendCommand(Esp8266_Command command);
+    void sendCommand(Esp8266_Command command) throws IOException;
 
     Socket startConnection(String esp8266Endpoint, int port) throws UnknownHostException, IOException;
+
+    void setSocketConnection(Socket socket);
 }

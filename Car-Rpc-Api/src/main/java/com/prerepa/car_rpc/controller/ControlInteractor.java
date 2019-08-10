@@ -3,10 +3,7 @@ package com.prerepa.car_rpc.controller;
 import com.prerepa.car_rpc.api.controller.ControllerPlatform;
 import com.prerepa.car_rpc.esp8266.Esp8266Interactor;
 import com.prerepa.car_rpc.shared.ValueStore;
-import com.prerepa.generated.ControlRequest;
-import com.prerepa.generated.ControlResponse;
-import com.prerepa.generated.Control_Esp8266Acknowledge;
-import com.prerepa.generated.Control_Esp8266Address;
+import com.prerepa.generated.*;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -17,9 +14,33 @@ import java.net.Socket;
  */
 public class ControlInteractor implements ControllerPlatform {
 
+    /**
+     * Handle the request, return void. Gets
+     * the {@link ControlRequest#getControllerKey()}
+     * and gets the socket associated with it with
+     * {@link ValueStore#getSocket(int)}. The rpc
+     * uses the method {@link ControlInteractor#buildCommand(ControlRequest)},
+     * and passes in the {@link ControlRequest}, and it gets a
+     * {@link Esp8266_Command}. It then writes the command to the
+     * socket's {@link java.io.OutputStream}.
+     *
+     * request -> builder -> command -> write to socket
+     * @param request
+     * @throws IOException
+     */
     @Override
-    public ControlResponse handleControllerRequest(ControlRequest request) {
-        return null;
+    public void handleControllerRequest(ControlRequest request) throws IOException {
+        Esp8266Interactor esp8266Interactor = new Esp8266Interactor();
+        int controllerKey = request.getControllerKey();
+        Socket esp8266Socket = ValueStore.getSocket(controllerKey);
+        esp8266Interactor.setSocketConnection(esp8266Socket);
+        Esp8266_Command command = buildCommand(request);
+        command.writeTo(esp8266Socket.getOutputStream());
+    }
+
+    @Override
+    public ControlResponse recieveRepsonse(int controllerKey) {
+        
     }
 
     @Override
@@ -74,5 +95,9 @@ public class ControlInteractor implements ControllerPlatform {
                 break;
         }
         return acknowledge;
+    }
+
+    public Esp8266_Command buildCommand(ControlRequest request) {
+
     }
 }
