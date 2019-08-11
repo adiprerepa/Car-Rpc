@@ -3,6 +3,8 @@ package com.prerepa.car_rpc.controller;
 import com.prerepa.generated.Control_Esp8266Acknowledge;
 import com.prerepa.generated.Control_Esp8266Address;
 import org.junit.Test;
+
+import static com.prerepa.car_rpc.factory.CommandFactory.buildAcknowledge;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -50,7 +52,7 @@ public class ControllerInteractorTest {
         Control_Esp8266Acknowledge okAck = Control_Esp8266Acknowledge.newBuilder()
                 .setStatus(Control_Esp8266Acknowledge.Request_Status.OK)
                 .build();
-        Control_Esp8266Acknowledge mockAcknowledge = controlInteractor.buildAcknowledge(AcknowledgeStatus.OK);
+        Control_Esp8266Acknowledge mockAcknowledge = buildAcknowledge(AcknowledgeStatus.OK);
         assertEquals(mockAcknowledge, okAck);
     }
 
@@ -64,7 +66,7 @@ public class ControllerInteractorTest {
         Control_Esp8266Acknowledge serverErrorAcknowledge = Control_Esp8266Acknowledge.newBuilder()
                 .setStatus(Control_Esp8266Acknowledge.Request_Status.INTERNAL_SERVER_ERROR)
                 .build();
-        Control_Esp8266Acknowledge mockAcknowledge = controlInteractor.buildAcknowledge(AcknowledgeStatus.INTERNAL_SERVER_ERROR);
+        Control_Esp8266Acknowledge mockAcknowledge = buildAcknowledge(AcknowledgeStatus.INTERNAL_SERVER_ERROR);
         assertEquals(mockAcknowledge, serverErrorAcknowledge);
     }
 
@@ -74,7 +76,7 @@ public class ControllerInteractorTest {
         Control_Esp8266Acknowledge cannotConnectAcknowledge = Control_Esp8266Acknowledge.newBuilder()
                 .setStatus(Control_Esp8266Acknowledge.Request_Status.UNABLE_TO_CONNECT_TO_ESP8266)
                 .build();
-        Control_Esp8266Acknowledge mockAcknowledge = controlInteractor.buildAcknowledge(AcknowledgeStatus.CANNOT_CONNECT_TO_ESP8266);
+        Control_Esp8266Acknowledge mockAcknowledge = buildAcknowledge(AcknowledgeStatus.CANNOT_CONNECT_TO_ESP8266);
         assertEquals(mockAcknowledge, cannotConnectAcknowledge);
     }
 }

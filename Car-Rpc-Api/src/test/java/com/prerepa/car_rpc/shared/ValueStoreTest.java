@@ -17,6 +17,6 @@ public class ValueStoreTest {
         String espAddress = "Address-false-lol";
         int port = 23;
         int key = 1626;
-        ValueStore.setKey(espAddress, port, key);
+//        ValueStore.setKey(espAddress, port, key);
     }
 }
