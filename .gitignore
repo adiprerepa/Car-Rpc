@@ -1,2 +1,3 @@
 /Car-Rpc-Api/target/*
 /App/app/build/*
+/App/app/.externalNativeBuild/*
