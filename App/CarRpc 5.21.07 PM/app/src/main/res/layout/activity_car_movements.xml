@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CarMovements">
+
+    <ImageButton
+        android:id="@+id/upArr"
+        android:layout_width="179dp"
+        android:layout_height="237dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/holo_blue_light"
+        android:src="@drawable/uparr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leftArr" />
+
+    <ImageButton
+        android:id="@+id/downArr"
+        android:layout_width="179dp"
+        android:layout_height="237dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/holo_blue_light"
+        android:src="@drawable/downarr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/upArr"
+        app:layout_constraintTop_toBottomOf="@+id/rightArr" />
+
+    <ImageButton
+        android:id="@+id/rightArr"
+        android:layout_width="179dp"
+        android:layout_height="237dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginLeft="192dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@android:color/holo_blue_light"
+        android:src="@drawable/newrightarr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/leftArr"
+        android:layout_width="179dp"
+        android:layout_height="237dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@android:color/holo_blue_light"
+        android:src="@drawable/newleftarr"
+        app:layout_constraintEnd_toStartOf="@+id/rightArr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Left"
+        android:layout_width="48dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:text="Left"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/leftArr"
+        app:layout_constraintEnd_toEndOf="@+id/leftArr"
+        app:layout_constraintStart_toStartOf="@+id/leftArr" />
+
+    <TextView
+        android:id="@+id/Right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Right"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/rightArr"
+        app:layout_constraintEnd_toEndOf="@+id/rightArr"
+        app:layout_constraintStart_toStartOf="@+id/rightArr" />
+
+    <TextView
+        android:id="@+id/Forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Forward"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/upArr"
+        app:layout_constraintEnd_toEndOf="@+id/upArr"
+        app:layout_constraintStart_toStartOf="@+id/upArr" />
+
+    <TextView
+        android:id="@+id/Backwards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Backward"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/downArr"
+        app:layout_constraintEnd_toEndOf="@+id/downArr"
+        app:layout_constraintStart_toStartOf="@+id/downArr" />
+
+</android.support.constraint.ConstraintLayout>
