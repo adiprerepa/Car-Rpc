@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class ControllerInteractorTest {
 
 
-    /*
+    /**
       TODO find out a way to mock a socket with
       {@link Mockito}
      */
