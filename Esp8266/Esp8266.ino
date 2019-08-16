@@ -1,86 +1,116 @@
-#include "event.pb.h"
-
-#include <pb_common.h>
-#include <pb.h>
-#include <pb_encode.h>
-#include <pb_decode.h>
+#include "pb_common.h"
+#include "pb.h"
+#include "pb_encode.h"
+#include "pb_decode.h"
+#include "Esp8266_Interface.pb.h"
 
 #include <ESP8266WiFi.h>
 
-const char* ssid     = "onhub";
-const char* password = "ekchotaghar";
-const char* addr     = "10.0.1.181";
-const uint16_t port  = 10100;
+const char* ssid     = "SSID";
+const char* pass     = "PASS";
+const uint16_t port  = 42069;
 
+WiFiServer server(port);
 WiFiClient client;
 
-void sendStat(pb_Event e);
+struct InputData {
+  static const unsigned buffer_length = esp8266_Esp8266_Command_size;
+  unsigned char buffer[buffer_length];
+  pb_istream_t input_stream;
+  esp8266_Esp8266_Command command;
+
+  InputData() { refresh(); };
+
+  void refresh() {
+    input_stream = pb_istream_from_buffer(buffer, buffer_length);
+    command = esp8266_Esp8266_Command_init_zero;
+  }
+
+  void readAndDecode() {
+    refresh();
+    client.read(buffer, client.available());
+    pb_decode(&input_stream, esp8266_Esp8266_Command_fields, &command);
+  }
+} input;
+
+struct OutputData {
+  static const unsigned buffer_length = esp8266_Esp8266_Metrics_size;
+  unsigned char buffer[buffer_length];
+  pb_ostream_t output_stream;
+  esp8266_Esp8266_Metrics metrics;
+
+  OutputData() { refresh(); }
+  void refresh() {
+    output_stream = pb_ostream_from_buffer(buffer, buffer_length);
+  }
+
+  void encodeAndWrite() {
+    refresh();
+    pb_encode(&output_stream, esp8266_Esp8266_Metrics_fields, &metrics);
+    client.write(buffer, output_stream.bytes_written);
+  }
+} output;
+
+void setupWiFi();
+void printConnection(const char * name, IPAddress address, int port);
+
+void handleData();
 
 // setup WIFI and sensor
 void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
-  Serial.begin(115200);
-  delay(10);
-
-  Serial.println();
-  Serial.print("Setting up WIFI for SSID ");
-  Serial.println(ssid);
-
-//  WiFi.mode(WIFI_STA);
-  WiFi.begin(ssid, password);
-
-  while (WiFi.status() != WL_CONNECTED) {
-    Serial.println("WIFI connection failed, reconnecting...");
-    delay(500);
-  }
-  
-  Serial.print("\nWiFi connected, ");
-  Serial.print("IP address: ");
-  Serial.println(WiFi.localIP());
+  Serial.begin(9600);
+  setupWiFi();
 }
 
 
 void loop() {
-  digitalWrite(LED_BUILTIN, LOW);
-  Serial.print("connecting to ");
-  Serial.println(addr);
-  client.connect(addr, port);
-
-  if (!client.connect(addr, port)) {
-    Serial.println("connection failed");
-    Serial.println("wait 5 sec to reconnect...");
-    delay(5000);
-    return;
+  client = server.available();
+  if (client) {
+    printConnection("controller", client.remoteIP(), client.remotePort());
+    client.setNoDelay(true);
+    while (client.connected()) {
+      if (client.available()) {
+      input.readAndDecode();
+      handleData();
+      output.encodeAndWrite();
+      }
+    }
+    Serial.println("Disconnected");
   }
-    
-  pb_Event temp = pb_Event_init_zero;
-  temp.stat = 1000;
-  
-  sendStat(temp);
-  digitalWrite(LED_BUILTIN, HIGH);
-  
-  delay(5000);
 }
 
-void sendStat(pb_Event e) {
-  uint8_t buff[128];
-  pb_ostream_t stream = pb_ostream_from_buffer(buff, sizeof(buff));
-  char* consoleStatusInfo = (char*)buff;
-  if (!pb_encode(&stream, pb_Event_fields, &e)){
-    Serial.println("failed to encode temp proto");
-    Serial.println(PB_GET_ERROR(&stream));
-    return;
-  } else {
-    Serial.println("Encoded Sucessfuly");
+void setupWiFi() {
+  Serial.print("Attempting to connect to WiFi SSID: ");
+  Serial.print(ssid);
+
+  WiFi.begin(ssid, pass);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
   }
-//  Serial.printf("Sending info for...%d\nMessage String : %s\n", e.stat, consoleStatusInfo);
-  Serial.print("Message Length: ");
-  Serial.println(stream.bytes_written);
- 
-  Serial.print("Message: ");
- 
-  for(int i = 0; i<stream.bytes_written; i++){
-    Serial.printf("%02X",buff[i]);
+  Serial.println();
+  server.begin();
+  printConnection("WiFi", WiFi.localIP(), port);
+}
+
+void printConnection(const char * name, IPAddress address, int port) {
+  Serial.print("Connected to ");
+  Serial.print(name);
+  Serial.print(". Address is ");
+  Serial.print(address);
+  Serial.print(":");
+  Serial.println(port);
+}
+
+void handleData() {
+  Serial.print("got: ");
+  switch (input.command.direction) {
+    case esp8266_Esp8266_Command_Esp8266_Direction_MOTOR_FORWARD: Serial.println("MOTOR FORWARD"); break;
+    case esp8266_Esp8266_Command_Esp8266_Direction_MOTOR_BACK: Serial.println("MOTOR BACK"); break;
+    case esp8266_Esp8266_Command_Esp8266_Direction_WHEELS_LEFT: Serial.println("WHEELS LEFT"); break;
+    case esp8266_Esp8266_Command_Esp8266_Direction_WHEELS_RIGHT: Serial.println("WHEELS RIGHT"); break;
+    case esp8266_Esp8266_Command_Esp8266_Direction_KEEP_ALIVE: Serial.println("KEEP ALIVE"); break;
   }
-  client.write(buff, stream.bytes_written);
+  output.metrics.hcsr04_calibrate = 1.0;
+  output.metrics.returnCode = esp8266_Esp8266_Metrics_Esp8266_Return_Status_Codes_OPERATION_OK;
 }
