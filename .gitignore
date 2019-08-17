@@ -1,3 +1,10 @@
 /Car-Rpc-Api/target/*
 /App/app/build/*
 /App/app/.externalNativeBuild/*
+/Esp8266/pb_common.c
+/Esp8266/pb_common.h
+/Esp8266/pb_decode.h
+/Esp8266/pb_decode.c
+/Esp8266/pb_encode.c
+/Esp8266/pb_decode.h
+/Esp8266/pb.h
