@@ -1,33 +1,41 @@
-// auther aditya
+// Author: Aditya Prerepa & Akshay Trivedi
+
 syntax = "proto2";
-option java_package = "com.prerepa.generated";
+
+option java_package = "com.car_rpc.generated";
 option java_multiple_files = true;
 option java_outer_classname = "Esp8266Proto";
-package esp8266;
+package Esp8266;
 
-// For sending a command to the Esp8266, uses an enum for direction
-// That will be got from the Controller.
-message Esp8266_Command {
-    enum Esp8266_Direction {
-        MOTOR_FORWARD = 0;
-        MOTOR_BACK = 1;
-        WHEELS_LEFT = 2;
-        WHEELS_RIGHT = 3;
-        KEEP_ALIVE = 4;
-    }
-    required Esp8266_Direction direction = 1;
+// frontRotation is the angle at which the servos at the front
+// of the car should be. we map values from -1 (left) to 1 (right) to
+// the angle, where we can multiply the number by a scale
+// factor which is pre-determined for a given car. That new number
+// is what determines the voltage for the servo.
+// speed is the speed of the back motors -> the
+// speed is directly associated with the voltage fed to the motors.
+// when speed is negative, the motors go the opposite direction
+// by feeding voltage -> ground and vice versa.
+message Command {
+    required float frontRotation = 1;
+    required float speed = 2;
 }
 
-// Stuff to send back the the Esp8266, enum for status return code,
-// and more metrics.
-// todo add more metrics!
-message Esp8266_Metrics {
-    enum Esp8266_Return_Status_Codes {
-        MALFORMED_COMMAND = 0;
-        COULD_NOT_EXECUTE_UNABLE_TO_SEND_TO_CAR = 1;
-        COULD_NOT_EXECUTE_RUNTIME_ERROR = 2;
-        OPERATION_OK = 3;
-    }
-    required double hcsr04_calibrate = 1;
-    required Esp8266_Return_Status_Codes returnCode = 2;
+// The complete request sent to the esp8266.
+// todo add more to send, such as IO pin outputs
+// that will read stuff from the API.
+message Full_Request {
+    // All for now.
+    required Command command = 1;
+}
+
+// Metrics that are given from the chip's IO pins,
+// such as ultrasound inputs from the hcsr04, and stuff
+// like collision detection.
+message Metrics {
+    // Three sensors -> hardcoded during tested,
+    // realtime during production.
+    required int32 HCSR04_front_distance = 0;
+    required int32 HCSR04_left_distance = 1;
+    required int32 HCSR04_right_distance = 2;
 }

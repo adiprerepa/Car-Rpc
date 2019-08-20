@@ -9,31 +9,34 @@ import java.util.Vector;
  * @author aditya
  */
 public class ValueStore {
-    private static boolean esp_connection_success = true;
     /**
      * We use {@link Vector} because it is thread safe.
      */
+    private static Vector<Boolean> connectionStatuses = new Vector<>();
     private static Vector<String> esp8266Addresses = new Vector<>();
     private static Vector<Integer> esp8266Ports = new Vector<>();
     private static Vector<Integer> controllerKeys = new Vector<>();
     private static Vector<Socket> sockets = new Vector<>();
 
-    public static void setEsp_connection_success(boolean value) {
-        esp_connection_success = value;
+    public static void setEsp_connection_success(int key, boolean value) {
+        int position = controllerKeys.indexOf(key);
+        connectionStatuses.add(position, value);
     }
 
-    public static boolean getEsp_connection_success() {
-        return esp_connection_success;
+    public static boolean getEsp_connection_success(int key) {
+        return connectionStatuses.get(controllerKeys.indexOf(key));
     }
 
     public static void setKey(String esp8266Address, Integer port, Integer key) {
-        esp8266Addresses.add(esp8266Address);
-        esp8266Ports.add(port);
         controllerKeys.add(key);
+        int position = controllerKeys.indexOf(key);
+        esp8266Addresses.add(position, esp8266Address);
+        esp8266Ports.add(position, port);
     }
 
-    public static void setSocket(Socket socket) {
-        sockets.add(socket);
+    public static void setSocket(Socket socket, int key) {
+        // add to the index corresponding with the key
+        sockets.add(controllerKeys.indexOf(key), socket);
     }
 
     public static String getAddress(int key) {
