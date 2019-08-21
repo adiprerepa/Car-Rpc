@@ -10,7 +10,6 @@ import com.prerepa.generated.Control_Esp8266Address;
 
 import java.io.IOException;
 import java.net.Socket;
-import java.net.UnknownHostException;
 
 /**
  * The Main Controller Platform that has all the logic in it.

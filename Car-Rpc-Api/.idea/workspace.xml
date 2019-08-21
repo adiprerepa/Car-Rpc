@@ -2,167 +2,103 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2b0cb0b-b8bb-41cf-a716-8df61f4f8a8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../CarApp/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/androidTest/java/com/nickd/car_app/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/java/com/nickd/car_app/root/MainActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/drawable/downarr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/drawable/newleftarr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/drawable/newrightarr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/drawable/uparr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/app/src/test/java/com/nickd/car_app/ExampleUnitTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CarApp/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/4.6/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/4.6/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/4.6/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/4.6/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/4.6/javaCompile/jarAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/4.6/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/4.6/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/4.6/javaCompile/taskJars.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.gradle/vcsWorkingDirs/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/caches/build_file_checksums.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__android_arch_core_common_1_1_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__android_arch_lifecycle_common_1_1_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_collections_28_0_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_solver_1_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_support_annotations_28_0_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_google_code_findbugs_jsr305_2_0_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__com_squareup_javawriter_2_1_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__javax_inject_javax_inject_1_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__junit_junit_4_12_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__net_sf_kxml_kxml2_2_3_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__org_hamcrest_hamcrest_integration_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__org_hamcrest_hamcrest_library_1_3_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__org_jetbrains_annotations_13_0_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_android_extensions_runtime_1_3_31_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_31_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_31_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_3_31_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../App/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/App.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../App/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/androidTest/java/com/carrpc/nickd/car_rpc/ExampleInstrumentedTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/java/com/carrpc/nickd/car_rpc/CarMovements.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/drawable/downarr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/drawable/hello.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/drawable/newleftarr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/drawable/newrightarr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/drawable/uparr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/layout/activity_car_movements.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/app/src/test/java/com/carrpc/nickd/car_rpc/ExampleUnitTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/local.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App/settings.gradle" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/Esp8266TestClient.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/src/main/java/com/prerepa/esp8266_client/Esp8266ClientInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/src/main/java/com/prerepa/esp8266_client/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/src/main/java/com/prerepa/esp8266_client/MessageFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/src/main/proto/Simple_Test.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/src/test/java/MessageFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/Esp8266-Test-Client-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/Simple_Test.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/esp8266_client/Esp8266ClientInteractor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/esp8266_client/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/esp8266_client/MessageFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/Request$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/Request$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/Request.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/RequestOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/Response$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/Response$Builder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/Response.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/ResponseOrBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/SimpleHelloWorldProto$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/SimpleHelloWorldProto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/generated-sources/protobuf/java/com/prerepa/generated/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/generated-sources/protobuf/java/com/prerepa/generated/RequestOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/generated-sources/protobuf/java/com/prerepa/generated/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/generated-sources/protobuf/java/com/prerepa/generated/ResponseOrBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/generated-sources/protobuf/java/com/prerepa/generated/SimpleHelloWorldProto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/any.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/api.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/compiler/plugin.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/descriptor.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/duration.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/empty.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/field_mask.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/source_context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/struct.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/timestamp.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/type.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/wrappers.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/annotations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/auth.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/backend.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/billing.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/config_change.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/consumer.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/context.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/control.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/distribution.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/documentation.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/endpoint.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/experimental/authorization_config.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/experimental/experimental.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/http.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/httpbody.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/label.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/logging.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/metric.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/monitored_resource.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/monitoring.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/quota.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/service.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/source_info.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/system_parameter.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/usage.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/cloud/audit/audit_log.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/logging/type/http_request.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/logging/type/log_severity.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/longrunning/operations.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/rpc/code.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/rpc/error_details.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/rpc/status.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/color.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/date.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/dayofweek.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/latlng.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/money.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/postal_address.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/timeofday.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-plugins/protoc-3.2.0-linux-x86_64.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-plugins/protoc-gen-grpc-java-1.20.0-linux-x86_64.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/test-classes/MessageFactoryTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/controller/ControllerInteractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/controller/ControllerInteractorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/shared/ValueStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/shared/ValueStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/controller_proto/Controller_Interface.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/controller_proto/Controller_Interface.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/esp8266_proto/Esp8266_Interface.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/esp8266_proto/Esp8266_Interface.proto" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -335,6 +271,8 @@
       <workItem from="1565236050991" duration="6579000" />
       <workItem from="1565567448579" duration="2367000" />
       <workItem from="1565735843849" duration="706000" />
+      <workItem from="1566012575933" duration="203000" />
+      <workItem from="1566013648224" duration="6273000" />
     </task>
     <servers />
   </component>
@@ -360,27 +298,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java</url>
-          <line>32</line>
-          <properties class="com.prerepa.car_rpc.api.CarApi" method="blockUntilShutdown">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java</url>
-          <line>37</line>
-          <properties class="com.prerepa.car_rpc.api.CarApi" method="stopServer">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java</url>
           <line>21</line>

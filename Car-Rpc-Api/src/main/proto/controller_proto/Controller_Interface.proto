@@ -1,57 +1,78 @@
-// author aditya
+// author Aditya Prerepa & Akshay Trivedi
 syntax = "proto2";
-option java_package = "com.prerepa.generated";
+option java_package = "com.car_rpc.generated";
 option java_multiple_files = true;
 option java_outer_classname = "ControllerProto";
 package controller;
 
-// Main Service
+// Main Service: Communcation between phone and API
+// ControlAcknowledge: Acknowledge a connection between the chip, phone, and API. Once
+// 	this rpc is called, the server takes the host and port given by the app and tries to make
+// 	a connection. If sucessful, the Socket will be stored in a ValueStore and later
+// 	accessed by the {@link ControlService} rpc, where the request contains the key, for accessing the socket.
+// ControlService: The main rpc that sends commands to the server, and recieves metrics after these commands
+// 	are carried out by the esp8266. The command is a three-dimentional vector, and the response contains metrics
+// 	that are displayed on the app.
 service ControllerService {
-    rpc ControlService(ControlRequest) returns (ControlResponse){}
 
-    rpc ControlAcknowledge(Control_Esp8266Address) returns (Control_Esp8266Acknowledge) {}
+    // Acknowledge RPC
+    rpc ControlAcknowledge(ControlAcknowledge) returns (ControlAcknowledgeResponse) { }
+
+    // Control RPC
+    rpc ControlService(ControlRequest) returns (ControlResponse) { }
 }
 
-// Request from Controller Client
-// Enum for Control Requested
-// Key for authentication
+// +++++++++++++++++++++++++++++++++++++++++ CONTROL - AFTER CONNECTION ACKNOWLEDGE +++++++++++++++++++++++++++++++++++++++++ //
+
+// Vector3 is the format for the calibration of the gyroscope and accelorotmeraods
+// in the phone. The calibration is used to find the desired velocities, acceleration,
+// and directon of the car.
+message Vector {
+    required float x = 1;
+    required float y = 2;
+    required float z = 3;
+}
+
+// Complete request sent to the @link Car-Rpc-Api. Contains a vector and a powerstate
+// set by the app (manually by the user). powerState allows the user to turn the car
+// off or on. ControllerKey is an authentication key to ensure the security of the
+// connection.
 message ControlRequest {
-    enum Direction {
-        MOTOR_FORWARD = 0;
-        MOTOR_BACK = 1;
-        WHEELS_LEFT = 2;
-        WHEELS_RIGHT = 3;
-        KEEP_ALIVE = 4;
-    }
-    required int64 controller_key = 1;
-    required Direction direction = 2;
+    required Vector axisPlane = 1;
+    required bool powerState = 2;
+    required int32 controllerKey = 3;
 }
 
-// Response for the Request
-// Gives optional metrics only if the Status Code is OK,
-// otherwise 0. Metrics are optional.
+// Complete response to the ControlRequest. Gives optional metrics only if the status is OK,
+// otherwise 0.
 message ControlResponse {
-    enum Request_Status_Code {
+    enum RequestStatusCode {
         MALFORMED_COMMAND = 0;
         UNABLE_TO_CONNECT_TO_ESP8266 = 1;
         INTERNAL_SERVER_ERROR = 2;
         INVALID_KEY = 3;
         OK = 4;
     }
-    optional int32 hcsro4_calibrate = 1 [default = 0];
-    required Request_Status_Code requestCode = 2;
+    optional int32 hcsr04_front_distance = 1 [default = 0];
+    optional int32 hcsr04_right_distance = 2 [default = 0];
+    optional int32 hcsr04_left_distance = 3  [default = 0];
+    required RequestStatusCode requestCode = 4;
 }
 
-// for acknowledging the controller wants a connection with the esp8266,
-// Input a controller key so only they can control it.
-message Control_Esp8266Address {
+// +++++++++++++++++++++++++++++++++++++++++ ACKNOWLEDGE - INITIAL STUFF +++++++++++++++++++++++++++++++++++++++++ //
+
+// For beginning a connection between the controller and the API.
+// The controller sends the address and port of the Esp8266.
+// The controllerKey is a password to ensure the security of the connection.
+message ControlAcknowledge {
     required string address = 1;
     required int32 port = 2;
-    required int32 controller_key = 3;
+    required int32 controllerKey = 3;
 }
-
-// to send back after we did our operations
-message Control_Esp8266Acknowledge {
+// For responding to the controller after they acknowledge.
+// Contains a status code to determine whether or not the connection to the
+// Esp8266 is feasible.
+message ControlAcknowledgeResponse {
     enum Request_Status {
         INTERNAL_SERVER_ERROR = 0;
         UNABLE_TO_CONNECT_TO_ESP8266 = 1;
@@ -59,3 +80,5 @@ message Control_Esp8266Acknowledge {
     }
     required Request_Status status = 1;
 }
+
+// +++++++++++++++++++++++++++++++++++++++++ END REGION +++++++++++++++++++++++++++++++++++++++++ //
