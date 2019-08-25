@@ -1,6 +1,8 @@
 package com.prerepa.car_rpc.shared;
 
+import java.io.IOException;
 import java.net.Socket;
+import java.nio.channels.SocketChannel;
 import java.util.Vector;
 
 /**
@@ -11,12 +13,14 @@ import java.util.Vector;
 public class ValueStore {
     /**
      * We use {@link Vector} because it is thread safe.
+     * TODO make a class that holds all the information of a server entity and
+     * make a hashmap of it (for speed). if it is not possible, make
+     * a hashCode() for this class or the vector member class.
      */
     private static Vector<Boolean> connectionStatuses = new Vector<>();
     private static Vector<String> esp8266Addresses = new Vector<>();
-    private static Vector<Integer> esp8266Ports = new Vector<>();
     private static Vector<Integer> controllerKeys = new Vector<>();
-    private static Vector<Socket> sockets = new Vector<>();
+    private static Vector<SocketChannel> sockets = new Vector<>();
 
     public static void setEsp_connection_success(int key, boolean value) {
         int position = controllerKeys.indexOf(key);
@@ -27,14 +31,19 @@ public class ValueStore {
         return connectionStatuses.get(controllerKeys.indexOf(key));
     }
 
-    public static void setKey(String esp8266Address, Integer port, Integer key) {
+    /**
+     * The key is associated with the socket and address
+     * @param socket
+     * @param key
+     * @throws IOException
+     */
+    public static void setKey(SocketChannel socket,  Integer key) throws IOException {
         controllerKeys.add(key);
         int position = controllerKeys.indexOf(key);
-        esp8266Addresses.add(position, esp8266Address);
-        esp8266Ports.add(position, port);
+        esp8266Addresses.add(position, socket.getRemoteAddress().toString());
     }
 
-    public static void setSocket(Socket socket, int key) {
+    public static void setSocket(SocketChannel socket, int key) {
         // add to the index corresponding with the key
         sockets.add(controllerKeys.indexOf(key), socket);
     }
@@ -43,11 +52,7 @@ public class ValueStore {
         return esp8266Addresses.get(controllerKeys.indexOf(key));
     }
 
-    public static int getPort(int key) {
-        return esp8266Ports.get(controllerKeys.indexOf(key));
-    }
-
-    public static Socket getSocket(int key) {
+    public static SocketChannel getSocket(int key) {
         return sockets.get(controllerKeys.indexOf(key));
     }
 

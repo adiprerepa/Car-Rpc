@@ -27,6 +27,7 @@ message Command {
 message Full_Request {
     // All for now.
     required Command command = 1;
+    required bool powerState = 2;
 }
 
 // Metrics that are given from the chip's IO pins,
@@ -35,7 +36,7 @@ message Full_Request {
 message Metrics {
     // Three sensors -> hardcoded during tested,
     // realtime during production.
-    required int32 HCSR04_front_distance = 0;
-    required int32 HCSR04_left_distance = 1;
-    required int32 HCSR04_right_distance = 2;
+    required int32 HCSR04_front_distance = 1;
+    required int32 HCSR04_left_distance = 2;
+    required int32 HCSR04_right_distance = 3;
 }

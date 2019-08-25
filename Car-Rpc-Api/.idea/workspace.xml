@@ -2,103 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2b0cb0b-b8bb-41cf-a716-8df61f4f8a8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/Esp8266TestClient.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/src/main/java/com/prerepa/esp8266_client/Esp8266ClientInteractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/src/main/java/com/prerepa/esp8266_client/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/src/main/java/com/prerepa/esp8266_client/MessageFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/src/main/proto/Simple_Test.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/src/test/java/MessageFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/Esp8266-Test-Client-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/Simple_Test.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/esp8266_client/Esp8266ClientInteractor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/esp8266_client/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/esp8266_client/MessageFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/Request$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/Request$Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/Request.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/RequestOrBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/Response$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/Response$Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/Response.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/ResponseOrBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/SimpleHelloWorldProto$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/classes/com/prerepa/generated/SimpleHelloWorldProto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/generated-sources/protobuf/java/com/prerepa/generated/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/generated-sources/protobuf/java/com/prerepa/generated/RequestOrBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/generated-sources/protobuf/java/com/prerepa/generated/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/generated-sources/protobuf/java/com/prerepa/generated/ResponseOrBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/generated-sources/protobuf/java/com/prerepa/generated/SimpleHelloWorldProto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/any.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/api.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/compiler/plugin.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/descriptor.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/duration.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/empty.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/field_mask.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/source_context.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/struct.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/timestamp.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/type.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/wrappers.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/annotations.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/auth.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/backend.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/billing.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/config_change.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/consumer.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/context.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/control.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/distribution.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/documentation.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/endpoint.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/experimental/authorization_config.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/experimental/experimental.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/http.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/httpbody.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/label.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/log.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/logging.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/metric.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/monitored_resource.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/monitoring.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/quota.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/service.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/source_info.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/system_parameter.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/usage.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/cloud/audit/audit_log.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/logging/type/http_request.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/logging/type/log_severity.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/longrunning/operations.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/rpc/code.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/rpc/error_details.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/rpc/status.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/color.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/date.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/dayofweek.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/latlng.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/money.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/postal_address.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/timeofday.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-plugins/protoc-3.2.0-linux-x86_64.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/protoc-plugins/protoc-gen-grpc-java-1.20.0-linux-x86_64.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266TestClient/target/test-classes/MessageFactoryTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/controller/ControllerPlatform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/controller/ControllerPlatform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/CommandStatus.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/esp8266/Esp8266Interactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/esp8266/Esp8266Interactor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/factory/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/factory/CommandFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/shared/ValueStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/shared/ValueStore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/proto/controller_proto/Controller_Interface.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/controller_proto/Controller_Interface.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/proto/esp8266_proto/Esp8266_Interface.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/esp8266_proto/Esp8266_Interface.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Esp8266TestClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Esp8266TestClient/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,8 +26,8 @@
       <list>
         <option value="Interface" />
         <option value="package-info" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -159,20 +74,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ControllerInteractorTest.buildAcknowledgeResponseTest_Cannot_Connect_To_Esp8266">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.main.Main" />
-      <module name="Car-Rpc-Api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.prerepa.car_rpc.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.com.prerepa.car_rpc in Car-Rpc-Api">
     <configuration name="ControllerInteractorTest.buildAcknowledgeResponseTest_Cannot_Connect_To_Esp8266" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Car-Rpc-Api" />
       <extension name="coverage">
@@ -237,13 +139,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.prerepa.car_rpc in Car-Rpc-Api" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Car-Rpc-Api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.prerepa.car_rpc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.com.prerepa.car_rpc in Car-Rpc-Api" />
         <item itemvalue="JUnit.ControllerInteractorTest.buildAcknowledgeResponseTest_Cannot_Connect_To_Esp8266" />
         <item itemvalue="JUnit.ControllerInteractorTest.buildAcknowledgeResponseTest_Internal_Server_Error" />
         <item itemvalue="JUnit.ControllerInteractorTest.buildAcknowledgeResponseTest_OK" />
         <item itemvalue="JUnit.ControllerInteractorTest.handleAcknowledgeTest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -269,10 +185,8 @@
       <workItem from="1565118136350" duration="17579000" />
       <workItem from="1565235475831" duration="366000" />
       <workItem from="1565236050991" duration="6579000" />
-      <workItem from="1565567448579" duration="2367000" />
-      <workItem from="1565735843849" duration="706000" />
-      <workItem from="1566012575933" duration="203000" />
-      <workItem from="1566013648224" duration="6273000" />
+      <workItem from="1565495278266" duration="307000" />
+      <workItem from="1566699078668" duration="4403000" />
     </task>
     <servers />
   </component>
@@ -298,10 +212,28 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java</url>
+          <line>37</line>
+          <properties class="com.prerepa.car_rpc.api.CarApi">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java</url>
-          <line>21</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java</url>
+          <line>12</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
