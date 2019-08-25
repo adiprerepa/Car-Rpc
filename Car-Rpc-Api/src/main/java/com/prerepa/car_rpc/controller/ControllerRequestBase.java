@@ -1,6 +1,6 @@
 package com.prerepa.car_rpc.controller;
 
-import com.prerepa.generated.*;
+import com.car_rpc.generated.*;
 import io.grpc.stub.StreamObserver;
 
 import java.io.IOException;
@@ -8,13 +8,14 @@ import java.io.IOException;
 /**
  * The actual service rpc definition, links to
  * {@link ControlInteractor} for the most part.
+ * @author aditya
  */
 public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServiceImplBase {
 
     private ControlInteractor controlInteractor = new ControlInteractor();
 
     @Override
-    public void controlService(ControlRequest controlRequest, StreamObserver<ControlResponse> responseStreamObserver) {
+    public void controlCommandService(ControlRequest controlRequest, StreamObserver<ControlResponse> responseStreamObserver) {
         ControlResponse response = null;
         try {
             // sends request to esp8266, goes through ControllerInteractor and Esp8266 interactor that
@@ -22,7 +23,11 @@ public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServi
             controlInteractor.handleControllerRequest(controlRequest);
             // recieves response from socket set in esp8266 interactor which controlInteractor has.
             // one instance of everything per service call.
-            response = controlInteractor.recieveRepsonse();
+            try {
+                response = controlInteractor.recieveRepsonse();
+            } catch (Throwable throwable) {
+                throwable.printStackTrace();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -31,9 +36,9 @@ public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServi
     }
 
     @Override
-    public void controlAcknowledge(Control_Esp8266Address esp8266Address, StreamObserver<Control_Esp8266Acknowledge> responseStreamObserver) {
+    public void controlAcknowledgeService(ControlAcknowledge esp8266Acknowledge, StreamObserver<ControlAcknowledgeResponse> responseStreamObserver) {
         // handles the address by setting the socket and key to the interactor and ValueStore
-        responseStreamObserver.onNext(controlInteractor.handleAcknowledge(esp8266Address));
+        responseStreamObserver.onNext(controlInteractor.handleAcknowledge(esp8266Acknowledge));
         responseStreamObserver.onCompleted();
     }
 }

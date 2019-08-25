@@ -1,12 +1,9 @@
 package com.prerepa.car_rpc.api.esp_8266;
 
-import com.prerepa.generated.Esp8266_Command;
-import com.prerepa.generated.Esp8266_Metrics;
-
+import com.car_rpc.generated.Full_Request;
+import com.car_rpc.generated.Metrics;
 import java.io.IOException;
-import java.net.Inet4Address;
-import java.net.Socket;
-import java.net.UnknownHostException;
+import java.nio.channels.SocketChannel;
 
 /**
  * Interface For the Esp8266 Platform
@@ -14,11 +11,11 @@ import java.net.UnknownHostException;
  * @author aditya
  */
 public interface Esp8266Platform {
-    Esp8266_Metrics recieveMetrics(Socket raw_socket) throws Throwable;
+    Metrics recieveMetrics() throws Throwable;
 
-    void sendCommand(Esp8266_Command command) throws IOException;
+    void sendCommand(Full_Request command) throws IOException;
 
-    Socket startConnection(String esp8266Endpoint, int port) throws UnknownHostException, IOException;
+    SocketChannel startConnection(String esp8266Endpoint, int port) throws IOException;
 
     void acknowledgeConnection(String hostAddress, int port, int controllerKey);
 }

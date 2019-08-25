@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fec95ab5-5911-4b6d-a613-d3f047516772" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/controller/CommandStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Car-Rpc-Api/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/api/controller/ControllerPlatform.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/api/controller/ControllerPlatform.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/esp8266/Esp8266Interactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/esp8266/Esp8266Interactor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/src/test/java/com/prerepa/car_rpc/shared/ValueStoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Car-Rpc-Api/src/test/java/com/prerepa/car_rpc/shared/ValueStoreTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/shared/ValueStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/shared/ValueStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

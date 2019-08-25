@@ -16,10 +16,10 @@ package controller;
 service ControllerService {
 
     // Acknowledge RPC
-    rpc ControlAcknowledge(ControlAcknowledge) returns (ControlAcknowledgeResponse) { }
+    rpc ControlAcknowledgeService(ControlAcknowledge) returns (ControlAcknowledgeResponse) { }
 
     // Control RPC
-    rpc ControlService(ControlRequest) returns (ControlResponse) { }
+    rpc ControlCommandService(ControlRequest) returns (ControlResponse) { }
 }
 
 // +++++++++++++++++++++++++++++++++++++++++ CONTROL - AFTER CONNECTION ACKNOWLEDGE +++++++++++++++++++++++++++++++++++++++++ //
@@ -72,6 +72,7 @@ message ControlAcknowledge {
 // For responding to the controller after they acknowledge.
 // Contains a status code to determine whether or not the connection to the
 // Esp8266 is feasible.
+// todo add initial position of car to protobuf
 message ControlAcknowledgeResponse {
     enum Request_Status {
         INTERNAL_SERVER_ERROR = 0;
