@@ -14,6 +14,11 @@ public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServi
 
     private ControlInteractor controlInteractor = new ControlInteractor();
 
+    /**
+     * Command RPC
+     * @param controlRequest
+     * @param responseStreamObserver
+     */
     @Override
     public void controlCommandService(ControlRequest controlRequest, StreamObserver<ControlResponse> responseStreamObserver) {
         ControlResponse response = null;
@@ -35,6 +40,11 @@ public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServi
         responseStreamObserver.onCompleted();
     }
 
+    /**
+     * Acknowledge RPC
+     * @param esp8266Acknowledge
+     * @param responseStreamObserver
+     */
     @Override
     public void controlAcknowledgeService(ControlAcknowledge esp8266Acknowledge, StreamObserver<ControlAcknowledgeResponse> responseStreamObserver) {
         // handles the address by setting the socket and key to the interactor and ValueStore

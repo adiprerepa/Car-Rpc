@@ -7,7 +7,6 @@ import java.nio.channels.SocketChannel;
 
 /**
  * Interface For the Esp8266 Platform
- * todo add metrics support
  * @author aditya
  */
 public interface Esp8266Platform {
@@ -17,5 +16,5 @@ public interface Esp8266Platform {
 
     SocketChannel startConnection(String esp8266Endpoint, int port) throws IOException;
 
-    void acknowledgeConnection(String hostAddress, int port, int controllerKey);
+    boolean acknowledgeConnection(String hostAddress, int port, int controllerKey);
 }

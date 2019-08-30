@@ -1,6 +1,7 @@
 package com.prerepa.car_rpc.controller;
 
 import com.car_rpc.generated.*;
+import com.google.common.annotations.VisibleForTesting;
 import com.prerepa.car_rpc.api.controller.ControllerPlatform;
 import com.prerepa.car_rpc.esp8266.Esp8266Interactor;
 import com.prerepa.car_rpc.factory.CommandFactory;
@@ -73,15 +74,16 @@ public class ControlInteractor implements ControllerPlatform {
     public ControlAcknowledgeResponse handleAcknowledge(ControlAcknowledge address) {
         ControlAcknowledgeResponse esp8266Acknowledge;
         // Acknowledge Connection
-        esp8266Interactor.acknowledgeConnection(address.getAddress(), address.getPort(), address.getControllerKey());
+        boolean connStatus = esp8266Interactor.acknowledgeConnection(address.getAddress(), address.getPort(), address.getControllerKey());
         // get result from valuestore - also can be done by returning from esp8266Interactor.acknowledgeConnection()
-        if (ValueStore.getEsp_connection_success(address.getControllerKey())) {
-            // conn success
-            esp8266Acknowledge = buildAcknowledge(AcknowledgeStatus.OK);
-        } else {
-            // conn failed
-            esp8266Acknowledge = buildAcknowledge(AcknowledgeStatus.CANNOT_CONNECT_TO_ESP8266);
-        }
+        // conn ok
+        if (connStatus) esp8266Acknowledge = buildAcknowledge(AcknowledgeStatus.OK);
+        // failed
+        else esp8266Acknowledge = buildAcknowledge(AcknowledgeStatus.CANNOT_CONNECT_TO_ESP8266);
         return esp8266Acknowledge;
+    }
+
+    public Esp8266Interactor getEsp8266Interactor() {
+        return esp8266Interactor;
     }
 }

@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2b0cb0b-b8bb-41cf-a716-8df61f4f8a8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/factory/CommandFactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/controller/ControllerPlatform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/controller/ControllerPlatform.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/CommandStatus.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/esp8266/Esp8266Interactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/esp8266/Esp8266Interactor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/factory/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/factory/CommandFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/shared/ValueStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/shared/ValueStore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/proto/controller_proto/Controller_Interface.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/controller_proto/Controller_Interface.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/esp8266_proto/Esp8266_Interface.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/esp8266_proto/Esp8266_Interface.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Esp8266TestClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Esp8266TestClient/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/api/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/controller/ControllerInteractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/controller/ControllerInteractorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/shared/ValueStoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/shared/ValueStoreTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,39 +76,39 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.com.prerepa.car_rpc in Car-Rpc-Api">
-    <configuration name="ControllerInteractorTest.buildAcknowledgeResponseTest_Cannot_Connect_To_Esp8266" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommandFactoryTest.buildAcknowledge_OK" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Car-Rpc-Api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.prerepa.car_rpc.controller.*" />
+          <option name="PATTERN" value="com.prerepa.car_rpc.factory.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.controller.ControllerInteractorTest" />
-      <option name="METHOD_NAME" value="buildAcknowledgeResponseTest_Cannot_Connect_To_Esp8266" />
+      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.factory" />
+      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.factory.CommandFactoryTest" />
+      <option name="METHOD_NAME" value="buildAcknowledge_OK" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ControllerInteractorTest.buildAcknowledgeResponseTest_Internal_Server_Error" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommandFactoryTest.buildResponse_Metrics" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Car-Rpc-Api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.prerepa.car_rpc.controller.*" />
+          <option name="PATTERN" value="com.prerepa.car_rpc.factory.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.controller.ControllerInteractorTest" />
-      <option name="METHOD_NAME" value="buildAcknowledgeResponseTest_Internal_Server_Error" />
+      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.factory" />
+      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.factory.CommandFactoryTest" />
+      <option name="METHOD_NAME" value="buildResponse_Metrics" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ControllerInteractorTest.buildAcknowledgeResponseTest_OK" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerInteractorTest.handleAcknowledgeTest_ConnectionFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Car-Rpc-Api" />
       <extension name="coverage">
         <pattern>
@@ -117,23 +118,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.controller" />
       <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.controller.ControllerInteractorTest" />
-      <option name="METHOD_NAME" value="buildAcknowledgeResponseTest_OK" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ControllerInteractorTest.handleAcknowledgeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Car-Rpc-Api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.prerepa.car_rpc.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.controller.ControllerInteractorTest" />
-      <option name="METHOD_NAME" value="handleAcknowledgeTest" />
+      <option name="METHOD_NAME" value="handleAcknowledgeTest_ConnectionFailed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -153,13 +138,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.prerepa.car_rpc.factory in Car-Rpc-Api" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Car-Rpc-Api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.prerepa.car_rpc.factory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.factory" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.com.prerepa.car_rpc in Car-Rpc-Api" />
-        <item itemvalue="JUnit.ControllerInteractorTest.buildAcknowledgeResponseTest_Cannot_Connect_To_Esp8266" />
-        <item itemvalue="JUnit.ControllerInteractorTest.buildAcknowledgeResponseTest_Internal_Server_Error" />
-        <item itemvalue="JUnit.ControllerInteractorTest.buildAcknowledgeResponseTest_OK" />
-        <item itemvalue="JUnit.ControllerInteractorTest.handleAcknowledgeTest" />
+        <item itemvalue="JUnit.com.prerepa.car_rpc.factory in Car-Rpc-Api" />
+        <item itemvalue="JUnit.CommandFactoryTest.buildAcknowledge_OK" />
+        <item itemvalue="JUnit.CommandFactoryTest.buildResponse_Metrics" />
+        <item itemvalue="JUnit.ControllerInteractorTest.handleAcknowledgeTest_ConnectionFailed" />
       </list>
     </recent_temporary>
   </component>
@@ -208,34 +207,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java</url>
-          <line>37</line>
-          <properties class="com.prerepa.car_rpc.api.CarApi">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

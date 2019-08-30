@@ -75,27 +75,29 @@ public class Esp8266Interactor implements Esp8266Platform {
 
     /**
      * Set socket key and connection status to Valuestore -
-     * and set socket locally
+     * and set socket locally. todo add connection status to ValueStore
      * @param hostAddress
      * @param port
      * @param controllerKey
+     * @return
      */
     @Override
-    public void acknowledgeConnection(String hostAddress, int port, int controllerKey) {
+    public boolean acknowledgeConnection(String hostAddress, int port, int controllerKey) {
+        boolean status;
         SocketChannel esp8266_Socket = null;
         try {
             // Starts connection - socket set along with key, in interactor too
             esp8266_Socket = startConnection(hostAddress, port);
             // conn succeded
-            ValueStore.setEsp_connection_success(controllerKey, true);
-            ValueStore.setKey(esp8266_Socket, controllerKey);
+            status = true;
         } catch (IOException e) {
             // conn failed
-            ValueStore.setEsp_connection_success(controllerKey, false);
+            status = false;
         }
         // error checking - todo
         if (esp8266_Socket != null) {
             this.socket = esp8266_Socket;
         }
+        return status;
     }
 }

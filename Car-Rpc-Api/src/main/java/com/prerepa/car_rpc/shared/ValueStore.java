@@ -1,8 +1,10 @@
 package com.prerepa.car_rpc.shared;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.net.Socket;
 import java.nio.channels.SocketChannel;
+import java.util.ArrayList;
 import java.util.Vector;
 
 /**
@@ -17,10 +19,10 @@ public class ValueStore {
      * make a hashmap of it (for speed). if it is not possible, make
      * a hashCode() for this class or the vector member class.
      */
-    private static Vector<Boolean> connectionStatuses = new Vector<>();
-    private static Vector<String> esp8266Addresses = new Vector<>();
-    private static Vector<Integer> controllerKeys = new Vector<>();
-    private static Vector<SocketChannel> sockets = new Vector<>();
+    private static ArrayList<Boolean> connectionStatuses = new ArrayList<>();
+    private static ArrayList<String> esp8266Addresses = new ArrayList<>();
+    private static ArrayList<Integer> controllerKeys = new ArrayList<>();
+    private static ArrayList<SocketChannel> sockets = new ArrayList<>();
 
     public static void setEsp_connection_success(int key, boolean value) {
         int position = controllerKeys.indexOf(key);

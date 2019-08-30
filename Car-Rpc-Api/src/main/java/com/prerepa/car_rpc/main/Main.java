@@ -14,8 +14,3 @@ public class Main {
         carApi.blockUntilShutdown();
     }
 }
-
-/**
- * TODO@aditya - PORT OVER THE SOCKETS TO SOCKETCHANNELS - IN THE ESP8266 INTERACTOR
- * IT WORKING IS IN THE OTHER PROJECT - THE TEST CLIENT
- */

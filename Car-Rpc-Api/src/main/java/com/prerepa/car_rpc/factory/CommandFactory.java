@@ -7,6 +7,8 @@ public class CommandFactory {
 
     /**
      * Encodes {@link ControlRequest} -> {@link Full_Request}
+     * - Translating Command Logic
+     * - Only works on non-analog systems
      */
     public static Full_Request buildCommand(ControlRequest request) {
         Full_Request full_request;
@@ -18,7 +20,7 @@ public class CommandFactory {
             // x is the largest and it means either servo left or right, and speed full ahead
             if (gyroscopeXPosition > 0) {
                 // -1 is left -> with full speed
-                full_request = Full_Request.newBuilder().setPowerState(powerState).setCommand(Command.newBuilder().setFrontRotation(-1).build()).build();
+                full_request = Full_Request.newBuilder().setPowerState(powerState).setCommand(Command.newBuilder().setFrontRotation(-1).setSpeed(1).build()).build();
             } else {
                 // +1 is right -> with full speed
                 full_request = Full_Request.newBuilder().setPowerState(powerState).setCommand(Command.newBuilder().setFrontRotation(1).setSpeed(1).build()).build();
@@ -37,6 +39,11 @@ public class CommandFactory {
         return full_request;
     }
 
+    /**
+     * Todo add hcsr04 distances to builder
+     * @param status
+     * @return
+     */
     public static ControlAcknowledgeResponse buildAcknowledge(AcknowledgeStatus status) {
         ControlAcknowledgeResponse acknowledge;
         switch (status) {
@@ -59,7 +66,22 @@ public class CommandFactory {
         return acknowledge;
     }
 
+    /**
+     * Build a response from metrics from the esp8266.
+     * TODO add support for faliure to connect
+     * @param metrics
+     * @return
+     */
     public static ControlResponse buildControlResponseFromEsp8266Metrics(Metrics metrics) {
-        return null;
+        int hcsr04left = metrics.getHCSR04LeftDistance();
+        int hcsr04right = metrics.getHCSR04RightDistance();
+        int hcsr04front = metrics.getHCSR04FrontDistance();
+        ControlResponse controlResponse = ControlResponse.newBuilder()
+                .setHcsr04FrontDistance(hcsr04front)
+                .setHcsr04LeftDistance(hcsr04left)
+                .setHcsr04RightDistance(hcsr04right)
+                .setRequestCode(ControlResponse.RequestStatusCode.OK)
+                .build();
+        return controlResponse;
     }
 }
