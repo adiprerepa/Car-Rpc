@@ -36,6 +36,10 @@ public class CarApi {
             server.awaitTermination();
     }
 
+    Server getServer() {
+        return this.server;
+    }
+
     private void stopServer() {
         if (server != null) server.shutdown();
     }
