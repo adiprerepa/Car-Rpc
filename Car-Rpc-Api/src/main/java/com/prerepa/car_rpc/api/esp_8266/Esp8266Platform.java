@@ -10,6 +10,7 @@ import java.nio.channels.SocketChannel;
  * @author aditya
  */
 public interface Esp8266Platform {
+
     Metrics recieveMetrics() throws Throwable;
 
     void sendCommand(Full_Request command) throws IOException;

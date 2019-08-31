@@ -5,6 +5,8 @@ import com.car_rpc.generated.Metrics;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.CodedOutputStream;
 import com.prerepa.car_rpc.api.esp_8266.Esp8266Platform;
+import com.prerepa.car_rpc.factory.ConnectionEntityBuilder;
+import com.prerepa.car_rpc.shared.ConnectionEntity;
 import com.prerepa.car_rpc.shared.ValueStore;
 import java.io.IOException;
 import java.net.InetAddress;
@@ -18,10 +20,9 @@ import java.nio.channels.SocketChannel;
  *
  * 4 things it does :
  * Acknowledgements
- *  |
  *  - sendAck
  *  - startConn
- * |
+ * Commands
  * - recieveMetrics
  * - sendCommand
  *
@@ -34,7 +35,6 @@ public class Esp8266Interactor implements Esp8266Platform {
     /**
      * Recieves metrics from the pre-set socket in the class, from the
      * esp8266 such as sensor positions.
-     * @throws Throwable
      */
     @Override
     public Metrics recieveMetrics() throws Throwable {
@@ -48,8 +48,6 @@ public class Esp8266Interactor implements Esp8266Platform {
     /**
      * Send a command to the esp8266 with the
      * {@link Full_Request#writeTo(CodedOutputStream)}
-     * @param command
-     * @throws IOException
      */
     @Override
     public void sendCommand(Full_Request command) throws IOException {
@@ -61,11 +59,7 @@ public class Esp8266Interactor implements Esp8266Platform {
 
     /**
      * Start a connection with a server,
-     * exists for testability.
-     * @param address
-     * @param port
-     * @return
-     * @throws IOException
+     * exists for testability and granularity.
      */
     @Override
     public SocketChannel startConnection(String address, int port) throws IOException {
@@ -75,11 +69,9 @@ public class Esp8266Interactor implements Esp8266Platform {
 
     /**
      * Set socket key and connection status to Valuestore -
-     * and set socket locally. todo add connection status to ValueStore
-     * @param hostAddress
-     * @param port
-     * @param controllerKey
-     * @return
+     * and set socket locally. We return the connection status
+     * for junit testability.
+     * Also set the ConnectionEntity to the ValueStore for later use (callbacks maybe).
      */
     @Override
     public boolean acknowledgeConnection(String hostAddress, int port, int controllerKey) {
@@ -88,13 +80,31 @@ public class Esp8266Interactor implements Esp8266Platform {
         try {
             // Starts connection - socket set along with key, in interactor too
             esp8266_Socket = startConnection(hostAddress, port);
+
             // conn succeded
             status = true;
+
+            // set to valuestore
+            ValueStore.singletonStore.setConnectionStatus(controllerKey, true);
+
+            // build a connectionEntity for the valuestore
+            ConnectionEntity connectionEntity = new ConnectionEntityBuilder()
+                    .setEsp826HostAddress(hostAddress)
+                    .setEsp8266Port(port)
+                    .setControllerKey(controllerKey)
+                    .build();
+
+            // set to valuestore
+            ValueStore.singletonStore.setConnectionEntity(controllerKey, connectionEntity);
         } catch (IOException e) {
             // conn failed
             status = false;
+
+            // no need to set a connection entity here.
+            // set fail to valuestore
+            ValueStore.singletonStore.setConnectionStatus(controllerKey, false);
         }
-        // error checking - todo
+        // set the socket if it was initialized
         if (esp8266_Socket != null) {
             this.socket = esp8266_Socket;
         }

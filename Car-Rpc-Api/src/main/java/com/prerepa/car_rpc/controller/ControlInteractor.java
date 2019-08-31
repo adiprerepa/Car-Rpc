@@ -1,11 +1,9 @@
 package com.prerepa.car_rpc.controller;
 
 import com.car_rpc.generated.*;
-import com.google.common.annotations.VisibleForTesting;
 import com.prerepa.car_rpc.api.controller.ControllerPlatform;
 import com.prerepa.car_rpc.esp8266.Esp8266Interactor;
 import com.prerepa.car_rpc.factory.CommandFactory;
-import com.prerepa.car_rpc.shared.ValueStore;
 
 import java.io.IOException;
 
@@ -21,22 +19,12 @@ public class ControlInteractor implements ControllerPlatform {
     private Esp8266Interactor esp8266Interactor = new Esp8266Interactor();
 
     /**
-     * Handle the request, return void. Gets
-     * the {@link ControlRequest#getControllerKey()}
-     * and gets the socket associated with it with
-     * {@link ValueStore#getSocket(int)}. The rpc
-     * uses the method {@link com.prerepa.car_rpc.factory.CommandFactory#buildCommand(ControlRequest)},
-     * and passes in the {@link ControlRequest}, and it gets a
-     * {@link Full_Request}. It then writes the command to the
-     * socket's {@link java.io.OutputStream}.
      *
-     * Uses {@link ValueStore#getSocket(int)} - so assumes that the connection
-     * was already set by the acknowledge found in :
-     * {@link ControlInteractor#handleAcknowledge(ControlAcknowledge)}
-     *
-     * request -> builder -> command -> write to socket
-     * @param request
-     * @throws IOException
+     * Takes a Request that contains the (x,y,z) accelerometer position of
+     * the phone, and builds the {@link Full_Request} through the {@link CommandFactory#buildCommand(ControlRequest)}.
+     * We then send that command to the esp8266 through the esp8266Interactor with
+     * {@link Esp8266Interactor#sendCommand(Full_Request)}
+     * request -> builder -> command -> write to socket (in esp8266 interactor)
      */
     @Override
     public void handleControllerRequest(ControlRequest request) throws IOException {
@@ -53,22 +41,18 @@ public class ControlInteractor implements ControllerPlatform {
      * the interactor set in {@link ControlInteractor#esp8266Interactor},
      * and the socket is set in the {@link Esp8266Interactor} class,
      * we use it straight from there. Usually recieves metrics
-     * @return
-     * @throws IOException
      */
     @Override
     public ControlResponse recieveRepsonse() throws Throwable {
         Metrics metrics = esp8266Interactor.recieveMetrics();
-        return CommandFactory.buildControlResponseFromEsp8266Metrics(metrics);
         // builder for esp8266 metrics -> control response
+        return CommandFactory.buildControlResponseFromEsp8266Metrics(metrics);
     }
 
     /**
      * Take the address of an esp8266 (said addr), and use the
      * {@link Esp8266Interactor#acknowledgeConnection(String, int, int)}
      * to initialize a socket in the class and the value store.
-     * @param address
-     * @return
      */
     @Override
     public ControlAcknowledgeResponse handleAcknowledge(ControlAcknowledge address) {
@@ -81,9 +65,5 @@ public class ControlInteractor implements ControllerPlatform {
         // failed
         else esp8266Acknowledge = buildAcknowledge(AcknowledgeStatus.CANNOT_CONNECT_TO_ESP8266);
         return esp8266Acknowledge;
-    }
-
-    public Esp8266Interactor getEsp8266Interactor() {
-        return esp8266Interactor;
     }
 }

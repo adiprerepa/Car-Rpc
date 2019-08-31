@@ -1,11 +1,6 @@
 package com.prerepa.car_rpc.shared;
 
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.net.Socket;
-import java.nio.channels.SocketChannel;
-import java.util.ArrayList;
-import java.util.Vector;
+import java.util.HashMap;
 
 /**
  * Shared store for all constants and information
@@ -13,52 +8,52 @@ import java.util.Vector;
  * @author aditya
  */
 public class ValueStore {
-    /**
-     * We use {@link Vector} because it is thread safe.
-     * TODO make a class that holds all the information of a server entity and
-     * make a hashmap of it (for speed). if it is not possible, make
-     * a hashCode() for this class or the vector member class.
-     */
-    private static ArrayList<Boolean> connectionStatuses = new ArrayList<>();
-    private static ArrayList<String> esp8266Addresses = new ArrayList<>();
-    private static ArrayList<Integer> controllerKeys = new ArrayList<>();
-    private static ArrayList<SocketChannel> sockets = new ArrayList<>();
-
-    public static void setEsp_connection_success(int key, boolean value) {
-        int position = controllerKeys.indexOf(key);
-        connectionStatuses.add(position, value);
-    }
-
-    public static boolean getEsp_connection_success(int key) {
-        return connectionStatuses.get(controllerKeys.indexOf(key));
-    }
 
     /**
-     * The key is associated with the socket and address
-     * @param socket
-     * @param key
-     * @throws IOException
+     * Singleton instance.
      */
-    public static void setKey(SocketChannel socket,  Integer key) throws IOException {
-        controllerKeys.add(key);
-        int position = controllerKeys.indexOf(key);
-        esp8266Addresses.add(position, socket.getRemoteAddress().toString());
+    public static ValueStore singletonStore = new ValueStore();
+
+    /**
+     * The integer is the key which we pull the connection entity from.
+     */
+    private HashMap<Integer, ConnectionEntity> connectionEntities = new HashMap<>();
+
+    /**
+     * HashMap of successes of connections, integer is key and boolean is the
+     * last success/fail - previous connection statuses get overwritten.
+     */
+    private HashMap<Integer, Boolean> connectionSuccesses = new HashMap<>();
+
+    /**
+     * The logic here is to put the connection entity in position
+     * controllerKey for easy access (HashMap find time is O(1)).
+     */
+    public void setConnectionEntity(int controllerKey, ConnectionEntity connectionEntity) {
+        connectionEntities.put(controllerKey, connectionEntity);
     }
 
-    public static void setSocket(SocketChannel socket, int key) {
-        // add to the index corresponding with the key
-        sockets.add(controllerKeys.indexOf(key), socket);
+    /**
+     * Get a connection entity from a controller key, which will be sent
+     * every iteration of command from the app.
+     */
+    public ConnectionEntity getConnectionEntity(int controllerKey) {
+        return connectionEntities.get(controllerKey);
     }
 
-    public static String getAddress(int key) {
-        return esp8266Addresses.get(controllerKeys.indexOf(key));
+    /**
+     * Set a connection success/fail after trying to connect with the car
+     * Usage : to set status for app.
+     */
+    public void setConnectionStatus(int controllerKey, Boolean connectionStatus) {
+        connectionSuccesses.put(controllerKey, connectionStatus);
     }
 
-    public static SocketChannel getSocket(int key) {
-        return sockets.get(controllerKeys.indexOf(key));
-    }
-
-    public static boolean keyExists(int key) {
-        return controllerKeys.contains(key);
+    /**
+     * Get the last connection status after trying to connect to the esp8266
+     * Usage : to get and send status to app.
+     */
+    public Boolean getLastConnectionStatus(int controllerKey) {
+        return connectionSuccesses.get(controllerKey);
     }
 }
