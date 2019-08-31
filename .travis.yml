@@ -1,2 +1,2 @@
 language: java
-script: ./platformStartupScript 
+script: bash platformStartupScript 
