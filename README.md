@@ -10,6 +10,8 @@ There are 3 main components to this project - the `esp8266`, the `api`, and the 
 ## Libraries
 This project uses `protobuf`, `gRPC`, `mysql-connector-jdbc` for the API, `ESP8266WiFi` and `nanopb` for the esp8266, and `gRPC for the controller`.
 
+travis test branch
+
 ## Authors
  - Aditya Prerepa
  - Nikhil Dhomse
