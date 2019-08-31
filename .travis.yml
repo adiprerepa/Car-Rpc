@@ -1,2 +1,2 @@
 language: java
-script: ./Car-Rpc-Api/platformStartupScript 
+script: ./Car-Rpc-Api/platformStartupScript.sh 
