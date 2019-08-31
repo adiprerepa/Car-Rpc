@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2b0cb0b-b8bb-41cf-a716-8df61f4f8a8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/factory/ConnectionEntityBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/shared/ConnectionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/shared/ValueStoreTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/factory/ConnectionEntityBuilderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/esp8266/Esp8266Interactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/esp8266/Esp8266Interactor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/shared/ValueStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/shared/ValueStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/controller/ControllerInteractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/controller/ControllerInteractorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/factory/CommandFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/factory/CommandFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/factory/ConnectionEntityBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/factory/ConnectionEntityBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/shared/ConnectionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/shared/ConnectionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/shared/ValueStoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/shared/ValueStoreTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Esp8266TestClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Esp8266TestClient/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +49,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -71,33 +72,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ValueStoreTest.connectionStatusNotSet_badControllerKey">
-    <configuration name="ValueStoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ConnectionEntityBuilderTest">
+    <configuration name="ConnectionEntityBuilderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Car-Rpc-Api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.prerepa.car_rpc.shared.*" />
+          <option name="PATTERN" value="com.prerepa.car_rpc.factory.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.shared" />
-      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.shared.ValueStoreTest" />
+      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.factory" />
+      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ValueStoreTest.connectionEntitySet_verifyNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ConnectionEntityBuilderTest.connectionEntity_nullAddress" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Car-Rpc-Api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.prerepa.car_rpc.shared.*" />
+          <option name="PATTERN" value="com.prerepa.car_rpc.factory.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.shared" />
-      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.shared.ValueStoreTest" />
-      <option name="METHOD_NAME" value="connectionEntitySet_verifyNull" />
+      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.factory" />
+      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest" />
+      <option name="METHOD_NAME" value="connectionEntity_nullAddress" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConnectionEntityBuilderTest.connectionEntity_nullFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Car-Rpc-Api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.prerepa.car_rpc.factory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.factory" />
+      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest" />
+      <option name="METHOD_NAME" value="connectionEntity_nullFields" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -119,22 +136,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ValueStoreTest.connectionStatusSet_connectionSucceeded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Car-Rpc-Api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.prerepa.car_rpc.shared.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.shared" />
-      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.shared.ValueStoreTest" />
-      <option name="METHOD_NAME" value="connectionStatusSet_connectionSucceeded" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="com.prerepa.car_rpc in Car-Rpc-Api" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Car-Rpc-Api" />
       <extension name="coverage">
@@ -151,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ValueStoreTest.connectionStatusNotSet_badControllerKey" />
-        <item itemvalue="JUnit.ValueStoreTest" />
+        <item itemvalue="JUnit.ConnectionEntityBuilderTest" />
         <item itemvalue="JUnit.com.prerepa.car_rpc in Car-Rpc-Api" />
-        <item itemvalue="JUnit.ValueStoreTest.connectionStatusSet_connectionSucceeded" />
-        <item itemvalue="JUnit.ValueStoreTest.connectionEntitySet_verifyNull" />
+        <item itemvalue="JUnit.ConnectionEntityBuilderTest.connectionEntity_nullAddress" />
+        <item itemvalue="JUnit.ConnectionEntityBuilderTest.connectionEntity_nullFields" />
+        <item itemvalue="JUnit.ValueStoreTest.connectionStatusNotSet_badControllerKey" />
       </list>
     </recent_temporary>
   </component>
@@ -183,6 +184,12 @@
       <workItem from="1565236050991" duration="6579000" />
       <workItem from="1565495278266" duration="307000" />
       <workItem from="1566699078668" duration="4403000" />
+      <workItem from="1567226617419" duration="54000" />
+      <workItem from="1567272600644" duration="27000" />
+      <workItem from="1567272647392" duration="78000" />
+      <workItem from="1567272762764" duration="96000" />
+      <workItem from="1567273273060" duration="12000" />
+      <workItem from="1567277423540" duration="2482000" />
     </task>
     <servers />
   </component>

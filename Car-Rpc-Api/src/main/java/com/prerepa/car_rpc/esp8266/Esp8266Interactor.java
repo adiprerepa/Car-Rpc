@@ -89,9 +89,10 @@ public class Esp8266Interactor implements Esp8266Platform {
 
             // build a connectionEntity for the valuestore
             ConnectionEntity connectionEntity = new ConnectionEntityBuilder()
-                    .setEsp826HostAddress(hostAddress)
+                    .setEsp8266HostAddress(hostAddress)
                     .setEsp8266Port(port)
                     .setControllerKey(controllerKey)
+                    .setSocketChannel(esp8266_Socket)
                     .build();
 
             // set to valuestore

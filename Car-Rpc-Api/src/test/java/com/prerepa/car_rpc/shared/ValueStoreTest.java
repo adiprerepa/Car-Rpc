@@ -15,7 +15,7 @@ public class ValueStoreTest {
     public void connectionEntitySet_notNullControllerKey() {
         int controllerKey = 11111;
         ConnectionEntity testConnectionEntity = new ConnectionEntityBuilder()
-                .setEsp826HostAddress("x.x.x.x")
+                .setEsp8266HostAddress("x.x.x.x")
                 .setEsp8266Port(0)
                 .setControllerKey(controllerKey)
                 .build();
@@ -28,7 +28,7 @@ public class ValueStoreTest {
     public void connectionEntitySet_badControllerKey() {
         int controllerKey = 11111;
         ConnectionEntity testConnectionEntity = new ConnectionEntityBuilder()
-                .setEsp826HostAddress("x.x.x.x")
+                .setEsp8266HostAddress("x.x.x.x")
                 .setEsp8266Port(0)
                 .setControllerKey(controllerKey)
                 .build();

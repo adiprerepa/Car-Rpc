@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fec95ab5-5911-4b6d-a613-d3f047516772" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Car-Rpc-Api/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/api/controller/ControllerPlatform.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/api/controller/ControllerPlatform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/esp8266/Esp8266Interactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/esp8266/Esp8266Interactor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/shared/ValueStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/shared/ValueStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/shared/ConnectionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Car-Rpc-Api/src/main/java/com/prerepa/car_rpc/shared/ConnectionEntity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,6 +103,7 @@
       <workItem from="1565738706897" duration="12225000" />
       <workItem from="1566012948575" duration="697000" />
       <workItem from="1566341449194" duration="1625000" />
+      <workItem from="1567272999352" duration="62000" />
     </task>
     <servers />
   </component>
@@ -151,11 +148,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/esp8266_client/Main.java</url>
           <line>14</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/esp8266_client/Esp8266ClientInteractor.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/esp8266_client/Main.java</url>

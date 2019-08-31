@@ -40,9 +40,7 @@ public class CommandFactory {
     }
 
     /**
-     * Todo add hcsr04 distances to builder
-     * @param status
-     * @return
+     * Build an Acknowledge from the local enum {@link AcknowledgeStatus}.
      */
     public static ControlAcknowledgeResponse buildAcknowledge(AcknowledgeStatus status) {
         ControlAcknowledgeResponse acknowledge;
@@ -68,20 +66,17 @@ public class CommandFactory {
 
     /**
      * Build a response from metrics from the esp8266.
-     * TODO add support for faliure to connect
-     * @param metrics
-     * @return
+     * TODO add support for faliure to connect - when the esp8266 disconnects
      */
     public static ControlResponse buildControlResponseFromEsp8266Metrics(Metrics metrics) {
         int hcsr04left = metrics.getHCSR04LeftDistance();
         int hcsr04right = metrics.getHCSR04RightDistance();
         int hcsr04front = metrics.getHCSR04FrontDistance();
-        ControlResponse controlResponse = ControlResponse.newBuilder()
+        return ControlResponse.newBuilder()
                 .setHcsr04FrontDistance(hcsr04front)
                 .setHcsr04LeftDistance(hcsr04left)
                 .setHcsr04RightDistance(hcsr04right)
                 .setRequestCode(ControlResponse.RequestStatusCode.OK)
                 .build();
-        return controlResponse;
     }
 }
