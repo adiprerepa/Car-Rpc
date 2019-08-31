@@ -12,7 +12,6 @@ This project uses `protobuf`, `gRPC`, `mysql-connector-jdbc` for the API, `ESP82
 
 ## Authors
  - Aditya Prerepa
- - Akshay Trivedi
  - Nikhil Dhomse
  
 ## Updated Last
