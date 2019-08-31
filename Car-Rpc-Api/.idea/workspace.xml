@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2b0cb0b-b8bb-41cf-a716-8df61f4f8a8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/platformStartupScript.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../platformStartupScript.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformStartupScript.sh" beforeDir="false" afterPath="$PROJECT_DIR$/platformStartupScript.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
