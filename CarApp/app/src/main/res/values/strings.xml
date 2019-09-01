@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Car-App</string>
-    <string name="backward">Backward</string>
-    <string name="forward">Forward</string>
-    <string name="right">Right</string>
-    <string name="left">Left</string>
-</resources>
