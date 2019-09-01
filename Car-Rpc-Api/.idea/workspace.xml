@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2b0cb0b-b8bb-41cf-a716-8df61f4f8a8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/controller/ControllerRequestBaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/api/CarApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/api/CarApiTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="b2b0cb0b-b8bb-41cf-a716-8df61f4f8a8f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,19 +61,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.com.prerepa.car_rpc in Car-Rpc-Api">
-    <configuration name="CarApiTest.carApiServiceShutsDown" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.main.Main" />
       <module name="Car-Rpc-Api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.prerepa.car_rpc.api.*" />
+          <option name="PATTERN" value="com.prerepa.car_rpc.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.api" />
-      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.api.CarApiTest" />
-      <option name="METHOD_NAME" value="carApiServiceShutsDown" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -146,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.com.prerepa.car_rpc in Car-Rpc-Api" />
         <item itemvalue="JUnit.ControllerRequestBaseTest.controlAcknowledgeTest" />
         <item itemvalue="JUnit.CarApiTest.carApiServiceStarts_serverNull" />
         <item itemvalue="JUnit.CarApiTest.carApiServiceStarts" />
-        <item itemvalue="JUnit.CarApiTest.carApiServiceShutsDown" />
       </list>
     </recent_temporary>
   </component>
