@@ -1,6 +1,9 @@
 # Car-Rpc
 The objective of this project is to effectively take control of a toy car (RC), with a platform API and controllers, and give it infinite range. 
 
+## Build Status
+[![Build Status](https://travis-ci.org/adiprerepa/Car-Rpc.svg?branch=master)](https://travis-ci.org/adiprerepa/Car-Rpc)
+
 ## Architecture
 There are 3 main components to this project - the `esp8266`, the `api`, and the `controller`. Here, the `esp8266` is done in c++, the
 `api` is done in java, and the controller is done in `c++` and/or `java`. Here, the `esp8266` is the master.
