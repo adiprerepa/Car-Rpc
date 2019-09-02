@@ -44,6 +44,9 @@ class CarAcknowledgeRpcTask(activity: Activity): AsyncTask<String, Void, Control
             val sw = StringWriter()
             val pw = PrintWriter(sw)
             e.printStackTrace(pw)
+            /**
+             * Todo make this error an activity screen
+             */
             return ControlAcknowledgeResponse.Request_Status.INTERNAL_SERVER_ERROR
         }
     }

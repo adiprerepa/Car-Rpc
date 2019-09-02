@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 
 class ServerInformationActivity : Activity() {
 
@@ -28,9 +29,13 @@ class ServerInformationActivity : Activity() {
         }
         continueButt.setOnClickListener {
             val host: String? = hostEditText!!.text.toString()
-            val port: Int? = Integer.valueOf(portEditText!!.text.toString())
-            val controllerKey: Int? = Integer.valueOf(controllerEditText!!.text.toString())
-            tryToConnectPass(host, port, controllerKey)
+            val port: Int? = portEditText!!.text.toString().toIntOrNull()
+            val controllerKey: Int? = controllerEditText!!.text.toString().toIntOrNull()
+            if (host.isNullOrBlank() || port == null || controllerKey == null) {
+                Toast.makeText(applicationContext, "Please fill in all fields or make sure port and key are integers", Toast.LENGTH_LONG).show()
+            } else {
+                tryToConnectPass(host, port, controllerKey)
+            }
         }
     }
 

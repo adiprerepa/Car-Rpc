@@ -18,12 +18,13 @@ class ConnectActivity : Activity() {
         val port: Int? = intent.getIntExtra("port", 0)
         sendMessage(host, port, key)
         val progressBar: ProgressBar = findViewById(R.id.progressBar)
+        progressBar.visibility = View.VISIBLE
         if (progressBar.visibility == View.GONE) {
             val intent = Intent(this, ConnectedActivity::class.java)
             startActivity(intent)
         } else {
             // pass intent extras for the case of retry connection..
-            val intent = Intent(this, ConnectedActivity::class.java).apply {
+            val intent = Intent(this, UnableToConnectActivity::class.java).apply {
                 putExtra("host", host)
                 putExtra("key", key)
                 putExtra("port", port)
