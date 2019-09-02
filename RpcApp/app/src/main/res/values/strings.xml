@@ -12,4 +12,10 @@
     <string name="connecting">Connecting...</string>
     <string name="connected">Connected!</string>
     <string name="controller_key">Controller Key</string>
+    <string name="unable_to_connect">Unable to Connect...</string>
+    <string name="retry_connect">Retry Connecting</string>
+    <string name="ip_port_wrong">This is embarrasing…Either the IP and Port you entered of the esp8266 was wrong or you are in the wrong network. Here are some options.</string>
+    <string name="change_car_info">Change Car Info</string>
+    <string name="butt_next">Next</string>
+    <string name="red_x">red x</string>
 </resources>

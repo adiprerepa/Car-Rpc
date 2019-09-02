@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,7 +13,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val nextButton = findViewById<Button>(R.id.button)
         nextButton.setOnClickListener {
-            serverInformationScreenRelay()
+            val intent = Intent(this, ServerInformationActivity::class.java)
+            startActivity(intent)
+//            serverInformationScreenRelay()
         }
     }
 

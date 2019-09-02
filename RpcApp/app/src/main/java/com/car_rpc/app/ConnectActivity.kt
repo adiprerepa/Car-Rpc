@@ -22,7 +22,13 @@ class ConnectActivity : Activity() {
             val intent = Intent(this, ConnectedActivity::class.java)
             startActivity(intent)
         } else {
-            progressBar.visibility = View.VISIBLE
+            // pass intent extras for the case of retry connection..
+            val intent = Intent(this, ConnectedActivity::class.java).apply {
+                putExtra("host", host)
+                putExtra("key", key)
+                putExtra("port", port)
+            }
+            startActivity(intent)
         }
     }
 

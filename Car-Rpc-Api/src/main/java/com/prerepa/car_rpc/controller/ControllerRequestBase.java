@@ -43,6 +43,7 @@ public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServi
      */
     @Override
     public void controlAcknowledgeService(ControlAcknowledge esp8266Acknowledge, StreamObserver<ControlAcknowledgeResponse> responseStreamObserver) {
+	System.out.println("Got a connection.");
         // handles the address by setting the socket and key to the interactor and ValueStore
         responseStreamObserver.onNext(controlInteractor.handleAcknowledge(esp8266Acknowledge));
         responseStreamObserver.onCompleted();

@@ -14,6 +14,7 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/welcome"
         style="@android:style/Widget.DeviceDefault.Light.TextView.SpinnerItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

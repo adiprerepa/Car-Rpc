@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.car_rpc.app">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,22 +21,27 @@
             </intent-filter>
         </activity>
         <activity android:name=".ServerInformationActivity"
-            android:parentActivityName=".MainActivity"
-            tools:targetApi="jelly_bean">
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
         <activity
             android:name=".ConnectActivity"
-            android:parentActivityName=".ServerInformationActivity"
-            tools:targetApi="jelly_bean">
+            android:parentActivityName=".ServerInformationActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ServerInformationActivity" />
         </activity>
         <activity android:name=".ConnectedActivity"
-            android:parentActivityName=".ConnectActivity"
-            tools:targetApi="jelly_bean">
+            android:parentActivityName=".ConnectActivity">
         </activity>
         <activity
             android:name=".ControllerActivity"
-            android:parentActivityName=".ConnectedActivity"
-            tools:targetApi="jelly_bean" />
+            android:parentActivityName=".ConnectedActivity" />
+        <activity
+            android:name=".UnableToConnectActivity"
+            android:parentActivityName=".ConnectActivity" />
     </application>
 
 </manifest>

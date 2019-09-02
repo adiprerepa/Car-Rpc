@@ -14,10 +14,19 @@ class ServerInformationActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.server_info_main)
         val continueButt: Button = findViewById(R.id.continueButton)
+        val hostEditText: EditText? = findViewById(R.id.host_edit_text)
+        val portEditText: EditText? = findViewById(R.id.portEditText)
+        val controllerEditText: EditText? = findViewById(R.id.controller_key_edit_text)
+        val retryHost: String? = intent.getStringExtra("host")
+        val retryPort: Int? = intent.getIntExtra("port", 0)
+        val retryKey: Int? = intent.getIntExtra("key", 0)
+        // set from retry in UnableToConnectActivity - edge case is if its the first time there
+        if (!retryHost.isNullOrBlank()) {
+            hostEditText!!.setText(retryHost)
+            portEditText!!.setText(retryPort.toString())
+            controllerEditText!!.setText(retryKey.toString())
+        }
         continueButt.setOnClickListener {
-            val hostEditText: EditText? = findViewById(R.id.host_edit_text)
-            val portEditText: EditText? = findViewById(R.id.portEditText)
-            val controllerEditText: EditText? = findViewById(R.id.controller_key_edit_text)
             val host: String? = hostEditText!!.text.toString()
             val port: Int? = Integer.valueOf(portEditText!!.text.toString())
             val controllerKey: Int? = Integer.valueOf(controllerEditText!!.text.toString())
