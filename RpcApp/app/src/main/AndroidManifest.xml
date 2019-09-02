@@ -22,6 +22,19 @@
             android:parentActivityName=".MainActivity"
             tools:targetApi="jelly_bean">
         </activity>
+        <activity
+            android:name=".ConnectActivity"
+            android:parentActivityName=".ServerInformationActivity"
+            tools:targetApi="jelly_bean">
+        </activity>
+        <activity android:name=".ConnectedActivity"
+            android:parentActivityName=".ConnectActivity"
+            tools:targetApi="jelly_bean">
+        </activity>
+        <activity
+            android:name=".ControllerActivity"
+            android:parentActivityName=".ConnectedActivity"
+            tools:targetApi="jelly_bean" />
     </application>
 
 </manifest>

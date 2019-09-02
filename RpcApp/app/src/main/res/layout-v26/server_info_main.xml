@@ -18,13 +18,13 @@
         android:text="@string/enter_addr"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#831B1B"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintBottom_toTopOf="@+id/host_edit_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/portEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
@@ -44,7 +44,7 @@
         app:layout_constraintVertical_bias="0.32" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/host_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -56,7 +56,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/ip_address"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/portEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enter_host"

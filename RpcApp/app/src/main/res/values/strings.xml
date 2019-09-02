@@ -8,4 +8,8 @@
     <string name="how_it_works">How it works</string>
     <string name="ip_address">IP Address</string>
     <string name="host">host</string>
+    <string name="connect">Connect</string>
+    <string name="connecting">Connecting...</string>
+    <string name="connected">Connected!</string>
+    <string name="controller_key">Controller Key</string>
 </resources>
