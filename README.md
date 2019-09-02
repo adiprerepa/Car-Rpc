@@ -1,7 +1,7 @@
 # Car-Rpc
 The objective of this project is to effectively take control of a toy car (RC), with a platform API and controllers, and give it infinite range. 
 
-## Build Status
+## Travis CI Build Status
 [![Build Status](https://travis-ci.org/adiprerepa/Car-Rpc.svg?branch=master)](https://travis-ci.org/adiprerepa/Car-Rpc)
 
 ## Purpose
@@ -17,14 +17,22 @@ This project requires :
  - *A Network Connection* - Does not require internet access because the server is being run locally - so any old router or your home router should work.
 
 ## Setup
-The repository has 3 main components (excluding test directories)
+The repository has 3 main components (excluding test directories).
  - `CarApp` - The android App Directory.
- - `Esp8266` - the embedded system code for the microcontroller
- - `Car-Rpc-Api` - The main server platform
-One of the ideologies behind this project were to have the App and Esp8266 do as little work as possible, and have the server do all the heavy lifting/processing. Any crappy linux-based computer (what we tested it on) will work perfect. A Raspberry Pi is perfect for this job, but anything will do.
+ - `Esp8266` - the embedded system code for the microcontroller.
+ - `Car-Rpc-Api` - The main server platform.
+ - One of the ideologies behind this project were to have the App and Esp8266 do as little work as possible, and have the server do all the heavy lifting/processing. Any crappy linux-based computer (what we tested it on) will work perfect. A Raspberry Pi is perfect for this job, but anything will do.
 
 ### Server Setup
-1) Clone the repository into your computer using `git clone`, and navigate to `Car-Rpc-Api`, using `cd Car-Rpc-Api`. If you list out the contents of this directory, you should see a `pom.xml` and an `src` directory. Assuming you have maven installed, run the command `mvn package` and wait for it to finish running. (`mvn package` will require wifi, as maven will try to clone `.pom` files and `.jar` files from other sources). Once it finishes, 
+ 1) Clone Repositiory with command `git clone git@github.com:adiprerepa/Car-Rpc.git` - Needs to be in home directory.
+ 2) Do `cd Car-Rpc-Api`. List out the contents with `ls`, you should see a `pom.xml`, `runPlatform.sh`, and a `src` directory.
+ 3) Run `./runPlatform.sh`, wait for the terminal output of the java program, you should see something like `Server Started on port <port>`.
+#### Prerequisites - Server Setup 
+ - An Internet Connection (Setup - git&maven)
+ - Maven Installed
+ - Java 8 or Higher Installed
+
+### Esp8266 Setup
 
 ## Architecture
 There are 3 main components to this project - the `esp8266`, the `api`, and the `controller`. Here, the `esp8266` is done in c++, the
@@ -35,11 +43,8 @@ There are 3 main components to this project - the `esp8266`, the `api`, and the 
 ## Libraries
 This project uses `protobuf`, `gRPC`, `mysql-connector-jdbc` for the API, `ESP8266WiFi` and `nanopb` for the esp8266, and `gRPC for the controller`.
 
-## Authors
+## Author
  - Aditya Prerepa
- - Nikhil Dhomse
- - Akshay Trivedi
-
 
 ## Updated Last
-8/5/19
+9/1/19 - not finished
