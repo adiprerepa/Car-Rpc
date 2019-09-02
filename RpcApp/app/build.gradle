@@ -4,6 +4,10 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'com.android.application'
+
+apply plugin: 'com.google.protobuf'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -19,6 +23,16 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            proto {
+                srcDir 'src/main/proto'
+            }
+            java {
+                srcDir 'src/main/java/generated_protobuf'
+            }
         }
     }
 }

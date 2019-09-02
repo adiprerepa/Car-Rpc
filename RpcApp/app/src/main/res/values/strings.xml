@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">RpcApp</string>
+    <string name="get_started">Car Rpc is a project in which uses this devices accelerometer to control an RC car. Ready to get started?</string>
+    <string name="continue_butt">Continue</string>
+    <string name="welcome_text">Welcome to Car Rpc!</string>
+    <string name="enter_addr">Please Enter the Esp8266\'s IP Address and Port.</string>
+    <string name="port">Port</string>
+    <string name="how_it_works">How it works</string>
+    <string name="ip_address">IP Address</string>
+    <string name="host">host</string>
 </resources>
