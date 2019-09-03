@@ -1,6 +1,7 @@
 package com.prerepa.car_rpc.controller;
 
 import com.car_rpc.generated.*;
+import com.prerepa.car_rpc.esp8266.Esp8266Interactor;
 import io.grpc.stub.StreamObserver;
 
 import java.io.IOException;
@@ -12,7 +13,15 @@ import java.io.IOException;
  */
 public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServiceImplBase {
 
-    private ControlInteractor controlInteractor = new ControlInteractor();
+    private ControlInteractor controlInteractor;
+
+    public ControllerRequestBase() {
+        controlInteractor = new ControlInteractor();
+    }
+
+    public ControllerRequestBase(ControlInteractor controlInteractor) {
+        this.controlInteractor = controlInteractor;
+    }
 
     /**
      * Command RPC

@@ -1,6 +1,8 @@
 package com.prerepa.car_rpc.api;
 
+import com.prerepa.car_rpc.controller.ControlInteractor;
 import com.prerepa.car_rpc.controller.ControllerRequestBase;
+import com.prerepa.car_rpc.esp8266.Esp8266Interactor;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 

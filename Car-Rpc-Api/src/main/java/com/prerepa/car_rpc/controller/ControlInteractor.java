@@ -16,7 +16,15 @@ import static com.prerepa.car_rpc.factory.CommandFactory.buildCommand;
  */
 public class ControlInteractor implements ControllerPlatform {
 
-    private Esp8266Interactor esp8266Interactor = new Esp8266Interactor();
+    private Esp8266Interactor esp8266Interactor;
+
+    public ControlInteractor() {
+        esp8266Interactor = new Esp8266Interactor();
+    }
+
+    public ControlInteractor(Esp8266Interactor esp8266Interactor) {
+        this.esp8266Interactor = esp8266Interactor;
+    }
 
     /**
      *
