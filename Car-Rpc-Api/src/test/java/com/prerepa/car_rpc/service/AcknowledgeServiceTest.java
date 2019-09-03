@@ -1,4 +1,4 @@
-package com.prerepa.car_rpc.api;
+package com.prerepa.car_rpc.service;
 
 import com.car_rpc.generated.ControlAcknowledge;
 import com.car_rpc.generated.ControlAcknowledgeResponse;
@@ -144,6 +144,9 @@ public class AcknowledgeServiceTest {
         }
     }
 
+    /**
+     * Inject the mock interactor in last 2 tests
+     */
     static class TestControlInteractor extends ControlInteractor {
 
          ControlAcknowledgeResponse.Request_Status requestStatus;
