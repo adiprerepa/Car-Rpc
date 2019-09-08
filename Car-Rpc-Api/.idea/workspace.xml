@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2b0cb0b-b8bb-41cf-a716-8df61f4f8a8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/controller/ControlInteractorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/service/ControlServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/BaseDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/InsertionStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/base_entities/DatabaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/base_entities/EntityIdentifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/base_entities/RetrievalEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/known_cars/KnownCarDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/known_cars/RetrievalStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/known_cars/entities/CarEntityIdentifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/known_cars/entities/KnownCarEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RpcApp/app/src/main/java/com/car_rpc/app/api/task/CarCommandRpcTask.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/api/AcknowledgeServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/service/AcknowledgeServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/controller/ControllerRequestBaseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car-Rpc-Api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Car-Rpc-Api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/controller/ControllerPlatform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/controller/ControllerPlatform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/controller_proto/Controller_Interface.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/controller_proto/Controller_Interface.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/service/ControlServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/service/ControlServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Esp8266/Esp8266.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../Esp8266/Esp8266.ino" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,14 +28,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="Car-Rpc-Api" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="package-info" />
+        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
       </list>
@@ -36,6 +64,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -70,7 +99,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in Car-Rpc-Api">
+  <component name="RunManager" selected="JUnit.ControlServiceTest.controlServiceTest_validCommand">
+    <configuration name="All in Car-Rpc-Api (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Car-Rpc-Api" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in Car-Rpc-Api" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Car-Rpc-Api" />
       <option name="PACKAGE_NAME" value="" />
@@ -95,32 +132,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ControlInteractorTest.esp8266VerifyCommandIsBuilt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControlServiceTest.controlServiceTest_validCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Car-Rpc-Api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.prerepa.car_rpc.controller.*" />
+          <option name="PATTERN" value="com.prerepa.car_rpc.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.controller" />
-      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.controller.ControlInteractorTest" />
-      <option name="METHOD_NAME" value="esp8266VerifyCommandIsBuilt" />
+      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc.service" />
+      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.service.ControlServiceTest" />
+      <option name="METHOD_NAME" value="controlServiceTest_validCommand" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="com.prerepa.car_rpc in Car-Rpc-Api" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Car-Rpc-Api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.prerepa.car_rpc.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.prerepa.car_rpc" />
-      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -141,13 +164,33 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ControlServiceTest.controlServiceTest_validCommand" />
+        <item itemvalue="JUnit.All in Car-Rpc-Api (1)" />
         <item itemvalue="JUnit.All in Car-Rpc-Api" />
         <item itemvalue="JUnit.com.prerepa.car_rpc.controller in Car-Rpc-Api" />
         <item itemvalue="JUnit.ControlInteractorTest.esp8266RecieveMetricsCalled" />
-        <item itemvalue="JUnit.com.prerepa.car_rpc in Car-Rpc-Api" />
-        <item itemvalue="JUnit.ControlInteractorTest.esp8266VerifyCommandIsBuilt" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@26fe9b1c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@26fe9b1c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@2e69d934" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -181,7 +224,9 @@
       <workItem from="1567277423540" duration="3718000" />
       <workItem from="1567394904482" duration="100000" />
       <workItem from="1567471128892" duration="828000" />
-      <workItem from="1567472007469" duration="12733000" />
+      <workItem from="1567472007469" duration="25772000" />
+      <workItem from="1567818579214" duration="20176000" />
+      <workItem from="1567975807129" duration="4214000" />
     </task>
     <servers />
   </component>
@@ -211,16 +256,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/com/prerepa/car_rpc/service/AcknowledgeServiceTest.java</url>
           <line>48</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java</url>
-          <line>68</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/esp8266/Esp8266Interactor.java</url>

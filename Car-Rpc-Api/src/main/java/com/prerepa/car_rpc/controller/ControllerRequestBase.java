@@ -57,4 +57,14 @@ public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServi
         responseStreamObserver.onNext(controlInteractor.handleAcknowledge(esp8266Acknowledge));
         responseStreamObserver.onCompleted();
     }
+
+    @Override
+    public void serverAcknowledgeService(ServerAcknowledge serverAcknowledge, StreamObserver<ServerAcknowledgeResponse> responseStreamObserver) {
+
+    }
+
+    @Override
+    public void discoveryService(Esp8266DiscoveryRequest discoveryRequest, StreamObserver<Esp8266DiscoveryResponse> responseStreamObserver) {
+
+    }
 }

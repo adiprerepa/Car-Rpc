@@ -61,6 +61,7 @@ public class ControlInteractor implements ControllerPlatform {
      * Take the address of an esp8266 (said addr), and use the
      * {@link Esp8266Interactor#acknowledgeConnection(String, int, int)}
      * to initialize a socket in the class and the value store.
+     * For Hard-Coded IP and port
      */
     @Override
     public ControlAcknowledgeResponse handleAcknowledge(ControlAcknowledge address) {
@@ -73,5 +74,30 @@ public class ControlInteractor implements ControllerPlatform {
         // failed
         else esp8266Acknowledge = buildAcknowledge(AcknowledgeStatus.CANNOT_CONNECT_TO_ESP8266);
         return esp8266Acknowledge;
+    }
+
+    @Override
+    public ServerAcknowledgeResponse handleServerAcknowledge(ServerAcknowledge serverAcknowledge) {
+        // todo when database support is added serverAcknowledge has a controllerKey we need to allocate
+        // a row to?
+        return ServerAcknowledgeResponse.newBuilder()
+                .setRequestStatus(ServerAcknowledgeResponse.RequestStatus.OK)
+                .build();
+    }
+
+    /**
+     * This only works if the server is in the same network
+     * as the esp8266s.
+     * @param discoveryRequest req
+     * @return EspResp
+     */
+    @Override
+    public Esp8266DiscoveryResponse handleDiscoveryRequest(Esp8266DiscoveryRequest discoveryRequest) {
+        /*
+          todo java mDNS here
+            it would also be possible to send a prompt to the esp8266 to start
+            discovery, given we have the connection at our disposal.
+         */
+        return null;
     }
 }

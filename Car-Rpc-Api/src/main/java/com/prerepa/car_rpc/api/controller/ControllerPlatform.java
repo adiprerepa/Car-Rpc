@@ -1,9 +1,6 @@
 package com.prerepa.car_rpc.api.controller;
 
-import com.car_rpc.generated.ControlAcknowledge;
-import com.car_rpc.generated.ControlAcknowledgeResponse;
-import com.car_rpc.generated.ControlRequest;
-import com.car_rpc.generated.ControlResponse;
+import com.car_rpc.generated.*;
 
 import java.io.IOException;
 
@@ -17,4 +14,8 @@ public interface ControllerPlatform {
     ControlResponse recieveRepsonse() throws Throwable;
 
     ControlAcknowledgeResponse handleAcknowledge(ControlAcknowledge address);
+
+    ServerAcknowledgeResponse handleServerAcknowledge(ServerAcknowledge serverAcknowledge);
+
+    Esp8266DiscoveryResponse handleDiscoveryRequest(Esp8266DiscoveryRequest discoveryRequest);
 }

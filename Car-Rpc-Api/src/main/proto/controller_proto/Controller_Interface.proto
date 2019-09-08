@@ -15,16 +15,19 @@ package controller;
 // 	that are displayed on the app.
 service ControllerService {
 
-    // Acknowledge RPC
+    // Acknowledge RPC - Hard Coded
     rpc ControlAcknowledgeService(ControlAcknowledge) returns (ControlAcknowledgeResponse) { }
+
+    // Server Acknowledge RPC
+    rpc ServerAcknowledgeService(ServerAcknowledge) returns (ServerAcknowledgeResponse) { }
+
+    rpc DiscoveryService(Esp8266DiscoveryRequest) returns (Esp8266DiscoveryResponse) { }
 
     // Control RPC
     rpc ControlCommandService(ControlRequest) returns (ControlResponse) { }
 }
 
-// +++++++++++++++++++++++++++++++++++++++++ CONTROL - AFTER CONNECTION ACKNOWLEDGE +++++++++++++++++++++++++++++++++++++++++ //
-
-// Vector3 is the format for the calibration of the gyroscope and accelorotmeraods
+// Vector is the format for the calibration of the gyroscope and accelerometer
 // in the phone. The calibration is used to find the desired velocities, acceleration,
 // and directon of the car.
 message Vector {
@@ -59,20 +62,48 @@ message ControlResponse {
     required RequestStatusCode requestCode = 4;
 }
 
-// +++++++++++++++++++++++++++++++++++++++++ ACKNOWLEDGE - INITIAL STUFF +++++++++++++++++++++++++++++++++++++++++ //
+// acknowledge a server exists with a controller key
+// prompted by app client, in menu options -> add server
+message ServerAcknowledge {
+    required int32 controllerKey = 1;
+}
 
-// For beginning a connection between the controller and the API.
-// The controller sends the address and port of the Esp8266.
-// The controllerKey is a password to ensure the security of the connection.
+// add cars to send back
+message ServerAcknowledgeResponse {
+    enum RequestStatus {
+        SERVER_ERROR = 0;
+        OK = 1;
+    }
+    required RequestStatus requestStatus = 1;
+}
+
+// for discovery with mDNS esp8266 - sent by controller
+message Esp8266DiscoveryRequest {
+    // no-op : just requesting acknowledge
+    required int32 controllerKey = 1;
+}
+
+message Esp8266DiscoveryResponse {
+    // for displaying on app later
+    enum AcknowledgeStatus {
+        OK = 0;
+        UNABLE_TO_CONNECT = 1;
+    }
+    required AcknowledgeStatus status = 1;
+    // add this when database support happens (or make it optional)
+    // this sends cars back FOUND AT TIME OF DISCOVERY
+    // repeated required carsFound = 1;
+}
+
+// For when discovery doesnt work and you want to hard-code
+// IP and Port.
 message ControlAcknowledge {
     required string address = 1;
     required int32 port = 2;
     required int32 controllerKey = 3;
 }
-// For responding to the controller after they acknowledge.
-// Contains a status code to determine whether or not the connection to the
-// Esp8266 is feasible.
-// todo add metrics
+
+// Was able to connect with ControlAcknowledge message?
 message ControlAcknowledgeResponse {
     enum Request_Status {
         INTERNAL_SERVER_ERROR = 0;
@@ -82,4 +113,3 @@ message ControlAcknowledgeResponse {
     required Request_Status status = 1;
 }
 
-// +++++++++++++++++++++++++++++++++++++++++ END REGION +++++++++++++++++++++++++++++++++++++++++ //
