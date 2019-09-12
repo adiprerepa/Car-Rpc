@@ -3,6 +3,8 @@ package com.prerepa.car_rpc.service;
 import com.car_rpc.generated.*;
 import com.prerepa.car_rpc.controller.ControlInteractor;
 import com.prerepa.car_rpc.controller.ControllerRequestBase;
+import com.prerepa.car_rpc.database.DatabaseCredentials;
+import com.prerepa.car_rpc.database.known_cars.KnownCarDatabase;
 import com.prerepa.car_rpc.esp8266.Esp8266Interactor;
 import io.grpc.inprocess.InProcessChannelBuilder;
 import io.grpc.inprocess.InProcessServerBuilder;
@@ -27,6 +29,7 @@ public class ControlServiceTest {
      */
     @Test
     public void controlServiceTest_validCommand() throws IOException {
+        TestKnownCarDatabase testKnownCarDatabase = new TestKnownCarDatabase();
         String serverName = InProcessServerBuilder.generateName();
         TestEsp8266Interactor testEsp8266Interactor = new TestEsp8266Interactor();
         Metrics expectedMetrics = Metrics.newBuilder()
@@ -37,7 +40,7 @@ public class ControlServiceTest {
         testEsp8266Interactor.metrics = expectedMetrics;
         grpcCleanupRule.register(
                 // Register service and add test interactor
-                InProcessServerBuilder.forName(serverName).directExecutor().addService(new ControllerRequestBase(new ControlInteractor(testEsp8266Interactor))).build().start()
+                InProcessServerBuilder.forName(serverName).directExecutor().addService(new ControllerRequestBase(new ControlInteractor(testEsp8266Interactor, testKnownCarDatabase))).build().start()
         );
         ControllerServiceGrpc.ControllerServiceBlockingStub blockingStub = ControllerServiceGrpc.newBlockingStub(
                 grpcCleanupRule.register(InProcessChannelBuilder.forName(serverName).directExecutor().build())
@@ -73,6 +76,13 @@ public class ControlServiceTest {
         @Override
         public void sendCommand(Full_Request fullRequest) {
             // No-op
+        }
+    }
+
+    static class TestKnownCarDatabase extends KnownCarDatabase {
+
+        TestKnownCarDatabase() {
+            // no -op
         }
     }
 }

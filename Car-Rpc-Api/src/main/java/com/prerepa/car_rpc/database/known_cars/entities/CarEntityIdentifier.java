@@ -6,7 +6,7 @@ public class CarEntityIdentifier<Identifier> implements EntityIdentifier {
 
     private Identifier identifier;
 
-    private CarEntityIdentifier(Identifier identifier) {
+    public CarEntityIdentifier(Identifier identifier) {
         this.identifier = identifier;
     }
 

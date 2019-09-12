@@ -1,6 +1,8 @@
 package com.prerepa.car_rpc.controller;
 
 import com.car_rpc.generated.*;
+import com.prerepa.car_rpc.database.DatabaseCredentials;
+import com.prerepa.car_rpc.database.known_cars.KnownCarDatabase;
 import com.prerepa.car_rpc.esp8266.Esp8266Interactor;
 import com.prerepa.car_rpc.factory.CommandFactory;
 import org.junit.Assert;
@@ -26,8 +28,17 @@ public class ControlInteractorTest {
     public void esp8266VerifyCommandIsSent() throws IOException {
         // Given
         // fake interactor to inject
+        DatabaseCredentials databaseCredentials = new DatabaseCredentials.DatabaseCredentialsBuilder().
+                withDatabaseUrl("xxx")
+                .withDatabasePassword("gaw")
+                .withDatabaseUsername("ghagh")
+                .build();
+        KnownCarDatabase knownCarDatabase = new KnownCarDatabase.KnownCarDatabaseBuilder()
+                .withTableName("table")
+                .withDatabaseCredentials(databaseCredentials)
+                .build();
         TestEsp8266Interactor testEsp8266Interactor = mock(TestEsp8266Interactor.class);
-        ControlInteractor controlInteractor = new ControlInteractor(testEsp8266Interactor);
+        ControlInteractor controlInteractor = new ControlInteractor(testEsp8266Interactor, knownCarDatabase);
         ControlRequest testRequest = ControlRequest.newBuilder()
                 .setAxisPlane(Vector.newBuilder().setX(2).setZ(3).setY(23).build())
                 .setPowerState(false)
@@ -48,7 +59,16 @@ public class ControlInteractorTest {
         // Given
         // fake interactor to inject
         CommandFactory commandFactory = mock(CommandFactory.class);
-        ControlInteractor controlInteractor = new ControlInteractor(new TestEsp8266Interactor());
+        DatabaseCredentials databaseCredentials = new DatabaseCredentials.DatabaseCredentialsBuilder().
+                withDatabaseUrl("xxx")
+                .withDatabasePassword("gaw")
+                .withDatabaseUsername("ghagh")
+                .build();
+        KnownCarDatabase knownCarDatabase = new KnownCarDatabase.KnownCarDatabaseBuilder()
+                .withTableName("table")
+                .withDatabaseCredentials(databaseCredentials)
+                .build();
+        ControlInteractor controlInteractor = new ControlInteractor(new TestEsp8266Interactor(), knownCarDatabase);
         ControlRequest testRequest = ControlRequest.newBuilder()
                 .setAxisPlane(Vector.newBuilder().setX(2).setZ(3).setY(23).build())
                 .setPowerState(false)
@@ -65,8 +85,17 @@ public class ControlInteractorTest {
     public void esp8266RecieveMetricsCalled() throws Throwable {
         // Given
         // fake interactor to inject
-        TestEsp8266Interactor testEsp8266Interactor = spy(new TestEsp8266Interactor());
-        ControlInteractor controlInteractor = new ControlInteractor(testEsp8266Interactor);
+        TestEsp8266Interactor testEsp8266Interactor = spy(new TestEsp8266Interactor());DatabaseCredentials databaseCredentials = new DatabaseCredentials.DatabaseCredentialsBuilder().
+                withDatabaseUrl("xxx")
+                .withDatabasePassword("gaw")
+                .withDatabaseUsername("ghagh")
+                .build();
+        KnownCarDatabase knownCarDatabase = new KnownCarDatabase.KnownCarDatabaseBuilder()
+                .withTableName("table")
+                .withDatabaseCredentials(databaseCredentials)
+                .build();
+
+        ControlInteractor controlInteractor = new ControlInteractor(testEsp8266Interactor, knownCarDatabase);
         // When
         controlInteractor.recieveRepsonse();
 
@@ -78,8 +107,17 @@ public class ControlInteractorTest {
     public void esp8266RecieveMetricsCorrect() throws Throwable {
         // Given
         // fake interactor to inject
+        DatabaseCredentials databaseCredentials = new DatabaseCredentials.DatabaseCredentialsBuilder().
+                withDatabaseUrl("xxx")
+                .withDatabasePassword("gaw")
+                .withDatabaseUsername("ghagh")
+                .build();
+        KnownCarDatabase knownCarDatabase = new KnownCarDatabase.KnownCarDatabaseBuilder()
+                .withTableName("table")
+                .withDatabaseCredentials(databaseCredentials)
+                .build();
         TestEsp8266Interactor testEsp8266Interactor = spy(new TestEsp8266Interactor());
-        ControlInteractor controlInteractor = new ControlInteractor(testEsp8266Interactor);
+        ControlInteractor controlInteractor = new ControlInteractor(testEsp8266Interactor, knownCarDatabase);
         // When
         ControlResponse metrics = controlInteractor.recieveRepsonse();
 

@@ -21,6 +21,7 @@ service ControllerService {
     // Server Acknowledge RPC
     rpc ServerAcknowledgeService(ServerAcknowledge) returns (ServerAcknowledgeResponse) { }
 
+    // mDNS - not started
     rpc DiscoveryService(Esp8266DiscoveryRequest) returns (Esp8266DiscoveryResponse) { }
 
     // Control RPC
@@ -75,6 +76,14 @@ message ServerAcknowledgeResponse {
         OK = 1;
     }
     required RequestStatus requestStatus = 1;
+    repeated CarEntity carEntities = 2;
+}
+
+message CarEntity {
+    required string lastIP = 1;
+    required int32 lastPort = 2;
+    required string name = 3;
+    required string lastConnected = 4;
 }
 
 // for discovery with mDNS esp8266 - sent by controller
@@ -101,6 +110,7 @@ message ControlAcknowledge {
     required string address = 1;
     required int32 port = 2;
     required int32 controllerKey = 3;
+    required string name = 4;
 }
 
 // Was able to connect with ControlAcknowledge message?

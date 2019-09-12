@@ -1,6 +1,8 @@
 package com.prerepa.car_rpc.controller;
 
 import com.car_rpc.generated.*;
+import com.prerepa.car_rpc.database.DatabaseCredentials;
+import com.prerepa.car_rpc.database.known_cars.KnownCarDatabase;
 import com.prerepa.car_rpc.esp8266.Esp8266Interactor;
 import io.grpc.stub.StreamObserver;
 
@@ -14,10 +16,7 @@ import java.io.IOException;
 public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServiceImplBase {
 
     private ControlInteractor controlInteractor;
-
-    public ControllerRequestBase() {
-        controlInteractor = new ControlInteractor();
-    }
+    // database of known cars used in last 2 services
 
     public ControllerRequestBase(ControlInteractor controlInteractor) {
         this.controlInteractor = controlInteractor;
@@ -52,7 +51,7 @@ public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServi
      */
     @Override
     public void controlAcknowledgeService(ControlAcknowledge esp8266Acknowledge, StreamObserver<ControlAcknowledgeResponse> responseStreamObserver) {
-	System.out.println("Got a connection.");
+        System.out.println("Got a connection.");
         // handles the address by setting the socket and key to the interactor and ValueStore
         responseStreamObserver.onNext(controlInteractor.handleAcknowledge(esp8266Acknowledge));
         responseStreamObserver.onCompleted();
@@ -60,7 +59,7 @@ public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServi
 
     @Override
     public void serverAcknowledgeService(ServerAcknowledge serverAcknowledge, StreamObserver<ServerAcknowledgeResponse> responseStreamObserver) {
-
+        responseStreamObserver.onNext(controlInteractor.handleServerAcknowledge(serverAcknowledge));
     }
 
     @Override

@@ -2,10 +2,15 @@ package com.prerepa.car_rpc.controller;
 
 import com.car_rpc.generated.*;
 import com.prerepa.car_rpc.api.controller.ControllerPlatform;
+import com.prerepa.car_rpc.database.known_cars.KnownCarDatabase;
+import com.prerepa.car_rpc.database.known_cars.entities.CarEntityIdentifier;
+import com.prerepa.car_rpc.database.known_cars.entities.KnownCarEntity;
 import com.prerepa.car_rpc.esp8266.Esp8266Interactor;
 import com.prerepa.car_rpc.factory.CommandFactory;
 
 import java.io.IOException;
+import java.time.Instant;
+import java.util.ArrayList;
 
 import static com.prerepa.car_rpc.factory.CommandFactory.buildAcknowledge;
 import static com.prerepa.car_rpc.factory.CommandFactory.buildCommand;
@@ -17,13 +22,11 @@ import static com.prerepa.car_rpc.factory.CommandFactory.buildCommand;
 public class ControlInteractor implements ControllerPlatform {
 
     private Esp8266Interactor esp8266Interactor;
+    private KnownCarDatabase knownCarDatabase;
 
-    public ControlInteractor() {
-        esp8266Interactor = new Esp8266Interactor();
-    }
-
-    public ControlInteractor(Esp8266Interactor esp8266Interactor) {
+    public ControlInteractor(Esp8266Interactor esp8266Interactor, KnownCarDatabase knownCarDatabase) {
         this.esp8266Interactor = esp8266Interactor;
+        this.knownCarDatabase = knownCarDatabase;
     }
 
     /**
@@ -68,9 +71,21 @@ public class ControlInteractor implements ControllerPlatform {
         ControlAcknowledgeResponse esp8266Acknowledge;
         // Acknowledge Connection
         boolean connStatus = esp8266Interactor.acknowledgeConnection(address.getAddress(), address.getPort(), address.getControllerKey());
-        // get result from valuestore - also can be done by returning from esp8266Interactor.acknowledgeConnection()
-        // conn ok
-        if (connStatus) esp8266Acknowledge = buildAcknowledge(AcknowledgeStatus.OK);
+        if (connStatus) {
+            esp8266Acknowledge = buildAcknowledge(AcknowledgeStatus.OK);
+            String name = address.getName();
+            String addr = address.getAddress();
+            int port = address.getPort();
+            Integer controllerKey = address.getControllerKey();
+            KnownCarEntity knownCarEntity = new KnownCarEntity.KnownCarEntityBuilder()
+                    .withControllerKey(controllerKey)
+                    .withName(name)
+                    .withTime(Instant.now())
+                    .withPort(port)
+                    .withIpAddress(addr)
+                    .build();
+            knownCarDatabase.insertIntoDatabase(knownCarEntity);
+        }
         // failed
         else esp8266Acknowledge = buildAcknowledge(AcknowledgeStatus.CANNOT_CONNECT_TO_ESP8266);
         return esp8266Acknowledge;
@@ -78,11 +93,30 @@ public class ControlInteractor implements ControllerPlatform {
 
     @Override
     public ServerAcknowledgeResponse handleServerAcknowledge(ServerAcknowledge serverAcknowledge) {
-        // todo when database support is added serverAcknowledge has a controllerKey we need to allocate
-        // a row to?
-        return ServerAcknowledgeResponse.newBuilder()
-                .setRequestStatus(ServerAcknowledgeResponse.RequestStatus.OK)
-                .build();
+        ArrayList<KnownCarEntity> carEntities = knownCarDatabase.retrieveEntities(new CarEntityIdentifier<>(
+                serverAcknowledge.getControllerKey()
+        ));
+
+        if (carEntities == null) {
+            return ServerAcknowledgeResponse.newBuilder()
+                    .setRequestStatus(ServerAcknowledgeResponse.RequestStatus.SERVER_ERROR)
+                    .addAllCarEntities(new ArrayList<>())
+                    .build();
+        } else {
+            ArrayList<CarEntity> protobufCarEntities = new ArrayList<>();
+            carEntities.forEach(knownCarEntity -> protobufCarEntities.add(
+                    CarEntity.newBuilder()
+                            .setLastIP(knownCarEntity.getIpAddress())
+                            .setLastPort(knownCarEntity.getPort())
+                            .setLastConnected(knownCarEntity.getDiscoveryTime().toString())
+                            .setName(knownCarEntity.getName())
+                            .build()
+            ));
+            return ServerAcknowledgeResponse.newBuilder()
+                    .setRequestStatus(ServerAcknowledgeResponse.RequestStatus.OK)
+                    .addAllCarEntities(protobufCarEntities)
+                    .build();
+        }
     }
 
     /**

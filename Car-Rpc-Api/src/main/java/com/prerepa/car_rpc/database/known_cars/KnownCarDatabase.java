@@ -1,6 +1,8 @@
 package com.prerepa.car_rpc.database.known_cars;
 
+import com.google.common.annotations.VisibleForTesting;
 import com.prerepa.car_rpc.database.BaseDatabase;
+import com.prerepa.car_rpc.database.DatabaseCredentials;
 import com.prerepa.car_rpc.database.InsertionStatus;
 import com.prerepa.car_rpc.database.known_cars.entities.CarEntityIdentifier;
 import com.prerepa.car_rpc.database.known_cars.entities.KnownCarEntity;
@@ -21,7 +23,12 @@ public class KnownCarDatabase extends BaseDatabase<KnownCarEntity, CarEntityIden
     private static String queryKey_port = "lastPort";
     private static String queryKey_name = "name";
 
-    public KnownCarDatabase(String url, String databaseUsername, String databasePassword, String tableName) {
+    @VisibleForTesting
+    public KnownCarDatabase() {
+        // no op for testing
+    }
+
+    private KnownCarDatabase(String url, String databaseUsername, String databasePassword, String tableName) {
         super(url, databaseUsername, databasePassword);
         this.tableName = tableName;
     }
@@ -81,6 +88,38 @@ public class KnownCarDatabase extends BaseDatabase<KnownCarEntity, CarEntityIden
             statement.executeUpdate(createTableInsert);
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static class KnownCarDatabaseBuilder {
+
+        DatabaseCredentials databaseCredentials;
+        String tableName;
+
+        public KnownCarDatabaseBuilder withDatabaseCredentials(DatabaseCredentials databaseCredentials) {
+            this.databaseCredentials = databaseCredentials;
+            return this;
+        }
+
+        public KnownCarDatabaseBuilder withTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+
+        public KnownCarDatabase build() {
+            if (databaseCredentials.getDatabaseUsername() == null && databaseCredentials.getDatabasePassword() == null) {
+                databaseCredentials.setDatabaseUsername("root");
+                databaseCredentials.setDatabasePassword("");
+            } else if (databaseCredentials.getDatabasePassword() == null) {
+                databaseCredentials.setDatabasePassword("");
+            } else if (databaseCredentials.getDatabaseUrl() == null) {
+                databaseCredentials.setDatabaseUrl("no url - should throw error");
+            } else if (tableName == null) {
+                tableName = "known_cars";
+            }
+            return new KnownCarDatabase(
+                    databaseCredentials.getDatabaseUrl(), databaseCredentials.getDatabaseUsername(), databaseCredentials.getDatabasePassword(), tableName
+            );
         }
     }
 }

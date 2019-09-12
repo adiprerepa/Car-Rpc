@@ -24,10 +24,10 @@ public abstract class BaseDatabase<DatabaseEntity extends com.prerepa.car_rpc.da
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(databaseUrl, databaseUsername, databasePassword);
         } catch (SQLException sqlException) {
-            sqlException.printStackTrace();
+//            sqlException.printStackTrace();
             System.err.println("An error happened with sql");
         } catch (ClassNotFoundException classNotFoundException) {
-            classNotFoundException.printStackTrace();
+//            classNotFoundException.printStackTrace();
             System.err.println("Unable to find class");
         }
     }
