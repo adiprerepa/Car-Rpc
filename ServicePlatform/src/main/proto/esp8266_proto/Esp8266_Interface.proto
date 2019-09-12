@@ -1,0 +1,42 @@
+// Author: Aditya Prerepa & Akshay Trivedi
+
+syntax = "proto2";
+
+option java_package = "com.car_rpc.generated";
+option java_multiple_files = true;
+option java_outer_classname = "Esp8266Proto";
+package Esp8266;
+
+// frontRotation is the angle at which the servos at the front
+// of the car should be. we map values from -1 (left) to 1 (right) to
+// the angle, where we can multiply the number by a scale
+// factor which is pre-determined for a given car. That new number
+// is what determines the voltage for the servo.
+// speed is the speed of the back motors -> the
+// speed is directly associated with the voltage fed to the motors.
+// when speed is negative, the motors go the opposite direction
+// by feeding voltage -> ground and vice versa.
+message Command {
+    required float frontRotation = 1;
+    required float speed = 2;
+}
+
+// The complete request sent to the esp8266.
+// todo add more to send, such as IO pin outputs
+// that will read stuff from the API.
+message Full_Request {
+    // All for now.
+    required Command command = 1;
+    required bool powerState = 2;
+}
+
+// Metrics that are given from the chip's IO pins,
+// such as ultrasound inputs from the hcsr04, and stuff
+// like collision detection.
+message Metrics {
+    // Three sensors -> hardcoded during tested,
+    // realtime during production.
+    required int32 HCSR04_front_distance = 1;
+    required int32 HCSR04_left_distance = 2;
+    required int32 HCSR04_right_distance = 3;
+}
