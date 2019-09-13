@@ -13,7 +13,6 @@ import java.sql.Statement;
 import java.time.Instant;
 import java.util.ArrayList;
 
-@SuppressWarnings({"FieldCanBeLocal", "unused"})
 public class KnownCarDatabase extends BaseDatabase<KnownCarEntity, CarEntityIdentifier<Integer>> {
 
     private String tableName;
@@ -24,7 +23,7 @@ public class KnownCarDatabase extends BaseDatabase<KnownCarEntity, CarEntityIden
     private static String queryKey_name = "name";
 
     @VisibleForTesting
-    public KnownCarDatabase() {
+    protected KnownCarDatabase() {
         // no op for testing
     }
 

@@ -1,9 +1,6 @@
 package com.prerepa.car_rpc.controller;
 
 import com.car_rpc.generated.*;
-import com.prerepa.car_rpc.database.DatabaseCredentials;
-import com.prerepa.car_rpc.database.known_cars.KnownCarDatabase;
-import com.prerepa.car_rpc.esp8266.Esp8266Interactor;
 import io.grpc.stub.StreamObserver;
 
 import java.io.IOException;
@@ -64,6 +61,6 @@ public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServi
 
     @Override
     public void discoveryService(Esp8266DiscoveryRequest discoveryRequest, StreamObserver<Esp8266DiscoveryResponse> responseStreamObserver) {
-
+        // todo when mdns works
     }
 }
