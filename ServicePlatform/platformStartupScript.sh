@@ -1,3 +1,3 @@
-# For CircleCi
-cd Car-Rpc-Api/ || exit
+# For TravisCI
+cd ServicePlatform/ || exit
 mvn clean install

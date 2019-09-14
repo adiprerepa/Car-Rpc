@@ -2,19 +2,166 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60daeee5-dfb4-4126-b8d8-f33e75fe2d61" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/runServicePlatform.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/database_credentials.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Car-Rpc-Api/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/known_cars/KnownCarDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/known_cars/KnownCarDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car-Rpc-Api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Car-Rpc-Api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformStartupScript.sh" beforeDir="false" afterPath="$PROJECT_DIR$/platformStartupScript.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/api/CarApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/BaseDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/BaseDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Car-Rpc-Api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Car-Rpc-Api-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/CarEntity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/CarEntity$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/CarEntity$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/CarEntity$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/CarEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/CarEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/CarEntityOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/CarEntityOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Command$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Command$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Command$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Command$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/CommandOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/CommandOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledge$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledge$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledge$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledge$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledge.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledgeOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledgeOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledgeResponse$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledgeResponse$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledgeResponse$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledgeResponse$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledgeResponse$Request_Status$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledgeResponse$Request_Status$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledgeResponse$Request_Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledgeResponse$Request_Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledgeResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledgeResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledgeResponseOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlAcknowledgeResponseOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlRequest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlRequest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlRequest$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlRequest$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlRequestOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlRequestOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlResponse$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlResponse$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlResponse$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlResponse$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlResponse$RequestStatusCode$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlResponse$RequestStatusCode$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlResponse$RequestStatusCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlResponse$RequestStatusCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlResponseOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControlResponseOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerProto$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerProto$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerProto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerProto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceBaseDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceBaseDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceBlockingStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceBlockingStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceFileDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceFileDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceFutureStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceFutureStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceImplBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceImplBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceMethodDescriptorSupplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceMethodDescriptorSupplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceStub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceStub.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$MethodHandlers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc$MethodHandlers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ControllerServiceGrpc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryRequest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryRequest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryRequest$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryRequest$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryRequestOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryRequestOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponse$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponse$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponse$AcknowledgeStatus$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponse$AcknowledgeStatus$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponse$AcknowledgeStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponse$AcknowledgeStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponse$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponse$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponseOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponseOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266Proto$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266Proto$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266Proto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Esp8266Proto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Full_Request$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Full_Request$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Full_Request$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Full_Request$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Full_Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Full_Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Full_RequestOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Full_RequestOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Metrics$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Metrics$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Metrics$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Metrics$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Metrics.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Metrics.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/MetricsOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/MetricsOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledge$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledge$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledge$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledge$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledge.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledgeOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledgeOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledgeResponse$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledgeResponse$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledgeResponse$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledgeResponse$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledgeResponse$RequestStatus$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledgeResponse$RequestStatus$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledgeResponse$RequestStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledgeResponse$RequestStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledgeResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledgeResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledgeResponseOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/ServerAcknowledgeResponseOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Vector$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Vector$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Vector$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Vector$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Vector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/Vector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/VectorOrBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/car_rpc/generated/VectorOrBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/api/CarApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/api/CarApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/api/controller/ControllerPlatform.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/api/controller/ControllerPlatform.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/api/esp_8266/Esp8266Platform.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/controller/AcknowledgeStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/controller/AcknowledgeStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/controller/ControlInteractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/controller/ControlInteractor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/controller/ControllerRequestBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/controller/ControllerRequestBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/BaseDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/BaseDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/DatabaseCredentials$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/DatabaseCredentials$DatabaseCredentialsBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/DatabaseCredentials$DatabaseCredentialsBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/DatabaseCredentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/DatabaseCredentials.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/InsertionStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/InsertionStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/base_entities/DatabaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/base_entities/DatabaseEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/base_entities/EntityIdentifier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/base_entities/EntityIdentifier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/base_entities/RetrievalEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/base_entities/RetrievalEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/known_cars/KnownCarDatabase$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/known_cars/KnownCarDatabase$KnownCarDatabaseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/known_cars/KnownCarDatabase$KnownCarDatabaseBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/known_cars/KnownCarDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/known_cars/KnownCarDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/known_cars/RetrievalStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/known_cars/RetrievalStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/known_cars/entities/CarEntityIdentifier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/known_cars/entities/CarEntityIdentifier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/known_cars/entities/KnownCarEntity$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/known_cars/entities/KnownCarEntity$KnownCarEntityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/known_cars/entities/KnownCarEntity$KnownCarEntityBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/known_cars/entities/KnownCarEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/database/known_cars/entities/KnownCarEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/esp8266/Esp8266Interactor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/esp8266/Esp8266Interactor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller_proto/Controller_Interface.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/esp8266_proto/Esp8266_Interface.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/Car-Rpc-Api.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/factory/CommandFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/factory/CommandFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/factory/CommandFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/factory/CommandFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/factory/ConnectionEntityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/factory/ConnectionEntityBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/shared/ConnectionEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/shared/ConnectionEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/shared/ValueStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prerepa/car_rpc/shared/ValueStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.prerepa.car_rpc.api.CarApiTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.prerepa.car_rpc.controller.ControlInteractorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.prerepa.car_rpc.controller.ControlInteractorTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.prerepa.car_rpc.controller.ControllerRequestBaseTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.prerepa.car_rpc.factory.CommandFactoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.prerepa.car_rpc.factory.CommandFactoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.prerepa.car_rpc.service.AcknowledgeServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.prerepa.car_rpc.service.AcknowledgeServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.prerepa.car_rpc.service.ControlServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.prerepa.car_rpc.service.ControlServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.prerepa.car_rpc.shared.ValueStoreTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.prerepa.car_rpc.shared.ValueStoreTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.prerepa.car_rpc.api.CarApiTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.prerepa.car_rpc.controller.ControlInteractorTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.prerepa.car_rpc.controller.ControlInteractorTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.prerepa.car_rpc.controller.ControllerRequestBaseTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.prerepa.car_rpc.factory.CommandFactoryTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.prerepa.car_rpc.factory.CommandFactoryTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.prerepa.car_rpc.service.AcknowledgeServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.prerepa.car_rpc.service.AcknowledgeServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.prerepa.car_rpc.shared.ValueStoreTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.prerepa.car_rpc.shared.ValueStoreTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/controller/ControlInteractorTest$TestEsp8266Interactor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/controller/ControlInteractorTest$TestEsp8266Interactor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/controller/ControlInteractorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/controller/ControlInteractorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/factory/CommandFactoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/factory/CommandFactoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/factory/ConnectionEntityBuilderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/factory/ConnectionEntityBuilderTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/service/AcknowledgeServiceTest$TestControlInteractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/service/AcknowledgeServiceTest$TestControlInteractor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/service/AcknowledgeServiceTest$TestEsp8266Interactor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/service/AcknowledgeServiceTest$TestEsp8266Interactor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/service/AcknowledgeServiceTest$TestKnownCarDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/service/AcknowledgeServiceTest$TestKnownCarDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/service/AcknowledgeServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/service/AcknowledgeServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/service/ControlServiceTest$TestEsp8266Interactor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/service/ControlServiceTest$TestEsp8266Interactor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/service/ControlServiceTest$TestKnownCarDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/service/ControlServiceTest$TestKnownCarDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/service/ControlServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/service/ControlServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/shared/ValueStoreTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/prerepa/car_rpc/shared/ValueStoreTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -25,6 +172,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/grpc-java/services" />
@@ -47,7 +195,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.prerepa.car_rpc.main.Main" />
+      <module name="Car-Rpc-Api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.prerepa.car_rpc.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AcknowledgeServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Car-Rpc-Api" />
       <extension name="coverage">
@@ -65,6 +226,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.AcknowledgeServiceTest" />
       </list>
     </recent_temporary>
@@ -79,7 +241,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568316416777</updated>
-      <workItem from="1568316420250" duration="4724000" />
+      <workItem from="1568316420250" duration="6901000" />
     </task>
     <servers />
   </component>

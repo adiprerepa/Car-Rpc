@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest" time="0.006" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest" time="0.003" errors="0" skipped="0">
   <properties>
     <property name="os.detected.version" value="5.0"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -71,11 +71,11 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest" name="connectionEntity_nullSocketChannel" time="0.005"/>
+  <testcase classname="com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest" name="connectionEntity_nullSocketChannel" time="0.003"/>
   <testcase classname="com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest" name="connectionEntity_nullControllerKey" time="0"/>
   <testcase classname="com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest" name="connectionEntity_notNullAddress" time="0"/>
   <testcase classname="com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest" name="connectionEntity_notNullPort" time="0"/>
-  <testcase classname="com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest" name="connectionEntity_nullPort" time="0.001"/>
+  <testcase classname="com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest" name="connectionEntity_nullPort" time="0"/>
   <testcase classname="com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest" name="connectionEntity_nullAddress" time="0"/>
   <testcase classname="com.prerepa.car_rpc.factory.ConnectionEntityBuilderTest" name="connectionEntity_notNullControllerKey" time="0"/>
 </testsuite>

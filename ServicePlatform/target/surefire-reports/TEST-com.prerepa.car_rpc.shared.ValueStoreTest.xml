@@ -73,9 +73,9 @@
   </properties>
   <testcase classname="com.prerepa.car_rpc.shared.ValueStoreTest" name="connectionStatusNotSet_badControllerKey" time="0.001"/>
   <testcase classname="com.prerepa.car_rpc.shared.ValueStoreTest" name="connectionEntitySet_notNullControllerKey" time="0"/>
-  <testcase classname="com.prerepa.car_rpc.shared.ValueStoreTest" name="connectionStatusSet_connectionSucceeded" time="0.001"/>
-  <testcase classname="com.prerepa.car_rpc.shared.ValueStoreTest" name="connectionEntitySet_verifyNull" time="0"/>
-  <testcase classname="com.prerepa.car_rpc.shared.ValueStoreTest" name="singletonIsInitialized" time="0.001"/>
-  <testcase classname="com.prerepa.car_rpc.shared.ValueStoreTest" name="connectionStatusSet_connectionFailed" time="0"/>
+  <testcase classname="com.prerepa.car_rpc.shared.ValueStoreTest" name="connectionStatusSet_connectionSucceeded" time="0"/>
+  <testcase classname="com.prerepa.car_rpc.shared.ValueStoreTest" name="connectionEntitySet_verifyNull" time="0.001"/>
+  <testcase classname="com.prerepa.car_rpc.shared.ValueStoreTest" name="singletonIsInitialized" time="0"/>
+  <testcase classname="com.prerepa.car_rpc.shared.ValueStoreTest" name="connectionStatusSet_connectionFailed" time="0.001"/>
   <testcase classname="com.prerepa.car_rpc.shared.ValueStoreTest" name="connectionEntitySet_badControllerKey" time="0"/>
 </testsuite>

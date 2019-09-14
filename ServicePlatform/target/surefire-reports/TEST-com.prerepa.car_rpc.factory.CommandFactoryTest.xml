@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="com.prerepa.car_rpc.factory.CommandFactoryTest" time="0.06" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="com.prerepa.car_rpc.factory.CommandFactoryTest" time="0.043" errors="0" skipped="0">
   <properties>
     <property name="os.detected.version" value="5.0"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -71,11 +71,11 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.prerepa.car_rpc.factory.CommandFactoryTest" name="buildAcknowledge_InternalServerError" time="0.032"/>
-  <testcase classname="com.prerepa.car_rpc.factory.CommandFactoryTest" name="buildCommand_ForwardTest" time="0.017"/>
-  <testcase classname="com.prerepa.car_rpc.factory.CommandFactoryTest" name="buildResponse_Metrics" time="0.009"/>
+  <testcase classname="com.prerepa.car_rpc.factory.CommandFactoryTest" name="buildAcknowledge_InternalServerError" time="0.022"/>
+  <testcase classname="com.prerepa.car_rpc.factory.CommandFactoryTest" name="buildCommand_ForwardTest" time="0.016"/>
+  <testcase classname="com.prerepa.car_rpc.factory.CommandFactoryTest" name="buildResponse_Metrics" time="0.005"/>
   <testcase classname="com.prerepa.car_rpc.factory.CommandFactoryTest" name="buildAcknowledge_OK" time="0"/>
-  <testcase classname="com.prerepa.car_rpc.factory.CommandFactoryTest" name="buildCommand_ServoLeft" time="0.002"/>
+  <testcase classname="com.prerepa.car_rpc.factory.CommandFactoryTest" name="buildCommand_ServoLeft" time="0"/>
   <testcase classname="com.prerepa.car_rpc.factory.CommandFactoryTest" name="buildCommand_ServoRight" time="0"/>
   <testcase classname="com.prerepa.car_rpc.factory.CommandFactoryTest" name="buildAcknowledge_UnableToConnect" time="0"/>
   <testcase classname="com.prerepa.car_rpc.factory.CommandFactoryTest" name="buildCommand_BackwardTest" time="0"/>

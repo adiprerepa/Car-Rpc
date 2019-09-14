@@ -11,7 +11,7 @@ public abstract class BaseDatabase<DatabaseEntity extends com.prerepa.car_rpc.da
 
     public Connection connection;
 
-    public BaseDatabase() { }
+    protected BaseDatabase() { }
 
     /**
      * Initialize database connection
@@ -21,7 +21,7 @@ public abstract class BaseDatabase<DatabaseEntity extends com.prerepa.car_rpc.da
      */
     public BaseDatabase(String databaseUrl, String databaseUsername, String databasePassword) {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(databaseUrl, databaseUsername, databasePassword);
         } catch (SQLException sqlException) {
 //            sqlException.printStackTrace();

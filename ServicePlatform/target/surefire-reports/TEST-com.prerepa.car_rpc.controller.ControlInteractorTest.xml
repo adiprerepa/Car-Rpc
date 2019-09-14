@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="com.prerepa.car_rpc.controller.ControlInteractorTest" time="0.246" errors="0" skipped="1">
+<testsuite tests="4" failures="0" name="com.prerepa.car_rpc.controller.ControlInteractorTest" time="0.22" errors="0" skipped="1">
   <properties>
     <property name="os.detected.version" value="5.0"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -71,10 +71,10 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.prerepa.car_rpc.controller.ControlInteractorTest" name="esp8266VerifyCommandIsBuilt" time="0.006">
+  <testcase classname="com.prerepa.car_rpc.controller.ControlInteractorTest" name="esp8266VerifyCommandIsBuilt" time="0.004">
     <skipped message="This passes when run alone, but fails during a package run? debug this later."/>
   </testcase>
-  <testcase classname="com.prerepa.car_rpc.controller.ControlInteractorTest" name="esp8266RecieveMetricsCalled" time="0.235"/>
-  <testcase classname="com.prerepa.car_rpc.controller.ControlInteractorTest" name="esp8266VerifyCommandIsSent" time="0.004"/>
+  <testcase classname="com.prerepa.car_rpc.controller.ControlInteractorTest" name="esp8266RecieveMetricsCalled" time="0.21"/>
+  <testcase classname="com.prerepa.car_rpc.controller.ControlInteractorTest" name="esp8266VerifyCommandIsSent" time="0.005"/>
   <testcase classname="com.prerepa.car_rpc.controller.ControlInteractorTest" name="esp8266RecieveMetricsCorrect" time="0.001"/>
 </testsuite>
