@@ -14,7 +14,11 @@ public class Main {
         CarApi carApi = new CarApi();
         Path databseCredentialsPath = Path.of(
                 String.format("%s/Car-Rpc/ServicePlatform/src/main/resources/database_credentials.json", System.getenv("HOME")));
-        carApi.start(databseCredentialsPath, 2000);
+
+        if (args.length != 0)
+            carApi.start(databseCredentialsPath, Integer.parseInt(args[0]));
+        else
+            carApi.start(databseCredentialsPath, 2000);
         carApi.blockUntilShutdown();
     }
 }

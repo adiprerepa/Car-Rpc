@@ -23,6 +23,7 @@ public class CarApi {
     private Server server;
 
     public void start(Path databaseCredentialsPath, int serverPort) {
+        // parse json
         Gson gson = new Gson();
         String jsonContent = null;
         try {
@@ -32,12 +33,6 @@ public class CarApi {
             e.printStackTrace();
         }
         DatabaseCredentials credentials = gson.fromJson(jsonContent, DatabaseCredentials.class);
-        // provide database
-//        DatabaseCredentials databaseCredentials = new DatabaseCredentials.DatabaseCredentialsBuilder()
-//                .withDatabaseUrl("jdbc:mysql://localhost/car_rpc?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC")
-//                .withDatabaseUsername("aditya")
-//                .withDatabasePassword("adityapc")
-//                .build();
         KnownCarDatabase knownCarDatabase = new KnownCarDatabase.KnownCarDatabaseBuilder()
                 .withDatabaseCredentials(credentials)
                 .withTableName("known_cars")
@@ -63,10 +58,6 @@ public class CarApi {
     public void blockUntilShutdown() throws Throwable {
         if (server != null)
             server.awaitTermination();
-    }
-
-    Server getServer() {
-        return this.server;
     }
 
     private void stopServer() {
