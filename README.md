@@ -7,6 +7,9 @@ The objective of this project is to effectively take control of a toy car (RC), 
 ## Purpose
 The purpose of this project is to give any hobbyist or person who loves to build things a platform to build on to make autonomous RC cars. It is to give satisfaction to any designer, programmer, or builder that they can also make cool stuff.
 
+## How it works
+If you have an rc car, a phone, and a computer, this project will work. Essentially, you can control the rc car from your phone's accelerometer, and the control is instantaneous. So, tilt left will turn the car left, right will turn the car right, forward will move the car forward, and backward will more it backward. Some more options would be to implement different methods of control, such as a __smart glove__ and all that jazz. Setup is relatively easy, payoff is amazing.
+
 ## Components Necessary
 This project requires : 
  - Any electrically controlled car that you can expose the motherboard with, and drives with servos and motors.
