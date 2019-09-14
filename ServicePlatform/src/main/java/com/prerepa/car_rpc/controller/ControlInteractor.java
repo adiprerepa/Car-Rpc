@@ -97,6 +97,7 @@ public class ControlInteractor implements ControllerPlatform {
                 serverAcknowledge.getControllerKey()
         ));
 
+        // null means error, we return on purpose
         if (carEntities == null) {
             return ServerAcknowledgeResponse.newBuilder()
                     .setRequestStatus(ServerAcknowledgeResponse.RequestStatus.SERVER_ERROR)

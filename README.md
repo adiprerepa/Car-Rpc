@@ -27,6 +27,32 @@ The repository has 3 main components (excluding test directories).
  1) Clone Repositiory with command `git clone git@github.com:adiprerepa/Car-Rpc.git` - Needs to be in home directory.
  2) Do `cd ServerPlatform`. List out the contents with `ls`, you should see a `pom.xml`, `runPlatform.sh`, and a `src` directory.
  3) Run `./runServicePlatform.sh`, wait for the terminal output of the java program, you should see something like `Server Started on port <port>`.
+#### MySQL Database Setup
+ - You can easily install mysql with this link : https://support.rackspace.com/how-to/installing-mysql-server-on-ubuntu/
+##### After Installation
+ - run `sudo -i` on your computer - and enter the password.
+ - run `mysql -u root -p` and do not put anything in for the password - you should automatically log in.
+ - now run  : 
+ ```mysql
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost' IDENTIFIED BY 'password';
+```
+where you insert username and password at your discretion. Remember this username and password.
+ - to create the car_rpc database : 
+ ```mysql
+CREATE DATABASE car_rpc;
+```
+ - Now you are done!
+##### Repository Database Credentials setup
+In order to stop from committing usernames and passwords to repository sources, make the file `database_credentials.json` in
+the directory `/Car-Rpc/ServicePlatform/src/main/resources/`, where you put the username, url, and password as follows(assuming that you run the database locally) : 
+```json
+ {
+     "databaseUrl" : "jdbc:mysql://localhost/car_rpc?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
+     "databaseUsername" : "USERNAME!!!!", 
+     "databasePassword" : "PASSWORD"
+ }
+```
+Where you can insert the username and password from earlier. Thats it for the database setup - the program will automatically make tables for you.
 #### Prerequisites - Server Setup 
  - An Internet Connection (Setup - git&maven)
  - Maven Installed
@@ -46,6 +72,7 @@ This project uses `protobuf`, `gRPC`, `mysql-connector-jdbc` for the API, `ESP82
 ## Authors
  - Aditya Prerepa
  - Akshay Trivedi
+ - Nikhil Dhomse
 
 ## Updated Last
 9/1/19 - not finished
