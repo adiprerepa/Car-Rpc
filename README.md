@@ -20,13 +20,13 @@ This project requires :
 The repository has 3 main components (excluding test directories).
  - `CarApp` - The android App Directory.
  - `Esp8266` - the embedded system code for the microcontroller.
- - `Car-Rpc-Api` - The main server platform.
+ - `ServicePlatform` - The main server platform.
  - One of the ideologies behind this project were to have the App and Esp8266 do as little work as possible, and have the server do all the heavy lifting/processing. Any crappy linux-based computer (what we tested it on) will work perfect. A Raspberry Pi is perfect for this job, but anything will do.
 
 ### Server Setup
  1) Clone Repositiory with command `git clone git@github.com:adiprerepa/Car-Rpc.git` - Needs to be in home directory.
- 2) Do `cd Car-Rpc-Api`. List out the contents with `ls`, you should see a `pom.xml`, `runPlatform.sh`, and a `src` directory.
- 3) Run `./runPlatform.sh`, wait for the terminal output of the java program, you should see something like `Server Started on port <port>`.
+ 2) Do `cd ServerPlatform`. List out the contents with `ls`, you should see a `pom.xml`, `runPlatform.sh`, and a `src` directory.
+ 3) Run `./runServicePlatform.sh`, wait for the terminal output of the java program, you should see something like `Server Started on port <port>`.
 #### Prerequisites - Server Setup 
  - An Internet Connection (Setup - git&maven)
  - Maven Installed

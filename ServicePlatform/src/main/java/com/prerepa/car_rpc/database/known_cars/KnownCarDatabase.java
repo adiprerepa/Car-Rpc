@@ -9,6 +9,7 @@ import com.prerepa.car_rpc.database.known_cars.entities.KnownCarEntity;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLSyntaxErrorException;
 import java.sql.Statement;
 import java.time.Instant;
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ public class KnownCarDatabase extends BaseDatabase<KnownCarEntity, CarEntityIden
     private KnownCarDatabase(String url, String databaseUsername, String databasePassword, String tableName) {
         super(url, databaseUsername, databasePassword);
         this.tableName = tableName;
+        createTable();
     }
 
     @Override
@@ -85,6 +87,9 @@ public class KnownCarDatabase extends BaseDatabase<KnownCarEntity, CarEntityIden
         try {
             Statement statement = super.connection.createStatement();
             statement.executeUpdate(createTableInsert);
+        } catch (SQLSyntaxErrorException e) {
+            // the error here would be that the table already exists
+            // no - op
         } catch (SQLException e) {
             e.printStackTrace();
         }
