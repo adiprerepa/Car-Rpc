@@ -97,13 +97,22 @@ public class ControlInteractor implements ControllerPlatform {
                 serverAcknowledge.getControllerKey()
         ));
 
-        // null means error, we return on purpose
+        // null means error, we return on purpose if there was an exception in the db,
+        //
         if (carEntities == null) {
             return ServerAcknowledgeResponse.newBuilder()
                     .setRequestStatus(ServerAcknowledgeResponse.RequestStatus.SERVER_ERROR)
                     .addAllCarEntities(new ArrayList<>())
                     .build();
         } else {
+            // here, even if db authentication does not work, we dont want the
+            // program not to work. So we return an OK with an empty ArrayList
+            // if authentication didnt work, and the mobile client would just send
+            // us the IP and port to connect to on their own, the purpose of this
+            // rpc is to have mobile clients acknowledge servers AND to send
+            // back the known cars to make their life easier IF they have mysql setup.
+            // if not, for whatever reason, we don't want to force them to set it up,
+            // it should work without it.
             ArrayList<CarEntity> protobufCarEntities = new ArrayList<>();
             carEntities.forEach(knownCarEntity -> protobufCarEntities.add(
                     CarEntity.newBuilder()

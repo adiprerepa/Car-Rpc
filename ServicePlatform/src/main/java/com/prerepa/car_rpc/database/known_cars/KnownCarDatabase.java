@@ -31,7 +31,9 @@ public class KnownCarDatabase extends BaseDatabase<KnownCarEntity, CarEntityIden
     private KnownCarDatabase(String url, String databaseUsername, String databasePassword, String tableName) {
         super(url, databaseUsername, databasePassword);
         this.tableName = tableName;
-        createTable();
+        if (super.databaseAuthenticationStatus) {
+            createTable();
+        }
     }
 
     @Override

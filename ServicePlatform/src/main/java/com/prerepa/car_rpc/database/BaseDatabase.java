@@ -10,6 +10,7 @@ public abstract class BaseDatabase<DatabaseEntity extends com.prerepa.car_rpc.da
         EntityIdentifier extends com.prerepa.car_rpc.database.base_entities.EntityIdentifier> {
 
     public Connection connection;
+    public boolean databaseAuthenticationStatus = false;
 
     protected BaseDatabase() { }
 
@@ -25,6 +26,7 @@ public abstract class BaseDatabase<DatabaseEntity extends com.prerepa.car_rpc.da
             System.out.println("Connecting to mySQL database...");
             connection = DriverManager.getConnection(databaseUrl, databaseUsername, databasePassword);
             System.out.println("Connected to mySQL database successfully!");
+            databaseAuthenticationStatus = true;
         } catch (SQLException sqlException) {
             System.err.println("An error happened with sql");
         } catch (ClassNotFoundException classNotFoundException) {
