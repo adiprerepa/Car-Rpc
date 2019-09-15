@@ -1,5 +1,8 @@
 package com.prerepa.car_rpc.database;
 
+/**
+ * Database credentials class - url, username, and password here.
+ */
 public class DatabaseCredentials {
 
     private String databaseUrl;

@@ -5,6 +5,11 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * Base Database that is the super class for Database Implementations.
+ * @param <DatabaseEntity>
+ * @param <EntityIdentifier>
+ */
 @SuppressWarnings({"FieldCanBeLocal", "unused"})
 public abstract class BaseDatabase<DatabaseEntity extends com.prerepa.car_rpc.database.base_entities.DatabaseEntity,
         EntityIdentifier extends com.prerepa.car_rpc.database.base_entities.EntityIdentifier> {
@@ -15,7 +20,7 @@ public abstract class BaseDatabase<DatabaseEntity extends com.prerepa.car_rpc.da
     protected BaseDatabase() { }
 
     /**
-     * Initialize database connection
+     * Initialize database connection - only done in super()
      * @param databaseUrl url of db (mysql)
      * @param databaseUsername username (with permissions on all databases)
      * @param databasePassword password

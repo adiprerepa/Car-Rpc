@@ -2,194 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60daeee5-dfb4-4126-b8d8-f33e75fe2d61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Esp8266/.protogen.sh.swp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266/Esp8266_Interface.pb.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266/Esp8266_Interface.pb.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Esp8266/pb_encode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/TestAppClient.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/src/main/java/com/prerepa/test_client/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/src/main/proto/Controller_Interface.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/src/main/proto/helloworld.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/TestAppClient-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/Controller_Interface.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/META-INF/TestAppClient.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/CarEntity$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/CarEntity$Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/CarEntity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/CarEntityOrBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlAcknowledge$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlAcknowledge$Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlAcknowledge.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlAcknowledgeOrBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlAcknowledgeResponse$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlAcknowledgeResponse$Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlAcknowledgeResponse$Request_Status$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlAcknowledgeResponse$Request_Status.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlAcknowledgeResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlAcknowledgeResponseOrBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlRequest$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlRequest$Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlRequestOrBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlResponse$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlResponse$Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlResponse$RequestStatusCode$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlResponse$RequestStatusCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControlResponseOrBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControllerProto$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControllerProto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceBaseDescriptorSupplier.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceBlockingStub.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceFileDescriptorSupplier.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceFutureStub.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceImplBase.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceMethodDescriptorSupplier.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControllerServiceGrpc$ControllerServiceStub.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControllerServiceGrpc$MethodHandlers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ControllerServiceGrpc.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/Esp8266DiscoveryRequest$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/Esp8266DiscoveryRequest$Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/Esp8266DiscoveryRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/Esp8266DiscoveryRequestOrBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponse$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponse$AcknowledgeStatus$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponse$AcknowledgeStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponse$Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/Esp8266DiscoveryResponseOrBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ServerAcknowledge$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ServerAcknowledge$Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ServerAcknowledge.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ServerAcknowledgeOrBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ServerAcknowledgeResponse$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ServerAcknowledgeResponse$Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ServerAcknowledgeResponse$RequestStatus$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ServerAcknowledgeResponse$RequestStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ServerAcknowledgeResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/ServerAcknowledgeResponseOrBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/Vector$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/Vector$Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/Vector.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/com/car_rpc/generated/VectorOrBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/helloworld.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/GreeterGrpc$GreeterBaseDescriptorSupplier.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/GreeterGrpc$GreeterBlockingStub.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/GreeterGrpc$GreeterFileDescriptorSupplier.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/GreeterGrpc$GreeterFutureStub.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/GreeterGrpc$GreeterImplBase.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/GreeterGrpc$GreeterMethodDescriptorSupplier.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/GreeterGrpc$GreeterStub.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/GreeterGrpc$MethodHandlers.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/GreeterGrpc.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/HelloReply$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/HelloReply$Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/HelloReply.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/HelloReplyOrBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/HelloRequest$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/HelloRequest$Builder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/HelloRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/HelloRequestOrBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/HelloWorldProto$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/classes/io/grpc/examples/helloworld/HelloWorldProto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/grpc-java/com/car_rpc/generated/ControllerServiceGrpc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/grpc-java/io/grpc/examples/helloworld/GreeterGrpc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/CarEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/CarEntityOrBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/ControlAcknowledge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/ControlAcknowledgeOrBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/ControlAcknowledgeResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/ControlAcknowledgeResponseOrBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/ControlRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/ControlRequestOrBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/ControlResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/ControlResponseOrBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/ControllerProto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/Esp8266DiscoveryRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/Esp8266DiscoveryRequestOrBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/Esp8266DiscoveryResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/Esp8266DiscoveryResponseOrBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/ServerAcknowledge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/ServerAcknowledgeOrBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/ServerAcknowledgeResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/ServerAcknowledgeResponseOrBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/Vector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/com/car_rpc/generated/VectorOrBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/io/grpc/examples/helloworld/HelloReply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/io/grpc/examples/helloworld/HelloReplyOrBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/io/grpc/examples/helloworld/HelloRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/io/grpc/examples/helloworld/HelloRequestOrBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/generated-sources/protobuf/java/io/grpc/examples/helloworld/HelloWorldProto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/any.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/api.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/compiler/plugin.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/descriptor.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/duration.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/empty.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/field_mask.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/source_context.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/struct.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/timestamp.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/type.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/2c703ed9196a1c1bf213bf8336834ac7/google/protobuf/wrappers.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/annotations.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/auth.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/backend.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/billing.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/config_change.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/consumer.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/context.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/control.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/distribution.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/documentation.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/endpoint.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/experimental/authorization_config.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/experimental/experimental.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/http.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/httpbody.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/label.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/log.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/logging.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/metric.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/monitored_resource.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/monitoring.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/quota.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/service.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/source_info.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/system_parameter.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/api/usage.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/cloud/audit/audit_log.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/logging/type/http_request.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/logging/type/log_severity.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/longrunning/operations.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/rpc/code.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/rpc/error_details.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/rpc/status.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/color.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/date.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/dayofweek.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/latlng.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/money.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/postal_address.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-dependencies/7da52e5572f6fe3c2aeeb8825514d869/google/type/timeofday.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-plugins/protoc-3.2.0-linux-x86_64.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TestAppClient/target/protoc-plugins/protoc-gen-grpc-java-1.20.0-linux-x86_64.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Esp8266/Esp8266.ino" beforeDir="false" afterPath="$PROJECT_DIR$/../Esp8266/Esp8266.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControlInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/ControllerRequestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/AcknowledgeStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/controller/AcknowledgeStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/BaseDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/BaseDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/DatabaseCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/DatabaseCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/base_entities/DatabaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/base_entities/DatabaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/base_entities/EntityIdentifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/base_entities/EntityIdentifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/base_entities/RetrievalEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/base_entities/RetrievalEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/known_cars/KnownCarDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/known_cars/KnownCarDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/known_cars/entities/CarEntityIdentifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/known_cars/entities/CarEntityIdentifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/known_cars/entities/KnownCarEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prerepa/car_rpc/database/known_cars/entities/KnownCarEntity.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -201,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Script" />
+        <option value="Class" />
       </list>
     </option>
   </component>

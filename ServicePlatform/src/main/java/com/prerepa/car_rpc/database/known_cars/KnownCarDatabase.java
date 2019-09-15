@@ -14,6 +14,10 @@ import java.sql.Statement;
 import java.time.Instant;
 import java.util.ArrayList;
 
+/**
+ * Known Car Database which inherits from {@link BaseDatabase} using
+ * {@link KnownCarEntity} and {@link CarEntityIdentifier} as Generic Constructors.
+ */
 public class KnownCarDatabase extends BaseDatabase<KnownCarEntity, CarEntityIdentifier<Integer>> {
 
     private String tableName;
@@ -28,14 +32,30 @@ public class KnownCarDatabase extends BaseDatabase<KnownCarEntity, CarEntityIden
         // no op for testing
     }
 
+    /**
+     * The super() call is for initializing the connection with jdbc,
+     * standard across all databases.
+     * @param url
+     * @param databaseUsername
+     * @param databasePassword
+     * @param tableName
+     */
     private KnownCarDatabase(String url, String databaseUsername, String databasePassword, String tableName) {
         super(url, databaseUsername, databasePassword);
         this.tableName = tableName;
+        /*
+        If we were able to authenticate in super(), try to create a table.
+         */
         if (super.databaseAuthenticationStatus) {
             createTable();
         }
     }
 
+    /**
+     * Insert an entity into the database
+     * @param entity to insert
+     * @return insertionStatus
+     */
     @Override
     public InsertionStatus insertIntoDatabase(KnownCarEntity entity) {
         try {
@@ -51,6 +71,11 @@ public class KnownCarDatabase extends BaseDatabase<KnownCarEntity, CarEntityIden
         }
     }
 
+    /**
+     * Retrieve Known car entities with given {@link CarEntityIdentifier}.
+     * @param entityIdentifier Identifier
+     * @return ArrayList of CarEntities
+     */
     @Override
     public ArrayList<KnownCarEntity> retrieveEntities(CarEntityIdentifier<Integer> entityIdentifier) {
         ArrayList<KnownCarEntity> retrievedCars = new ArrayList<>();
@@ -82,6 +107,9 @@ public class KnownCarDatabase extends BaseDatabase<KnownCarEntity, CarEntityIden
         return retrievedCars;
     }
 
+    /**
+     * Create a table - called only if we could authenticate,
+     */
     @Override
     public void createTable() {
         String createTableInsert = String.format("create table %s (id smallint auto_increment, %s BIGINT, %s varchar(40), %s int, %s varchar(100), %s varchar(100), constraint pk primary key (id));",
@@ -97,6 +125,9 @@ public class KnownCarDatabase extends BaseDatabase<KnownCarEntity, CarEntityIden
         }
     }
 
+    /**
+     * Database builder.
+     */
     public static class KnownCarDatabaseBuilder {
 
         DatabaseCredentials databaseCredentials;

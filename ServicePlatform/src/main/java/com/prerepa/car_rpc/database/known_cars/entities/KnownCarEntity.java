@@ -4,6 +4,10 @@ import com.prerepa.car_rpc.database.base_entities.DatabaseEntity;
 
 import java.time.Instant;
 
+/**
+ * Known Car Entity that we work with on Server-Side, all network
+ * transactions occur with {@link com.car_rpc.generated.CarEntity}.
+ */
 public class KnownCarEntity implements DatabaseEntity {
 
     private Integer controllerKey;
@@ -12,6 +16,13 @@ public class KnownCarEntity implements DatabaseEntity {
     private Instant discoveryTime;
     private String name;
 
+    /**
+     * For builder
+     * @param controllerKey controllerKey for database
+     * @param ipAddress for connecting
+     * @param port for connecting
+     * @param name to identify unique cars with the same controllerKey
+     */
     private KnownCarEntity(Integer controllerKey, String ipAddress, Integer port, String name) {
         this.controllerKey = controllerKey;
         this.discoveryTime = Instant.now();
@@ -45,6 +56,9 @@ public class KnownCarEntity implements DatabaseEntity {
         return name;
     }
 
+    /**
+     * Builder for {@link KnownCarEntity}
+     */
     public static class KnownCarEntityBuilder {
 
         private Integer controllerKey;
