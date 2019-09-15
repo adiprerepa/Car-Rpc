@@ -6,8 +6,8 @@
 
 #include <ESP8266WiFi.h>
 
-const char* ssid     = "NETGEAR11";
-const char* pass     = "huskyjet126";
+const char* ssid     = "SSID";
+const char* pass     = "PASS";
 const uint16_t port  = 42069;
 
 // remove 1 element from the following lists to make GPIO room for the motors
