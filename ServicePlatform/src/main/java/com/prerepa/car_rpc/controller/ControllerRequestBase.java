@@ -22,8 +22,12 @@ public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServi
     /**
      * Command RPC
      */
+    // STOPSHIP: 9/14/19 ADD SWITCHING OF CLIENTS - IF MOBILE WANTS TO CONTROL ANOTHER - IT SHOULD SEND
+
     @Override
     public void controlCommandService(ControlRequest controlRequest, StreamObserver<ControlResponse> responseStreamObserver) {
+
+        System.out.println("Command req");
         ControlResponse response = null;
         try {
             // sends request to esp8266, goes through ControllerInteractor and Esp8266 interactor that
@@ -41,6 +45,7 @@ public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServi
         }
         responseStreamObserver.onNext(response);
         responseStreamObserver.onCompleted();
+        System.out.println("Command req completed");
     }
 
     /**
@@ -56,7 +61,12 @@ public class ControllerRequestBase extends ControllerServiceGrpc.ControllerServi
 
     @Override
     public void serverAcknowledgeService(ServerAcknowledge serverAcknowledge, StreamObserver<ServerAcknowledgeResponse> responseStreamObserver) {
-        responseStreamObserver.onNext(controlInteractor.handleServerAcknowledge(serverAcknowledge));
+        System.out.println("Server Acknowledge Request");
+        ServerAcknowledgeResponse response = controlInteractor.handleServerAcknowledge(serverAcknowledge);
+        response.getCarEntitiesList().forEach(carEntity -> System.out.println(carEntity.getName()));
+        responseStreamObserver.onNext(response);
+        System.out.println("done");
+        responseStreamObserver.onCompleted();
     }
 
     @Override

@@ -40,7 +40,7 @@ public class KnownCarDatabase extends BaseDatabase<KnownCarEntity, CarEntityIden
     public InsertionStatus insertIntoDatabase(KnownCarEntity entity) {
         try {
             Statement statement = super.connection.createStatement();
-            String insertStatement = String.format("INSERT INTO known_cars(%s, %s, %s, %s, %s) values (%d, %s, %d, %s, %s);",
+            String insertStatement = String.format("INSERT INTO known_cars(%s, %s, %s, %s, %s) values (%d, '%s', %d, '%s', '%s');",
                     queryKey_controllerKey, queryKey_ipAddress, queryKey_port, queryKey_lastControlled, queryKey_name,
                     entity.getControllerKey(), entity.getIpAddress(), entity.getPort(), entity.getDiscoveryTime().toString(), entity.getName());
             statement.executeUpdate(insertStatement);

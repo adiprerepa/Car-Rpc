@@ -10,6 +10,19 @@ The purpose of this project is to give any hobbyist or person who loves to build
 ## How it works
 If you have an rc car, a phone, and a computer, this project will work. Essentially, you can control the rc car from your phone's accelerometer, and the control is instantaneous. So, tilt left will turn the car left, right will turn the car right, forward will move the car forward, and backward will more it backward. Some more options would be to implement different methods of control, such as a __smart glove__ and all that jazz. Setup is relatively easy, payoff is amazing.
 
+# Journey
+Making this project was one hell of a journey. From conception to building to finishing, I learned more than I possibly could have. Some of the things I am proud of about this program are the way I built it and how reliable (I think) the server is. I thought about the design for a long time, and it paid off in the end. I started during my internship at life360, where I was learning various valuable design techniques, and it all helped. The code on the server - from controller endpoints to the database code architecture - was carefully thought out and designed. The server is also extremely scalable - and you can add your own __features__ to the Server. It is multithreaded and is able to handle multiple controller connections at once. Everything about the server is a product of my knowledge of Java and gRPC.
+
+## Design Decisions I am Proud Of - Server
+ - A good database design decision was the `BaseDatabase` class, which was an abstract class which was generified for the Database Identifier (for pulling from mySQL), and the Database Entity Itself - which was returned on the `retrieve()` abstract function. You passed in the Entity Type (which inherited from a `BaseDatabaseEntity` class) to the generic. To use the BaseDatabase class you would need to directly inherit from it in your own database class, like `KnownCarDatabase`, but you would define a `KnownCarEntity` and `KnownCarIdentifier` to give the Generic Constructor. Those custom Entities and Identifiers would inherit from `BaseDatabaseEntity` and `BaseDatabaseIdentifier`. All in all, the way the java connector was designed was a good idea.
+ - The layers of abstraction implemented in the application was crucial to reliable, fast development. The package structure : a good thing I realized about this project was that in a project of this scale, you would need to split everything up appropriately. So, the package structure and RIB (Router Interactor Builder) pattern that was used was extremely useful. For example, the class `ControlInteractor` was used only for controller-related communication, and that would be defined in the gRPC service definition implementation. The `ControlInteractor` contained an `Esp8266Interactor`, which had everything to do with the low-level socket communication (using protobuf), The `ControlInteractor` contained the database function calls too, which were organized well.
+ - The Algorithm used to translate accelerometer positions to car velocity and wheel rotation was pretty useful. You Can find it in `CommandFactory#buildCommand`.
+ - Code Patterns used : 
+    - dependency injection
+    - object pools
+    - Factories and Builders
+    - Base Generics and Interfaces
+
 ## Components Necessary
 This project requires : 
  - Any electrically controlled car that you can expose the motherboard with, and drives with servos and motors.
@@ -18,6 +31,9 @@ This project requires :
  - An esp8266 - That was the microcontroller we used. Any wifi-compatible arduino-based microcontroller should work. (Given it supports the ESP IOT libraries).
  - Wires, a breadboard (optional), and 3 HCSR04s. (More on that later).
  - *A Network Connection* - Does not require internet access because the server is being run locally - so any old router or your home router should work.
+
+## Make your own controller
+One of the points of this project was to have other people build on it. Use the esp8266 and Server Code to make your own controller! The gRPC service definitions and declarations are readily available - come up with creative ways to control the Car - such as an app with various inputs or some other type of input - like a sensor array on your hand to map hand movements to car movements - you build it!
 
 ## Setup
 The repository has 3 main components (excluding test directories).
@@ -62,7 +78,15 @@ Where you can insert the username and password from earlier. Thats it for the da
  - Java 8 or Higher Installed
 
 ### Esp8266 Setup
-
+#### Prerequisites
+ - Arduino Compiler with Esp8266 - https://dzone.com/articles/programming-the-esp8266-with-the-arduino-ide-in-3
+ - Nanopb protobuf plugin : https://github.com/nanopb/nanopb - clone into home directory.
+ - An RC car
+#### RC Car setup
+In order to effectively set up the rc car-rpc, you need a remote control car. You should expose the motherboard of this car, and get a multimeter. Switch it into completion mode and play around with the pins - see which pins move which motors. You are basically mocking what the RC reciever would do. Once that happens - note down which combinations of pins work for which commands - such as left, right, forward, and backward. This is useful later on.
+ - You should solder the wires onto the car's motherboard.
+### App Setup
+Install the Car-Rpc app, and on the corresponding screens input the server IP and port, as well as the esp8266 IP and port (defined in the .ino file in `Esp8266`). The app should connect to the esp8266 and server successfully, and you should see a list of previously controlled cars by you. From there, tilt the phone left for tha car moving left, right for the car moving right, and so on.
 ## Architecture
 There are 3 main components to this project - the `esp8266`, the `api`, and the `controller`. Here, the `esp8266` is done in c++, the
 `api` is done in java, and the controller is done in `c++` and/or `java`. Here, the `esp8266` is the master.
@@ -71,11 +95,17 @@ There are 3 main components to this project - the `esp8266`, the `api`, and the 
 
 ## Libraries
 This project uses `protobuf`, `gRPC`, `mysql-connector-jdbc` for the API, `ESP8266WiFi` and `nanopb` for the esp8266, and `gRPC for the controller`.
-
-## Authors
+ 
+# Authors
  - Aditya Prerepa
+   - Underlying architecture and idea.
+   - Server Development and Code in Java.
+   - gRPC service definitions and implementations on controller side and esp8266 side.
+   - MySQL database schema and `jdbc` architecture implementation.
+   - Helped with Test App Client.
  - Akshay Trivedi
- - Nikhil Dhomse
+   - Esp8266 C++ Code
+   - Help with Esp8266 Protobuf definition.
 
-## Updated Last
-9/1/19 - not finished
+#### Last Updated 
+9/15/2019

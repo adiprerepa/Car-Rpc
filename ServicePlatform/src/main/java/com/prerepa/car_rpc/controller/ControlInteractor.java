@@ -11,6 +11,7 @@ import com.prerepa.car_rpc.factory.CommandFactory;
 import java.io.IOException;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import static com.prerepa.car_rpc.factory.CommandFactory.buildAcknowledge;
 import static com.prerepa.car_rpc.factory.CommandFactory.buildCommand;
@@ -122,6 +123,9 @@ public class ControlInteractor implements ControllerPlatform {
                             .setName(knownCarEntity.getName())
                             .build()
             ));
+            carEntities.forEach(
+                    knownCarEntity -> System.out.println(knownCarEntity.getName())
+            );
             return ServerAcknowledgeResponse.newBuilder()
                     .setRequestStatus(ServerAcknowledgeResponse.RequestStatus.OK)
                     .addAllCarEntities(protobufCarEntities)
