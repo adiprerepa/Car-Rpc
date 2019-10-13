@@ -6,8 +6,8 @@
 
 #include <ESP8266WiFi.h>
 #include <ESP8266WebServer.h>
-char* externalSsid;
-char* externalPass;
+char* externalSsid = NULL;
+char* externalPass = NULL;
 const uint16_t port  = 42069;
 const char* genWifiSsid = "Esp8266Net";
 const char* genWifiPass = "esp8266";
@@ -80,9 +80,9 @@ void handleData();
 // setup WIFI and sensor
 void setup() {
 	Serial.begin(9600);
-  reqCreds;
+  reqCreds();
   // wait for credentials
-  while (externalPass == null) {
+  while (externalPass == NULL) {
     Serial.print(".");
   }
   Serial.print("\n");
