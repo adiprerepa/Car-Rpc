@@ -85,6 +85,7 @@ public class ControlInteractor implements ControllerPlatform {
                     .withPort(port)
                     .withIpAddress(addr)
                     .build();
+            // todo add database faliure
             knownCarDatabase.insertIntoDatabase(knownCarEntity);
         }
         // failed

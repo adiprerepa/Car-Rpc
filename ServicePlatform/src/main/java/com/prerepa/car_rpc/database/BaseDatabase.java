@@ -15,7 +15,7 @@ public abstract class BaseDatabase<DatabaseEntity extends com.prerepa.car_rpc.da
         EntityIdentifier extends com.prerepa.car_rpc.database.base_entities.EntityIdentifier> {
 
     public Connection connection;
-    public boolean databaseAuthenticationStatus = false;
+    protected boolean databaseAuthenticationStatus = false;
 
     protected BaseDatabase() { }
 
