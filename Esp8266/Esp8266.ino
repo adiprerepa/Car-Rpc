@@ -5,13 +5,31 @@
 #include "Esp8266_Interface.pb.h"
 
 #include <ESP8266WiFi.h>
-
-const char* ssid     = "onhub";
-const char* pass     = "ekchotaghar";
+#include <ESP8266WebServer.h>
+char* externalSsid;
+char* externalPass;
 const uint16_t port  = 42069;
-
+const char* genWifiSsid = "Esp8266Net";
+const char* genWifiPass = "esp8266";
+const char htmlPage[]PROGMEM=R"=====(
+<!DOCTYPE html>
+<html>
+<body>
+<h3>Enter Wifi Ssid and Pass</h3>
+<FORM METHOD="POST"action="/sent">
+<input type="text" name="SSID" value = "ssid">
+<input type="text" name="PASS" value = "pass">
+<input type="submit" value="Send Creds">
+</form>
+</body>
+</html>
+)=====";
 WiFiServer server(port);
 WiFiClient client;
+IpAddress local_ip(192,168,1,1);
+IpAddress gateway(192, 168, 1, 1);
+IpAddress subnet(255, 255, 255, 0);
+Esp8266WebServer webServer(80);
 
 struct InputData {
 	static const unsigned buffer_length = Esp8266_Full_Request_size;
@@ -52,13 +70,22 @@ struct OutputData {
 } output;
 
 void setupWiFi();
+void reqCreds();
 void printConnection(const char * name, IPAddress address, int port);
-
+void onSend();
+void onConnect();
+void onNotFound();
 void handleData();
 
 // setup WIFI and sensor
 void setup() {
 	Serial.begin(9600);
+  reqCreds;
+  // wait for credentials
+  while (externalPass == null) {
+    Serial.print(".");
+  }
+  Serial.print("\n");
 	setupWiFi();
 }
 
@@ -81,9 +108,9 @@ void loop() {
 
 void setupWiFi() {
 	Serial.print("Attempting to connect to WiFi SSID: ");
-	Serial.print(ssid);
+	Serial.print(externalSsid);
 	
-	WiFi.begin(ssid, pass);
+	WiFi.begin(externalSsid, externalPass);
 	while (WiFi.status() != WL_CONNECTED) {
 		delay(500);
 		Serial.print(".");
@@ -117,4 +144,32 @@ void handleData() {
 	output.metrics.HCSR04_front_distance = 1.0;
 	output.metrics.HCSR04_left_distance = 1.0;
 	output.metrics.HCSR04_right_distance = 1.0;
+}
+
+void reqCreds() {
+  WiFi.softAP(genWifiPass, genWifiSsid);
+  WiFi.softAPConfig(local_ip, gateway, subnet);
+  delay(100);
+  webServer.on("/", onConnect);
+  webServer.on("/sent", onSend);
+  webServer.onNotFound(onNotFound);
+  webServer.begin();
+  Serial.print("HTTP Server started on port 80\n");
+  webServer.handleClient();
+} 
+
+void onConnect() {
+  String page = htmlPage;
+  
+}
+
+void onSend() {
+  String page = htmlPage;
+  externalSsid = server.arg("SSID");
+  externalPass = server.arg("PASS");
+  Serial.print("Recieved wifi ssid:");
+  Serial.print(externalSsid);
+  Serial.print("\nRecieved wifi pass:");
+  Serial.print(externalPass);
+  Serial.print("\nWill try to connect...");
 }

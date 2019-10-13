@@ -12,15 +12,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val nextButton = findViewById<Button>(R.id.button)
-        nextButton.setOnClickListener {
-            val intent = Intent(this, ServerInformationActivity::class.java)
-            startActivity(intent)
-//            serverInformationScreenRelay()
-        }
+
     }
 
-    fun serverInformationScreenRelay() {
-        val intent = Intent(this, ServerInformationActivity::class.java)
-        startActivity(intent)
-    }
 }
