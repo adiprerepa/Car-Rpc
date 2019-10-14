@@ -1,175 +1,184 @@
-#include "pb_common.h"
-#include "pb.h"
+#include <ESP8266WiFi.h>
+#include <WiFiClient.h>
+#include <ESP8266WebServer.h>
+#include "Esp8266_Interface.pb.h"
 #include "pb_encode.h"
 #include "pb_decode.h"
-#include "Esp8266_Interface.pb.h"
 
-#include <ESP8266WiFi.h>
-#include <ESP8266WebServer.h>
-char* externalSsid = NULL;
-char* externalPass = NULL;
-const uint16_t port  = 42069;
-const char* genWifiSsid = "Esp8266Net";
-const char* genWifiPass = "esp8266";
+struct StatusLED {
+  int red, green;
+} mainStatusLED = { .red = 12, .green = 13 };
+
+struct MotorCTL {
+  int enable, ctl1, ctl2;
+} motorA = { .enable = -1, .ctl1 = -1, .ctl2 = -1 }, 
+  motorB = { .enable = -1, .ctl1 = -1, .ctl2 = -1 };
+
+struct Hcsr04 {
+  int trig, echo;
+} front = { .trig = -1, .echo = -1 }, 
+  left = { .trig = -1, .echo = -1 }, 
+  right = { .trig = -1, .echo = -1 };
+
+static const unsigned input_buffer_length = Esp8266_Full_Request_size;
+unsigned char input_buffer[input_buffer_length];
+pb_istream_t input_stream;
+Esp8266_Full_Request command;
+
+static const unsigned output_buffer_length = Esp8266_Metrics_size;
+unsigned char output_buffer[output_buffer_length];
+pb_ostream_t output_stream;
+Esp8266_Metrics metrics;
+
+String softAPSSID = "esp8266Network";
+String wifiSSID;
+String wifiPassword;
+int wifiConnTime;
+
+int webServerPort = 80;
+int wifiServerPort = 42069;
+
+ESP8266WebServer webServer(webServerPort);
+WiFiServer wifiServer(wifiServerPort);
+WiFiClient wifiClient;
+
+IPAddress local_IP(192,168,4,22);
+IPAddress gateway(192,168,4,9);
+IPAddress subnet(255,255,255,0);
+
 const char htmlPage[]PROGMEM=R"=====(
 <!DOCTYPE html>
 <html>
-<body>
-<h3>Enter Wifi Ssid and Pass</h3>
-<FORM METHOD="POST"action="/sent">
-<input type="text" name="SSID" value = "ssid">
-<input type="text" name="PASS" value = "pass">
-<input type="submit" value="Send Creds">
-</form>
-</body>
+  <body>
+    <h3>Enter Wifi SSID and Password</h3>
+    <form method="POST" action="/sent">
+      <table>
+        <tr>
+          <td>SSID:</td>
+          <td><input type="text" name="SSID"></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><input type="text" name="PASS"></td>
+        </tr>
+        <tr>
+          <td>Connection Timeout:</td>
+          <td><input type="text" name="CONN_TIME" value="10"></td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="Connect"></td>
+        </tr>
+      </table>
+    </form>
+    <ul>
+      <li>Type an SSID and Password to connect the esp8266 to a WiFi Network.</li>
+      <li>If the esp8266 cannot connect to 'SSID' in 'Connection Timeout' seconds, it will recreate this website.</li>
+      <li>Do not change 'Connection Timeout' unless you are on a slow network.</li>
+      <li>The 'SSID' and 'Password' inputs are invalid if they cannot be used to connect to an existing WiFi network.</li>
+      <li>The 'Connection Timeout' input is invalid if it is not an integer greater than zero.</li>
+      <li>If any of the above fields are invalid, the esp8266 will recreate this website.</li>
+    </ul>
+  </body>
 </html>
 )=====";
-WiFiServer server(port);
-WiFiClient client;
-IpAddress local_ip(192,168,1,1);
-IpAddress gateway(192, 168, 1, 1);
-IpAddress subnet(255, 255, 255, 0);
-Esp8266WebServer webServer(80);
 
-struct InputData {
-	static const unsigned buffer_length = Esp8266_Full_Request_size;
-	unsigned char buffer[buffer_length];
-	pb_istream_t input_stream;
-	Esp8266_Full_Request command;
-	
-	InputData() { refresh(); };
-	
-	void refresh() {
-		input_stream = pb_istream_from_buffer(buffer, buffer_length);
-		command = Esp8266_Full_Request_init_zero;
-	}
-	
-	void readAndDecode() {
-		refresh();
-		client.read(buffer, client.available());
-		pb_decode(&input_stream, Esp8266_Full_Request_fields, &command);
-	}
-} input;
+void setupWebServer();
+void setupStatusLED(StatusLED&);
+void setupMotorCTL(MotorCTL&);
+void setupHcsr04(Hcsr04&);
 
-struct OutputData {
-	static const unsigned buffer_length = Esp8266_Metrics_size;
-	unsigned char buffer[buffer_length];
-	pb_ostream_t output_stream;
-	Esp8266_Metrics metrics;
-	
-	OutputData() { refresh(); }
-	void refresh() {
-		output_stream = pb_ostream_from_buffer(buffer, buffer_length);
-	}
-	
-	void encodeAndWrite() {
-		refresh();
-		pb_encode(&output_stream, Esp8266_Metrics_fields, &metrics);
-		client.write(buffer, output_stream.bytes_written);
-	}
-} output;
+void setStatusLED(StatusLED&, unsigned char, unsigned char);
+void controlMotor(MotorCTL&, int, int);
+int getHcsr04Distance(Hcsr04&);
 
-void setupWiFi();
-void reqCreds();
-void printConnection(const char * name, IPAddress address, int port);
-void onSend();
-void onConnect();
-void onNotFound();
-void handleData();
+void setup(void) {
+  Serial.begin(9600);
+  setupWebServer();
+  setupStatusLED(mainStatusLED);
+}
 
-// setup WIFI and sensor
-void setup() {
-	Serial.begin(9600);
-  reqCreds();
-  // wait for credentials
-  while (externalPass == NULL) {
-    Serial.print(".");
+void loop(){
+  while (WiFi.status() != WL_CONNECTED) {
+    setStatusLED(mainStatusLED, 200, 0);
+    WiFi.disconnect();
+    wifiSSID.remove(0, wifiSSID.length());
+    wifiPassword.remove(0, wifiPassword.length());
+    if ((!WiFi.softAPConfig(local_IP, gateway, subnet)) || (!WiFi.softAP(softAPSSID))) {
+      continue;
+    }
+    webServer.begin();
+    while ((!wifiSSID.length()) || (!wifiPassword.length())) {
+      webServer.handleClient();
+    }
+    webServer.stop();
+    WiFi.softAPdisconnect(true);
+    WiFi.begin(wifiSSID, wifiPassword);
+    int connectionCounter;
+    setStatusLED(mainStatusLED, 200, 200);
+    for (connectionCounter = 0; (connectionCounter < wifiConnTime) && (WiFi.status() != WL_CONNECTED); connectionCounter++) {
+      setStatusLED(mainStatusLED, 200 * (connectionCounter % 2), 200 * (1 + connectionCounter % 2));
+      delay(1000);
+    }
   }
-  Serial.print("\n");
-	setupWiFi();
+  setStatusLED(mainStatusLED, 0, 200);
+  wifiServer.begin();
+  wifiServer.setNoDelay(false);
+  while (WiFi.status() == WL_CONNECTED) {
+    wifiClient = wifiServer.available();
+    if (wifiClient) {
+      wifiClient.setNoDelay(true);
+      while (wifiClient.connected()) {
+        if (wifiClient.available()) {
+          input_stream = pb_istream_from_buffer(input_buffer, input_buffer_length);
+          output_stream = pb_ostream_from_buffer(output_buffer, output_buffer_length);          
+          command = Esp8266_Full_Request_init_default;
+          wifiClient.read(input_buffer, wifiClient.available());
+          pb_decode(&input_stream, Esp8266_Full_Request_fields, &command);
+          metrics.HCSR04_front_distance = 1.0;
+          metrics.HCSR04_left_distance = 1.0;
+          metrics.HCSR04_right_distance = 1.0;
+          pb_encode(&output_stream, Esp8266_Metrics_fields, &metrics);
+          wifiClient.write(output_buffer, output_stream.bytes_written);
+        }
+      }
+    }
+  }
+  wifiServer.stop();
 }
 
-
-void loop() {
-	client = server.available();
-	if (client) {
-		printConnection("controller", client.remoteIP(), client.remotePort());
-		client.setNoDelay(true);
-		while (client.connected()) {
-			if (client.available()) {
-				input.readAndDecode();
-				handleData();
-				output.encodeAndWrite();
-			}
-		}
-		Serial.println("Disconnected");
-	}
+void setupWebServer() {
+    webServer.on("/", [&]() {
+      webServer.send(200, "text/html", htmlPage);
+  });
+  webServer.on("/sent", [&]() {
+    wifiSSID = webServer.arg("SSID");
+    wifiPassword = webServer.arg("PASS");
+    wifiConnTime = webServer.arg("CONN_TIME").toInt();
+    webServer.sendHeader("Location","/");
+    webServer.send(303);
+  });
+  webServer.onNotFound([&]() {
+    webServer.send(404, "text/plain", "404: Not found");
+  });
 }
 
-void setupWiFi() {
-	Serial.print("Attempting to connect to WiFi SSID: ");
-	Serial.print(externalSsid);
-	
-	WiFi.begin(externalSsid, externalPass);
-	while (WiFi.status() != WL_CONNECTED) {
-		delay(500);
-		Serial.print(".");
-	}
-	Serial.println();
-	server.begin();
-	printConnection("WiFi", WiFi.localIP(), port);
+void setupStatusLED(StatusLED& statusLED) {
+  pinMode(statusLED.red, OUTPUT);
+  pinMode(statusLED.green, OUTPUT);
 }
 
-void printConnection(const char * name, IPAddress address, int port) {
-	Serial.print("Connected to ");
-	Serial.print(name);
-	Serial.print(". Address is ");
-	Serial.print(address);
-	Serial.print(":");
-	Serial.println(port);
+void setupMotorCTL(MotorCTL& motorCTL) {
+  pinMode(motorCTL.enable, OUTPUT);
+  pinMode(motorCTL.ctl1, OUTPUT);
+  pinMode(motorCTL.ctl2, OUTPUT);
 }
 
-void handleData() {
-	// things to do here
-	// - handle request data by sending voltage
-	// - get hcsr04 distances
-	// - write to outputdata
-	// front rotation rules - -1 is left, 1 is right
-	// backward speed -1
-	// forward speed 1	
-	Serial.print("got frontrotation: ");
-	Serial.print(input.command.command.frontRotation);
-	Serial.print("\ngot speed: ");
-	Serial.print(input.command.command.speed);
-	output.metrics.HCSR04_front_distance = 1.0;
-	output.metrics.HCSR04_left_distance = 1.0;
-	output.metrics.HCSR04_right_distance = 1.0;
+void setupHcsr04(Hcsr04& hcsr04) {
+  pinMode(hcsr04.trig, OUTPUT);
+  pinMode(hcsr04.echo, OUTPUT);
 }
 
-void reqCreds() {
-  WiFi.softAP(genWifiPass, genWifiSsid);
-  WiFi.softAPConfig(local_ip, gateway, subnet);
-  delay(100);
-  webServer.on("/", onConnect);
-  webServer.on("/sent", onSend);
-  webServer.onNotFound(onNotFound);
-  webServer.begin();
-  Serial.print("HTTP Server started on port 80\n");
-  webServer.handleClient();
-} 
-
-void onConnect() {
-  String page = htmlPage;
-  
-}
-
-void onSend() {
-  String page = htmlPage;
-  externalSsid = server.arg("SSID");
-  externalPass = server.arg("PASS");
-  Serial.print("Recieved wifi ssid:");
-  Serial.print(externalSsid);
-  Serial.print("\nRecieved wifi pass:");
-  Serial.print(externalPass);
-  Serial.print("\nWill try to connect...");
+void setStatusLED(StatusLED& statusLED, unsigned char redValue, unsigned char greenValue) {
+  analogWrite(statusLED.red, redValue);
+  analogWrite(statusLED.green, greenValue);
 }
