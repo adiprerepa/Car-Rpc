@@ -1,5 +1,5 @@
 # Car-Rpc
-The objective of this project is to effectively take control of a toy car (RC), with a platform API and controllers, and give it infinite range. 
+The objective of this project is to control an arduino-hacked RC car with an android phone, all connected to the cloud.
 
 ## Travis CI Build Status
 [![Build Status](https://travis-ci.org/adiprerepa/Car-Rpc.svg?branch=master)](https://travis-ci.org/adiprerepa/Car-Rpc)
